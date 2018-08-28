@@ -5,6 +5,8 @@ import '../App.css';
 
 
 export class Navigation extends Component {
+
+
     render() {
         return (
             <Navbar staticTop>
@@ -20,12 +22,12 @@ export class Navigation extends Component {
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
 
                         <NavItem href="/theswipe">The Swipe</NavItem>
+                                <NavItem href="/loggedout">Kirjaudu ulos</NavItem>
                     </Nav>) : (
                     <Nav pullRight>
                         <NavItem href="/login">Sisäänkirjautuminen</NavItem>
                         <NavItem href="/signup">Rekisteröityminen</NavItem>
                     </Nav>        )}
-
                 </Navbar.Collapse>
             </Navbar>
         );
