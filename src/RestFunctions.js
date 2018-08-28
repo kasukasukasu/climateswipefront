@@ -1,5 +1,4 @@
 
-
 export function fetchall(callback) {
     fetch('tasks', {accept: 'application/json'})
         .then(function(response) {
