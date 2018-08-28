@@ -13,37 +13,38 @@ export function fetchall(callback) {
 }
 
 // export function fetchTask(id, callback) {
-//     fetch(apiurli+'countries/'+id, {accept: 'application/json'})
+//     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
 //         .then(function(response) {
 //             response.json().then(function(json) {
 //                 if (response.status >= 500)
 //                     callback(json, response.status);
 //                 else
 //                     callback(json);
-//             });C
+//             });
 //         });
 // }
 //
-// export function deleteCountry(id/*, callback*/) {
-//     return fetch(apiurli+'countries/'+id, {method: 'DELETE'})
+// //tää ei vissii toimi
+// export function deleteTasks(id/*, callback*/) {
+//     return fetch(apiurli+'tasks/'+id, {method: 'DELETE'})
 //         .then(function(response){
 //             //callback();
 //         })
 // }
 //
-// export function createCountry(country, callback) {
-//     fetch(apiurli+'countries/',  {
+// export function createTask(task, callback) {
+//     fetch(apiurli+'tasks/',  {
 //         method: 'POST',
 //         headers: {'Content-Type': 'application/json' },
-//         body: JSON.stringify(country)
+//         body: JSON.stringify(task)
 //     })
 //         .then((function(response) {
 //             callback();
 //         }));
 // }
 //
-// export function updateCountry(country, callback) {
-//     fetch(apiurli+'countries/'+country.id,  {
+// export function updateTask(task, callback) {
+//     fetch(apiurli+'tasks/'+task.id,  {
 //         method: 'PUT',
 //         headers: {'Content-Type': 'application/json' },
 //         body: JSON.stringify(quote)
