@@ -15,7 +15,7 @@ import Navigation from './components/Navigation';
 import SignUp from './components/SignUp';
 import LoggedOut from './components/LoggedOut';
 import TasksList from './components/TasksList';
-import TheSwipe from './components/TheSwipe';
+import TheSwipe from './Sandbox/Swiping/TheSwipe';
 
 
 class App extends Component {
