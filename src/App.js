@@ -13,8 +13,10 @@ import Home from "./components/Home";
 import LogIn from "./components/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/SignUp';
+import LoggedOut from './components/LoggedOut';
 import TasksList from './components/TasksList';
 import TheSwipe from './components/TheSwipe';
+
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -38,6 +40,7 @@ class App extends Component {
         });
     }
 
+
     render() {
         const { authenticated, loading } = this.state;
 
@@ -57,6 +60,7 @@ class App extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={LogIn} />
                     <Route exact path="/signup" component={SignUp} />
+                    <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" component={TasksList}/>
                     <Route path="/theswipe" component={TheSwipe}/>
                 </div>
