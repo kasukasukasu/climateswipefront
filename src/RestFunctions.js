@@ -1,11 +1,11 @@
-const apiurli = '/';
+const apiurli = 'http://localhost:8080/';
 
 export function fetchall(callback) {
     fetch(apiurli+'tasks', {accept: 'application/json'})
         .then(function(response) {
             response.json().then(function(json) {
                 if (response.status >= 500)
-                    console.log(json);
+                    callback(json, response.status);
                 else
                     callback(json);
             });

@@ -9,20 +9,23 @@ export class Navigation extends Component {
         return (
             <Navbar staticTop>
                 <Navbar.Header>
-                    {/*<Navbar.Brand>*/}
-                        {/*<Link to="/">ClimateSwipe</Link>*/}
-                    {/*</Navbar.Brand>*/}
+                    <Navbar.Brand>
+                        <Link to="/">ClimateSwipe</Link>
+                    </Navbar.Brand>
                     <Navbar.Toggle/>
                 </Navbar.Header>
                 <Navbar.Collapse>
-                    <Nav>
+                        {this.props.state.authenticated ? (
+                            <Nav>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
+
                         <NavItem href="/theswipe">The Swipe</NavItem>
-                    </Nav>
+                    </Nav>) : (
                     <Nav pullRight>
                         <NavItem href="/login">Sisäänkirjautuminen</NavItem>
                         <NavItem href="/signup">Rekisteröityminen</NavItem>
-                    </Nav>
+                    </Nav>        )}
+
                 </Navbar.Collapse>
             </Navbar>
         );

@@ -27,6 +27,7 @@ class TasksList extends Component {
                     <td>{task.title}</td>
                     <td>{task.content1}</td>
                     <td>{task.content2}</td>
+                    <td>{task.rating}</td>
                 </tr>
             );
         });
@@ -42,8 +43,9 @@ class TasksList extends Component {
                         <th>Otsikko</th>
                         <th>Sisältö 1</th>
                         <th>Sisältö 2</th>
+                        <th>Vaikuttavuus</th>
                     </tr>
-                    <tbody>{tasks}</tbody>
+                    {tasks}
                     </thead>
                 </table>
             </div>

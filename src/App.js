@@ -52,7 +52,7 @@ class App extends Component {
         return (
             <Router>
                 <div>
-                    <Navigation/>
+                    <Navigation state={this.state} />
                     {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={LogIn} />
