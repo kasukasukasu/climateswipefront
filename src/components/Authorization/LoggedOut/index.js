@@ -10,9 +10,7 @@ class LogOutContainer extends Component {
 
 handleLogOut= async event => {
     console.log('moroo')
-    const user = await app
-        .auth().signOut()
-        .catch(function (err) {
+    app.auth().signOut().catch(function (err) {
             // Handle errors
             console.log('ei kirjautunut ulos');
         });

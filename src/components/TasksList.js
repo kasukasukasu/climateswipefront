@@ -22,18 +22,16 @@ class TasksList extends Component {
     };
 
     render() {
-        //
+
         var tasks = this.state.tasks.map(function (task) {
             return (
-
                     <details>
                         <summary>{task.title}</summary>
                         <p>{task.content1}</p>
                         <p>{task.content2}</p>
                         <p>{task.rating}</p>
                     </details>
-
-
+                
             );
         });
         // var props = this.props;

@@ -12,6 +12,19 @@ export function fetchall(callback) {
         });
 }
 
+export function fetchallchoices(callback) {
+    fetch(url + "relations", {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+            console.log('löytyy relations tiedot');
+        });
+}
+
 
 export function createUser(id) {
     var user = '{"uid": "' + id + '"}';
@@ -21,6 +34,7 @@ export function createUser(id) {
         body: user}
     );
 }
+
 
 // export function fetchTask(id, callback) {
 //     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
