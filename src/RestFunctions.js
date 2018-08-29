@@ -1,8 +1,7 @@
-const tasksurl = '/tasks';
-
+const url = 'http://localhost:8080/';
 
 export function fetchall(callback) {
-    fetch(tasksurl, {accept: 'application/json'})
+    fetch(url + "tasks", {accept: 'application/json'})
         .then(function(response) {
             response.json().then(function(json) {
                 if (response.status >= 500)
@@ -11,6 +10,16 @@ export function fetchall(callback) {
                     callback(json);
             });
         });
+}
+
+
+export function createUser(id) {
+    var user = '{"uid": "' + id + '"}';
+    fetch(url + "users",  {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: user}
+    );
 }
 
 // export function fetchTask(id, callback) {

@@ -9,12 +9,13 @@ import PrivateRoute from "./PrivateRoute";
 import app from "./base";
 
 import Home from "./components/Home";
-import LogIn from "./components/LogIn";
+import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
-import SignUp from './components/SignUp';
-import LoggedOut from './components/LoggedOut';
+import SignUp from './components/Authorization/SignUp';
+import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
 import TheSwipe from './Sandbox/Swiping/TheSwipe';
+import {findUser, createUser} from "./RestFunctions";
 
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
@@ -31,12 +32,15 @@ class App extends Component {
     componentWillMount() {
         app.auth().onAuthStateChanged(user => {
             if (user) {
+                var userid = user.uid;
                 console.log(user.uid);
                 this.setState({
                     authenticated: true,
                     currentUser: user,
                     loading: false
                 });
+                createUser(userid)
+
             } else {
                 this.setState({
                     authenticated: false,

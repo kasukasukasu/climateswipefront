@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SignedOutView from "./SignedOutView";
 import { withRouter } from "react-router";
-import app from "../../base";
+import app from "../../../base";
 
 // luodaan uloskirjaus komponentti index failiin
 
