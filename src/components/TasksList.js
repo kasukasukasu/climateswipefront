@@ -1,6 +1,12 @@
 import React, {Component} from "react";
 import {fetchall} from "../RestFunctions"
 import Buttons from "./SwipeButtons";
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 
 class TasksList extends Component {
     constructor(props) {
@@ -28,15 +34,22 @@ class TasksList extends Component {
 
         var tasks = this.state.tasks.map(function (task) {
             return (
-                    <details key={task.id}>
-                        <summary>{task.title}</summary>
-                        <p>{task.content1}</p>
-                        <p>{task.content2}</p>
-                        <p>{task.rating}</p>
-                    </details>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography key = {task.id}>{task.title}</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography>
+                            {task.content1}<br/>
+
+                            {task.content2}<br/>
+
+                            {task.rating}<br/>
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             );
         });
-        // var props = this.props;
         return (
             <div>
                 {tasks}

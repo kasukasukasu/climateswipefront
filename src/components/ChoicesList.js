@@ -1,5 +1,10 @@
 import React, {Component} from "react";
 import {fetchallchoices} from "../RestFunctions"
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 // this.props.user
 
@@ -32,12 +37,20 @@ class ChoicesList extends Component {
         var relations = this.state.relations.filter(addToList => {return addToList.choice==='1' && addToList.user.uid===this.props.user}).map(function (choice) {
             console.log('moroo5', choice);
             return (
-                <div key={choice.task.id}>
-                    <h2>{choice.task.title}</h2>
-                    <p>{choice.task.content1}</p>
-                    <p>{choice.task.content2}</p>
-                    <p>{choice.task.rating}</p>
-                </div>
+                <ExpansionPanel>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography key = {choice.task.id}>{choice.task.title}</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                        <Typography>
+                            {choice.task.content1}<br/>
+
+                            {choice.task.content2}<br/>
+
+                            {choice.task.rating}<br/>
+                        </Typography>
+                    </ExpansionPanelDetails>
+                </ExpansionPanel>
             );
         });
         // var props = this.props;
