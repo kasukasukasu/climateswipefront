@@ -22,6 +22,28 @@ export function createUser(id) {
     );
 }
 
+export function createRelation(data) {
+    var relation = '{"choice": "' + data.choice + '", "user": {"uid": "' + data.user_id + '"}, "task": {"id": ' + data.task_id + '}}';
+    fetch(url + "relations",  {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: relation}
+    );
+}
+
+// export function trueChoice (id) {
+//     console.log("klikattutrue");
+//     var data = ({choice: '1', user_id: id, task_id: 1});
+//     createRelation(data)
+//
+// }
+//
+// export function falseChoice(id) {
+//     console.log("klikattufalse");
+//     var data = ({choice: '0', user_id: id, task_id: 1});
+//     createRelation(data)
+// }
+
 // export function fetchTask(id, callback) {
 //     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
 //         .then(function(response) {

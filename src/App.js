@@ -75,7 +75,7 @@ class App extends Component {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" component={TasksList}/>
-                    <Route path="/theswipe" component={TheSwipe}/>
+                    {/*<Route path="/theswipe" component={TheSwipe}/>*/}
                     <Route path="/map" component={MapSection} />
                     <FooterSection />
                 </div>
