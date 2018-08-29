@@ -3,19 +3,19 @@
 // Firebasen autentifikaatio moduuli hoitaa loginin ja kirjautumisen ja React-router hoitaa reitiyksen hallinnoinnin
 
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from "./PrivateRoute";
 import app from "./base";
 
-import Home from "./components/Home";
 import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
-import TheSwipe from './Sandbox/Swiping/TheSwipe';
-import {findUser, createUser} from "./RestFunctions";
+// import TheSwipe from './Sandbox/Swiping/TheSwipe';
+import ChoicesList from './components/ChoicesList';
+import {createUser} from "./RestFunctions";
 
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
@@ -36,7 +36,7 @@ class App extends Component {
                 console.log(user.uid);
                 this.setState({
                     authenticated: true,
-                    currentUser: user,
+                    currentUser: user.uid,
                     loading: false
                 });
                 createUser(userid)
@@ -53,7 +53,8 @@ class App extends Component {
 
 
     render() {
-        const { authenticated, loading } = this.state;
+        // const { authenticated, loading } = this.state;
+        const { loading } = this.state;
 
         // renderöinti, kun haetaan autentikaatiota näytetään viestiä sivua ladataan
 
@@ -71,12 +72,15 @@ class App extends Component {
                     <Route exact path="/" component={Header} />
                     <Route exact path="/" component={AboutSection} />
                     <Route exact path="/" component={WhoWeAre} />
+                    <Switch>
                     <Route exact path="/login" component={LogIn} />
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
-                    <Route path="/taskslist" component={TasksList}/>
+                    <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
+                    <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser}/>}/>
                     {/*<Route path="/theswipe" component={TheSwipe}/>*/}
                     <Route path="/map" component={MapSection} />
+                    </Switch>
                     <FooterSection />
                 </div>
             </Router>

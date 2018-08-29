@@ -24,6 +24,7 @@ export class Navigation extends Component {
 
                         <NavItem href="/theswipe">The Swipe</NavItem>
                                 <NavItem href="/map">Jokukartta</NavItem>
+                                <NavItem href="/choices">Valitut haasteet</NavItem>
                                 <NavItem href="/loggedout">Kirjaudu ulos</NavItem>
                     </Nav>) : (
                     <Nav pullRight>

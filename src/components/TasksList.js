@@ -6,6 +6,8 @@ class TasksList extends Component {
     constructor(props) {
         super(props);
         this.state = {tasks: []};
+        console.log("Propsit tulee!!!!");
+        console.log(this.props.user);
     }
 
     componentDidMount() {
@@ -23,7 +25,7 @@ class TasksList extends Component {
     };
 
     render() {
-        //
+
         var tasks = this.state.tasks.map(function (task) {
             return (
                     <details key={task.id}>
@@ -38,7 +40,7 @@ class TasksList extends Component {
         return (
             <div>
                 {tasks}
-                <Buttons/>
+                <Buttons userid={this.props.user}/>
             </div>
 
         )

@@ -16,9 +16,7 @@ class SignUpContainer extends Component {
         event.preventDefault();
         const { email, password } = event.target.elements;
         try {
-            const user = await app
-                .auth()
-                .createUserWithEmailAndPassword(email.value, password.value);
+            app.auth().createUserWithEmailAndPassword(email.value, password.value);
             this.props.history.push("/");
         } catch (error) {
             alert(error);

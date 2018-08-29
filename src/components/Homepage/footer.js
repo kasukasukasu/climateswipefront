@@ -1,15 +1,15 @@
 import React from "react";
 const socialSites = [
   {
-    link: "https://twitter.com/cincinnaticodes",
+    link: "https://twitter.com/",
     icon: "icon-social-facebook"
   },
   {
-    link: "https://twitter.com/cincinnaticodes",
+    link: "https://twitter.com/",
     icon: "icon-social-twitter"
   },
   {
-    link: "https://github.com/cincinnaticodes",
+    link: "https://github.com/",
     icon: "icon-social-github"
   }
 ];
