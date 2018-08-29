@@ -16,6 +16,7 @@ import SignUp from './components/SignUp';
 import LoggedOut from './components/LoggedOut';
 import TasksList from './components/TasksList';
 import TheSwipe from './Sandbox/Swiping/TheSwipe';
+import {findUser, createUser} from "./RestFunctions";
 
 
 class App extends Component {
@@ -25,11 +26,15 @@ class App extends Component {
     componentWillMount() {
         app.auth().onAuthStateChanged(user => {
             if (user) {
+                var userid = user.uid;
+                console.log(user.uid);
                 this.setState({
                     authenticated: true,
                     currentUser: user,
                     loading: false
                 });
+                createUser(userid)
+
             } else {
                 this.setState({
                     authenticated: false,
