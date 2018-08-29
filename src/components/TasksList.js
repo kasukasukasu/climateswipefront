@@ -31,7 +31,7 @@ class TasksList extends Component {
                         <p>{task.content2}</p>
                         <p>{task.rating}</p>
                     </details>
-                
+
             );
         });
         // var props = this.props;
