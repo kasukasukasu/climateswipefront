@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import {fetchall} from "../RestFunctions"
+import Buttons from "./SwipeButtons";
 
 class TasksList extends Component {
     constructor(props) {
         super(props);
-        this.state = {tasks: [], check: false};
+        this.state = {tasks: []};
     }
 
     componentDidMount() {
@@ -26,18 +27,19 @@ class TasksList extends Component {
         var tasks = this.state.tasks.map(function (task) {
             return (
                     <details>
+                    <details key={task.id}>
                         <summary>{task.title}</summary>
                         <p>{task.content1}</p>
                         <p>{task.content2}</p>
                         <p>{task.rating}</p>
                     </details>
-
             );
         });
         // var props = this.props;
         return (
             <div>
                 {tasks}
+                <Buttons/>
             </div>
 
         )
