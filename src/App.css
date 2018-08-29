@@ -8,14 +8,15 @@
 }
 
 .App-header {
-  background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: darkolivegreen;
+  text-align: center;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 4.0em;
+  font-family: 'Delius Unicase', cursive;
 }
 
 .App-intro {

@@ -3,7 +3,7 @@
 // Firebasen autentifikaatio moduuli hoitaa loginin ja kirjautumisen ja React-router hoitaa reitiyksen hallinnoinnin
 
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 // import PrivateRoute from "./PrivateRoute";
 import app from "./base";
@@ -23,6 +23,7 @@ import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
 import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
+import NotChosen from "./components/NotChosenTasks";
 
 
 class App extends Component {
@@ -67,20 +68,24 @@ class App extends Component {
         return (
             <Router>
                 <div>
+                    <div>
+                    <header className="App-header">
+                        <h1 className="App-title">CLIMATESWIPE</h1>
+                    </header>
+                    </div>
                     <Navigation state={this.state} />
                     {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                     <Route exact path="/" component={Header} />
                     <Route exact path="/" component={AboutSection} />
                     <Route exact path="/" component={WhoWeAre} />
-                    <Switch>
                     <Route exact path="/login" component={LogIn} />
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
                     <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser}/>}/>
+                    <Route path="/notchosentasks" render={() => <NotChosen user={this.state.currentUser}/>}/>
                     {/*<Route path="/theswipe" component={TheSwipe}/>*/}
                     <Route path="/map" component={MapSection} />
-                    </Switch>
                     <FooterSection />
                 </div>
             </Router>
