@@ -34,7 +34,7 @@ class ChoicesList extends Component {
 
     render() {
         console.log('moroo4', this.state.relations);
-        var relations = this.state.relations.filter(addToList => {return addToList.choice==='1' && addToList.user.uid===this.props.user}).map(function (choice) {
+        var relations = this.state.relations.filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user}).map(function (choice) {
             console.log('moroo5', choice);
             return (
                 <ExpansionPanel>

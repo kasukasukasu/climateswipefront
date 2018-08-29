@@ -77,7 +77,8 @@ class App extends Component {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
-                    <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser}/>}/>
+                    <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
+                    <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                     {/*<Route path="/theswipe" component={TheSwipe}/>*/}
                     <Route path="/map" component={MapSection} />
                     </Switch>
