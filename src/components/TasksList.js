@@ -21,6 +21,7 @@ class TasksList extends Component {
         console.log(this.state.tasks);
     };
 
+
     render() {
         //
         var tasks = this.state.tasks.map(function (task) {
