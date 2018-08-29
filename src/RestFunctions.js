@@ -1,5 +1,8 @@
+const tasksurl = '/tasks';
+
+
 export function fetchall(callback) {
-    fetch('http://localhost:8080/tasks', {accept: 'application/json'})
+    fetch(tasksurl, {accept: 'application/json'})
         .then(function(response) {
             response.json().then(function(json) {
                 if (response.status >= 500)
