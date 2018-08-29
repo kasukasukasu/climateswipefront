@@ -26,7 +26,6 @@ class TasksList extends Component {
 
         var tasks = this.state.tasks.map(function (task) {
             return (
-                    <details>
                     <details key={task.id}>
                         <summary>{task.title}</summary>
                         <p>{task.content1}</p>
@@ -35,7 +34,7 @@ class TasksList extends Component {
                     </details>
             );
         });
-        // var props = this.props;
+
         return (
             <div>
                 {tasks}

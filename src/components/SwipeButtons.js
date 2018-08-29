@@ -4,9 +4,9 @@ import '../App.css';
 
 
 export class Buttons extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     handleClick(id, choice, e) {
         e.preventDefault();
@@ -19,8 +19,8 @@ export class Buttons extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.handleClick.bind(this, "hwgy7QO6zGdz4bMuhsO0Cm8qhwz2", "1")}> Lisää listaan! </button>
-                <button onClick={this.handleClick.bind(this, "hwgy7QO6zGdz4bMuhsO0Cm8qhwz2", "0" )}> Ehkä joskus myöhemmin... </button>
+                <button onClick={this.handleClick.bind(this, "EOukqsHJwsgodzgrSzbu8XpYPWa2", "1")}> Lisää listaan! </button>
+                <button onClick={this.handleClick.bind(this, "EOukqsHJwsgodzgrSzbu8XpYPWa2", "0" )}> Ehkä joskus myöhemmin... </button>
             </div>
         )
     }
