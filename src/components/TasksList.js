@@ -6,6 +6,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import "./ExpanPanel.css";
 
 
 class TasksList extends Component {
@@ -34,12 +35,12 @@ class TasksList extends Component {
 
         var tasks = this.state.tasks.map(function (task) {
             return (
-                <ExpansionPanel>
+                <ExpansionPanel key = {task.id}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography key = {task.id}>{task.title}</Typography>
+                        <Typography variant="display1">{task.title}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                        <Typography>
+                        <Typography variant="headline">
                             {task.content1}<br/>
 
                             {task.content2}<br/>

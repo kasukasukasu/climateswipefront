@@ -5,6 +5,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import "./ExpanPanel.css";
 
 // this.props.user
 
@@ -37,15 +38,15 @@ class ChoicesList extends Component {
         var relations = this.state.relations.filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user}).map(function (choice) {
             console.log('moroo5', choice);
             return (
-                <ExpansionPanel>
+                <ExpansionPanel key = {choice.id}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography key = {choice.task.id}>{choice.task.title}</Typography>
+                        <Typography variant="display1">{choice.task.title}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
-                        <Typography>
-                            {choice.task.content1}<br/>
+                        <Typography variant="headline">
+                            {choice.task.content1}<br/><hr/>
 
-                            {choice.task.content2}<br/>
+                            {choice.task.content2}<br/><hr/>
 
                             {choice.task.rating}<br/>
                         </Typography>

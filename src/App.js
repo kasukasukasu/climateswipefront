@@ -23,6 +23,7 @@ import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
 import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
+import {Grid} from "react-bootstrap";
 
 
 class App extends Component {
@@ -54,13 +55,13 @@ class App extends Component {
 
     render() {
         // const { authenticated, loading } = this.state;
-        const { loading } = this.state;
+        // const { loading } = this.state;
 
         // renderöinti, kun haetaan autentikaatiota näytetään viestiä sivua ladataan
 
-        if (loading) {
-            return <p>Tietoja ladataan...</p>;
-        }
+        // if (loading) {
+        //     return <p>Tietoja ladataan...</p>;
+        // }
 
         // sitten renderöitään reitit
         // oteaan privateroute käyttöön, jos halutaan määritellä sivut, joille pääsee vain kirjautunut käyttäjä
@@ -68,20 +69,24 @@ class App extends Component {
             <Router>
                 <div>
                     <Navigation state={this.state} />
-                    {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
-                    <Route exact path="/" component={Header} />
-                    <Route exact path="/" component={AboutSection} />
-                    <Route exact path="/" component={WhoWeAre} />
-                    <Switch>
-                    <Route exact path="/login" component={LogIn} />
-                    <Route exact path="/signup" component={SignUp} />
-                    <Route exact path="/loggedout" component={LoggedOut}/>
-                    <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
-                    <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
-                    <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
-                    {/*<Route path="/theswipe" component={TheSwipe}/>*/}
-                    <Route path="/map" component={MapSection} />
-                    </Switch>
+
+                            {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
+                            <Route exact path="/" component={Header} />
+                            <Route exact path="/" component={AboutSection} />
+                            <Route exact path="/" component={WhoWeAre} />
+                    <Grid>
+                        <Switch>
+                            <Route exact path="/login" component={LogIn} />
+                            <Route exact path="/signup" component={SignUp} />
+                            <Route exact path="/loggedout" component={LoggedOut}/>
+                            <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
+                            <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
+                            <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
+                            {/*<Route path="/theswipe" component={TheSwipe}/>*/}
+                            <Route path="/map" component={MapSection} />
+                        </Switch>
+                    </Grid>
+                    <hr/>
                     <FooterSection />
                 </div>
             </Router>
