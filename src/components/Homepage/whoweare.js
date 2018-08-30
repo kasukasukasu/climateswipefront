@@ -5,7 +5,7 @@ const ServicesOffered = [
     title: "Johanna", description: "Oma esittely"
   },
   {
-    title: "Anniina", description: "Oma esittely"
+    title: "Annina", description: "Oma esittely"
   },
   {
     title: "Kaarina", description: "Oma esittely"

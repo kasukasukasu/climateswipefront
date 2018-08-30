@@ -13,8 +13,8 @@ import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
-// import TheSwipe from './Sandbox/Swiping/TheSwipe';
-import UserChoices from './components/ChoicesList';
+import TheSwipe from './components/TheSwipe';
+import ChoicesList from './components/ChoicesList';
 import {createUser} from "./RestFunctions";
 
 import "./scss/stylish-portfolio.css";
@@ -23,6 +23,7 @@ import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
 import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
+import LajitteluBotti from "./components/LajitteluBotti";
 
 
 class App extends Component {
@@ -76,9 +77,10 @@ class App extends Component {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" component={TasksList}/>
-                    <Route path="/choices" component={UserChoices}/>
-                    {/*<Route path="/theswipe" component={TheSwipe}/>*/}
+                    <Route path="/choices" component={ChoicesList}/>
+                    <Route path="/theswipe" component={TheSwipe}/>
                     <Route path="/map" component={MapSection} />
+                    <Route path="/botti" component={LajitteluBotti} />
                     <FooterSection />
                 </div>
             </Router>

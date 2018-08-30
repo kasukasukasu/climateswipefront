@@ -16,20 +16,18 @@ export class Navigation extends Component {
                     </Navbar.Brand>
                     <Navbar.Toggle/>
                 </Navbar.Header>
-                <Navbar.Collapse>
-                        {this.props.state.authenticated ? (
-                            <Nav>
-                        <NavItem href="/taskslist">Ilmastoteot</NavItem>
-
-
-                        <NavItem href="/theswipe">The Swipe</NavItem>
-                                <NavItem href="/map">Jokukartta</NavItem>
-                                <NavItem href="/choices">Valitut haasteet</NavItem>
-                                <NavItem href="/loggedout">Kirjaudu ulos</NavItem>
+                <Navbar.Collapse>{this.props.state.authenticated ? (<Nav>
+                    <NavItem href="/theswipe">The Swipe</NavItem>
+                    <NavItem href="/map">Jokukartta</NavItem>
+                    <NavItem href="/botti">LajitteluBotti</NavItem>
+                    <NavItem href="/choices">Valitut haasteet</NavItem>
+                    <NavItem href="/loggedout">Kirjaudu ulos</NavItem>
                     </Nav>) : (
                     <Nav pullRight>
+                        <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         <NavItem href="/login">Sisäänkirjautuminen</NavItem>
                         <NavItem href="/signup">Rekisteröityminen</NavItem>
+
                     </Nav>        )}
                 </Navbar.Collapse>
             </Navbar>

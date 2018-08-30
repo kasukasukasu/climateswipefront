@@ -28,7 +28,7 @@ class ChoicesList extends Component {
 
     render() {
         console.log('moroo4', this.state.relations);
-        var relations = this.state.relations.filter(eikayttoon => {return eikayttoon.choice==='1'}).map(function (choice) {
+        var relations = this.state.relations.filter(addToList => {return addToList.choice==='1'}).map(function (choice) {
             console.log('moroo5', choice);
             return (
                 <div key={choice.task.id}>
