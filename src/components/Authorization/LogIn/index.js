@@ -1,24 +1,24 @@
 import React, { Component } from "react";
-import SignUpView from "./SignUpView";
+import LogInView from "./LogInView";
 import { withRouter } from "react-router";
-import app from "../../base";
+import app from "../../../base";
 
 
-// luodaan rekisteröitymiscontainer komponentti index failiin
+// luodaan kirjautumisscontainer komponentti index failiin
 
-class SignUpContainer extends Component {
+
+class LogInContainer extends Component {
 
     // handleSignup funktio määritelty nuolifunktioksi, tehtiin tässä, jotta ei tarvitse käyttää bind(this)
     // Tässä funktiossa preventDefault jotta vältetään sivun reloadaamista
     // haetaan salasana ja sähköposti formielementiltä
-    // luodaan uusi käyttäjä firebaseen käyttäen  createUserWithEmailAndPassword funktiota
+    // luodaan uusi käyttäjä firebaseen käyttäen  signInWithEmailAndPassword funktiota
+
     handleSignUp = async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
         try {
-            const user = await app
-                .auth()
-                .createUserWithEmailAndPassword(email.value, password.value);
+              app.auth().signInWithEmailAndPassword(email.value, password.value);
             this.props.history.push("/");
         } catch (error) {
             alert(error);
@@ -26,8 +26,8 @@ class SignUpContainer extends Component {
     };
 
     render() {
-        return <SignUpView onSubmit={this.handleSignUp} />;
+        return <LogInView onSubmit={this.handleSignUp} />;
     }
 }
 
-export default withRouter(SignUpContainer);
+export default withRouter(LogInContainer);
