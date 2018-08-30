@@ -59,7 +59,7 @@ export function fetchAllRelations(callback) {
 
 
 // export function fetchTask(id, callback) {
-//     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
+//     fetch(tasksurl + "/" +  id, {accept: 'application/json'})
 //         .then(function(response) {
 //             response.json().then(function(json) {
 //                 if (response.status >= 500)

@@ -1,57 +1,59 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-// import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React, {Component} from "react";
+import {fetchall} from "../RestFunctions"
 
-const styles = {
-    card: {
-        maxWidth: 20,
-    },
-    media: {
-        // ⚠️ object-fit is not supported by IE11.
-        objectFit: 'cover',
-    },
-};
+class TheSwipe extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {tasks: []};
+    }
 
-function TheSwipe (props) {
-    // const { classes } = props;
-    return (
-        <Card className="container text-center my-auto">
-        {/*<Card className={classes.card}>*/}
-            <CardActionArea>
-                {/*<CardMedia*/}
-                    {/*component="img"*/}
-                    {/*className={classes.media}*/}
-                    {/*height="140"*/}
-                    {/*image="./scss/img/bg-callout.jpg"*/}
-                    {/*title="joku ilmastokuva"*/}
-                {/*/>*/}
+    componentDidMount() {
+        this.getAll();
+    }
 
-                <CardContent className="container text-center my-auto">
-                    <Typography gutterBottom variant="headline" component="h2">Päivä kasvissyöjänä</Typography>
-                    <Typography component="p"></Typography>
-                </CardContent>
-            </CardActionArea>
-            <CardActions className="container text-center my-auto">
-                <Button className="container text-center my-auto" size="small" color="primary">
-                    Jaa
-                </Button>
-                <Button className="container text-center my-auto" size="small" color="primary">
-                    Lisätietoja tästä haasteesta
-                </Button>
-            </CardActions>
-        </Card>
-    );
+    getAll() {
+        fetchall(this.allFetched)
+    }
+
+    allFetched = (data) => {
+        this.setState({tasks: data});
+        console.log(this.state.tasks);
+    };
+
+    render() {
+        var tasks = this.state.tasks.map(function (task) {
+            return (
+                <tr>
+                    <td>{task.title}</td>
+                    <td>{task.content1}</td>
+                    <td>{task.content2}</td>
+                    <td>{task.rating}</td>
+                </tr>
+            );
+        });
+        // var props = this.props;
+        return (
+            <div>
+                <h2>Kaikki ilmastoteot</h2>
+                <hr/>
+
+                <table className="allTasks">
+                    <thead>
+                    <tr>
+                        <th>Otsikko</th>
+                        <th>Sisältö 1</th>
+                        <th>Sisältö 2</th>
+                        <th>Vaikuttavuus</th>
+                    </tr>
+                    {tasks}
+                    </thead>
+                </table>
+            </div>
+
+        )
+
+    }
 }
 
-TheSwipe.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
+export default TheSwipe;
 
-export default withStyles(styles)(TheSwipe);
