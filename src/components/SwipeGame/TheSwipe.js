@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {fetchall, fetchTask, fetchTasksIds} from "../../RestFunctions";
+import {createRelation, fetchall,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 var shuffle = require('shuffle-array');
 
@@ -22,6 +22,8 @@ class TheSwipe extends Component {
         fetchall(this.allFetched)
     }
 
+
+
     //sets fetched tasks to this.state
     allFetched = (data) => {
         shuffle(data);
@@ -29,9 +31,15 @@ class TheSwipe extends Component {
         console.log(data);
     };
 
-    goToNext = () => {
+    goToNext = (user_id, task, choice) => {
         this.setState({index: (this.state.index + 1) % this.state.tasks.length});
+        console.log('The link was clicked.');
+        var data = ({choice: choice, user_id: user_id, task_id: task.id});
+        console.log(data);
+        console.log(task);
+        createRelation(data);
     };
+
 
     render() {
         const item = this.state.tasks[this.state.index];
@@ -39,7 +47,8 @@ class TheSwipe extends Component {
             return (
                 <div>
                     <SwipeMap item={this.state.tasks} index={this.state.index}/>
-                    <button onClick={this.goToNext}>next</button>
+                    <button onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
+                    <button onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
                 </div>
             );
         }
