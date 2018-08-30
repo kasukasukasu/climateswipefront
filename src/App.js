@@ -12,18 +12,9 @@ import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
-<<<<<<< HEAD
-import TheSwipe from './components/SwipeGame/TheSwipe';
-import ChoicesList from './components/ChoicesList';
-import {createUser} from "./RestFunctions";
-
-
-=======
-import TheSwipe2 from './components/SwipeGame/ActionCards';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoicesList';
->>>>>>> 96594fbf1c9ad99a31926828ac8f40cc34949d64
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import AboutSection from "./components/Homepage/about";

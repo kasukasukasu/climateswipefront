@@ -24,41 +24,8 @@
     background: rgba(204, 210, 198, 0.6);
 }
 
-.card-middle {
-    position: absolute;
-    top: 33px;
-    left: 0;
-    right: 0;
-    z-index:2;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E6E6E6;
-    margin: auto;
-    text-align:center;
-    width: 95%;
-    height: 450px;
-    background: #fafff2;
-
-}
-
-.card-bottom {
-    position: absolute;
-    top:66px;
-    left: 0;
-    right: 0;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #E6E6E6;
-    margin: auto;
-    text-align:center;
-    width: 90%;
-    height: 425px;
-    background: #FFFFFF;
-
-}
-
 .card-button {
-    position: absolute;
+    /*position: absolute;*/
     bottom: 20px;
     cursor: pointer;
     z-index: 4;
@@ -86,21 +53,29 @@
   text-align: center;
 
 }
+.buttons {
+    text-align: center;
+}
+
+.left {
+    text-align: center;
+}
 .pass {
+    /*position: center;*/
     background: #CC0005;
-    left: 50px;
-    display: inline-block;
+    /*left: 1000px;*/
+    /*display: inline-block;*/
 }
 
 .like {
     background: #0ACF00;
-    right: 50px;
-    display: inline-block;
+    /*right: 50px;*/
+    /*display: inline-block;*/
 }
 
 .name-header-card {
     font-family: 'Proxima Nova';
-    font-size: 22px;
+    font-size: 100px;
     text-align: left;
     margin-top: 10px;
     margin-left: 20px;
@@ -110,7 +85,7 @@
     font-family: 'Proxima Nova';
     font-color: #ffffff;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 20px;
     text-align: left;
     margin: 50px;
 

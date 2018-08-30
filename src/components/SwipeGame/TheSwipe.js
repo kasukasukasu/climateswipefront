@@ -1,7 +1,11 @@
 import React, {Component} from "react";
 import {createRelation, fetchall,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
+import './ActionCards.css';
+
+
 var shuffle = require('shuffle-array');
+
 
 class TheSwipe extends Component {
     constructor(props) {
@@ -47,8 +51,14 @@ class TheSwipe extends Component {
             return (
                 <div>
                     <SwipeMap item={this.state.tasks} index={this.state.index}/>
-                    <button onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
-                    <button onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
+                    <div className="buttons">
+                        <span className="left">
+                    <button className="card-button pass" onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
+                        </span>
+                        <span className="right">
+                    <button className="card-button like" onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
+                        </span>
+                    </div>
                 </div>
             );
         }
