@@ -1,17 +1,19 @@
 import React, {Component} from "react";
-import {fetchall} from "../RestFunctions"
+import {fetchall} from "../RestFunctions";
+var shuffle = require('shuffle-array');
 
 class TheSwipe extends Component {
     constructor(props) {
         super(props);
         this.state = {
             id: '',
-            tasks: [props]
-        };
+            tasks: []
+        }
     }
 
     componentDidMount() {
         this.getAll();
+        console.log();
     }
 
     getAll() {
@@ -20,78 +22,42 @@ class TheSwipe extends Component {
 
     allFetched = (data) => {
         this.setState({tasks: data});
+        console.log(data);
     };
 
-    goToNext = () => {
-        this.setState({id: (this.state.id + 1) % this.state.tasks.length});
-        console.log("Haloo" + this.state.id);
-    };
-
-    removeTask = (id) => {
+    removeTask = (task) => {
+        console.log(task + " tämä id postettiin");
         this.state.tasks
-            .filter(function (removeid) {
-                return removeid.id !== id
+            .filter(function (removedOne) {
+                return removedOne.task !== task
            });
         this.setState(this.state);
-        console.log(id + " tämä id postettiin");
+        this.setState({id: (this.state.tasks.id + 1) % this.state.tasks.length});
     };
 
     render() {
-        var shuffle = require('shuffle-array');
         var shuffledArray = shuffle(this.state.tasks);
-        console.log("Taskilistan pituus on = " + this.state.tasks.length);
+        console.log("Taskilistan pituus on = " + shuffledArray.length);
         var tasks = shuffledArray
-            .filter(function (tasks) {
-                return (tasks.length - (tasks.length - 1));
-            })
-            .map(function(tasks) {
+            .map(function (tasks) {
                 return (
-                <details>
-                    <summary>{tasks.title}</summary>
+                <div key={tasks.id}>
+                    <p>{tasks.title}</p>
                     <p>{tasks.content1}</p>
                     <p>{tasks.content2}</p>
                     <p>{tasks.rating}</p>
-                </details>
+                </div>
             );
         });
 
         return (
             <div>
                 {tasks}
-                <button onClick={this.goToNext && this.removeTask}>Seuraava</button>
+                <button onClick={this.removeTask}>Seuraava</button>
             </div>
-        )
+        );
     }
 }
-
-
-
-
-//     render() {
-//
-//         const item = this.state.tasks;
-//         console.log(item);
-//
-//
-//
-//
-//
-//
-//         return (
-//             <div>
-//                 <details>
-//                 <summary>{item.title}</summary>
-//                 <p>{item.content1}</p>
-//                 <p>{item.content2}</p>
-//                 <p>{item.rating}</p>
-//                 </details>
-//
-//             </div>
-//         );
-//     }
-// }
-
-// && this.removeTask
 
 export default TheSwipe;
 

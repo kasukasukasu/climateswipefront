@@ -12,6 +12,19 @@ export function fetchall(callback) {
         });
 }
 
+export function fetchallchoices(callback) {
+    fetch(url + "relations", {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+            console.log('löytyy relations tiedot');
+        });
+}
+
 
 export function createUser(id) {
     var user = '{"uid": "' + id + '"}';
@@ -21,6 +34,28 @@ export function createUser(id) {
         body: user}
     );
 }
+
+export function createRelation(data) {
+    var relation = '{"choice": "' + data.choice + '", "user": {"uid": "' + data.user_id + '"}, "task": {"id": ' + data.task_id + '}}';
+    fetch(url + "relations",  {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: relation}
+    );
+}
+
+// export function trueChoice (id) {
+//     console.log("klikattutrue");
+//     var data = ({choice: '1', user_id: id, task_id: 1});
+//     createRelation(data)
+//
+// }
+//
+// export function falseChoice(id) {
+//     console.log("klikattufalse");
+//     var data = ({choice: '0', user_id: id, task_id: 1});
+//     createRelation(data)
+// }
 
 // export function fetchTask(id, callback) {
 //     fetch(tasksurl + "/" +  id, {accept: 'application/json'})

@@ -5,10 +5,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import PrivateRoute from "./PrivateRoute";
+// import PrivateRoute from "./PrivateRoute";
 import app from "./base";
 
-import Home from "./components/Home";
 import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
@@ -17,6 +16,7 @@ import TasksList from './components/TasksList';
 
 import TheSwipe from './components/TheSwipe';
 import {findUser, createUser} from "./RestFunctions";
+import UserChoices from './components/ChoicesList';
 
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
@@ -54,7 +54,8 @@ class App extends Component {
 
 
     render() {
-        const { authenticated, loading } = this.state;
+        // const { authenticated, loading } = this.state;
+        const { loading } = this.state;
 
         // renderöinti, kun haetaan autentikaatiota näytetään viestiä sivua ladataan
 
@@ -76,6 +77,7 @@ class App extends Component {
                     <Route exact path="/signup" component={SignUp} />
                     <Route exact path="/loggedout" component={LoggedOut}/>
                     <Route path="/taskslist" component={TasksList}/>
+                    <Route path="/choices" component={UserChoices}/>
                     <Route path="/theswipe" component={TheSwipe}/>
                     <Route path="/map" component={MapSection} />
                     <FooterSection />
