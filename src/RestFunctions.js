@@ -7,6 +7,7 @@ export function fetchall(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
+                    console.log(json);
                     callback(json);
             });
         });
@@ -35,6 +36,7 @@ export function createUser(id) {
     );
 }
 
+
 export function createRelation(data) {
     var relation = '{"choice": "' + data.choice + '", "user": {"uid": "' + data.user_id + '"}, "task": {"id": ' + data.task_id + '}}';
     fetch(url + "relations",  {
@@ -44,31 +46,44 @@ export function createRelation(data) {
     );
 }
 
-// export function trueChoice (id) {
-//     console.log("klikattutrue");
-//     var data = ({choice: '1', user_id: id, task_id: 1});
-//     createRelation(data)
-//
-// }
-//
-// export function falseChoice(id) {
-//     console.log("klikattufalse");
-//     var data = ({choice: '0', user_id: id, task_id: 1});
-//     createRelation(data)
-// }
 
-// export function fetchTask(id, callback) {
-//     fetch(tasksurl + "/" +  id, {accept: 'application/json'})
-//         .then(function(response) {
-//             response.json().then(function(json) {
-//                 if (response.status >= 500)
-//                     callback(json, response.status);
-//                 else
-//                     callback(json);
-//             });
-//         });
-// }
-//
+export function fetchAllRelations(callback) {
+    fetch(url + "relations", {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
+
+
+export function fetchTask(id, callback) {
+    fetch(url + "tasks/" + id, {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
+
+export function fetchTasksIds(callback) {
+    fetch(url + "tasks/allids" , {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
+
 // //tää ei vissii toimi
 // export function deleteTasks(id/*, callback*/) {
 //     return fetch(apiurli+'tasks/'+id, {method: 'DELETE'})
