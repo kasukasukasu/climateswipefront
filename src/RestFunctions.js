@@ -44,18 +44,19 @@ export function createRelation(data) {
     );
 }
 
-// export function trueChoice (id) {
-//     console.log("klikattutrue");
-//     var data = ({choice: '1', user_id: id, task_id: 1});
-//     createRelation(data)
-//
-// }
-//
-// export function falseChoice(id) {
-//     console.log("klikattufalse");
-//     var data = ({choice: '0', user_id: id, task_id: 1});
-//     createRelation(data)
-// }
+
+export function fetchAllRelations(callback) {
+    fetch(url + "relations", {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
+
 
 // export function fetchTask(id, callback) {
 //     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
