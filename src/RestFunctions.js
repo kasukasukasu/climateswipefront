@@ -44,6 +44,7 @@ export function createRelation(data) {
     );
 }
 
+
 export function fetchAllRelations(callback) {
     fetch(url + "relations", {accept: 'application/json'})
         .then(function(response) {
@@ -55,6 +56,7 @@ export function fetchAllRelations(callback) {
             });
         });
 }
+
 
 // export function fetchTask(id, callback) {
 //     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})

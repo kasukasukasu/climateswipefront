@@ -20,8 +20,7 @@ export class Navigation extends Component {
                     <Nav pullLeft>
                         <NavItem href="/">Etusivu</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
-
-
+                        <NavItem href="/botti">LajitteluBotti</NavItem>
                         <NavItem href="/theswipe">The Swipe</NavItem>
                         <NavItem href="/map">Jokukartta</NavItem>
                     </Nav>

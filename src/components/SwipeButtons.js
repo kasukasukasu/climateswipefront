@@ -4,6 +4,7 @@ import '../App.css';
 
 
 export class Buttons extends Component {
+
     handleClick(id, choice, e) {
         e.preventDefault();
         console.log('The link was clicked.');

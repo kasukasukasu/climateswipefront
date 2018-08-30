@@ -13,7 +13,7 @@ import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
-// import TheSwipe from './Sandbox/Swiping/TheSwipe';
+import TheSwipe from './components/TheSwipe';
 import ChoicesList from './components/ChoicesList';
 import {createUser} from "./RestFunctions";
 
@@ -23,6 +23,7 @@ import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
 import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
+import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
 
 
@@ -69,7 +70,6 @@ class App extends Component {
             <Router>
                 <div>
                     <Navigation state={this.state} />
-
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                             <Route exact path="/" component={Header} />
                             <Route exact path="/" component={AboutSection} />
@@ -82,7 +82,8 @@ class App extends Component {
                             <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
-                            {/*<Route path="/theswipe" component={TheSwipe}/>*/}
+                            <Route path="/theswipe" component={TheSwipe}/>
+                            <Route path="/botti" component={LajitteluBotti} />
                             <Route path="/map" component={MapSection} />
                         </Switch>
                     </Grid>
