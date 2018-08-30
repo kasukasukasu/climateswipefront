@@ -23,7 +23,6 @@ export class Navigation extends Component {
                         <NavItem href="/botti">LajitteluBotti</NavItem>
                         <NavItem href="/theswipe">The Swipe</NavItem>
                         <NavItem href="/theswipe2">The Swipe Two</NavItem>
-                        <NavItem href="/map">Jokukartta</NavItem>
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}
                     {this.props.state.authenticated ? (

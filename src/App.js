@@ -7,22 +7,19 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import PrivateRoute from "./PrivateRoute";
 import app from "./base";
-
 import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
-import TheSwipe from './components/TheSwipe';
-import TheSwipe2 from './components/ActionCards';
-import ChoicesList from './components/ChoicesList';
+import TheSwipe2 from './components/SwipeGame/ActionCards';
 import {createUser} from "./RestFunctions";
-
+import TheSwipe from './components/SwipeGame/TheSwipe';
+import ChoicesList from './components/ChoicesList';
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
-import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
@@ -86,7 +83,6 @@ class App extends Component {
                             <Route path="/theswipe" component={TheSwipe}/>
                             <Route path="/theswipe2" component={TheSwipe2}/>
                             <Route path="/botti" component={LajitteluBotti} />
-                            <Route path="/map" component={MapSection} />
                         </Switch>
                     </Grid>
                     <hr/>

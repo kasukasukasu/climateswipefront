@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import {fetchall} from "../RestFunctions"
-import Buttons from "./SwipeButtons";
+import Buttons from "./SwipeGame/SwipeButtons";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -31,6 +31,7 @@ class TasksList extends Component {
         this.setState({tasks: data});
         console.log(this.state.tasks);
     };
+
 
     render() {
 

@@ -7,6 +7,7 @@ export function fetchall(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
+                    console.log(json);
                     callback(json);
             });
         });
@@ -34,6 +35,7 @@ export function createUser(id) {
         body: user}
     );
 }
+
 
 export function createRelation(data) {
     var relation = '{"choice": "' + data.choice + '", "user": {"uid": "' + data.user_id + '"}, "task": {"id": ' + data.task_id + '}}';
@@ -81,18 +83,6 @@ export function fetchTasksIds(callback) {
         });
 }
 
-// export function fetchTask(id, callback) {
-//     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})
-//         .then(function(response) {
-//             response.json().then(function(json) {
-//                 if (response.status >= 500)
-//                     callback(json, response.status);
-//                 else
-//                     callback(json);
-//             });
-//         });
-// }
-//
 // //tää ei vissii toimi
 // export function deleteTasks(id/*, callback*/) {
 //     return fetch(apiurli+'tasks/'+id, {method: 'DELETE'})

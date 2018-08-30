@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {createRelation} from "../RestFunctions";
-import '../App.css';
+import {createRelation} from "../../RestFunctions";
+import '../../App.css';
 
 
 export class Buttons extends Component {
