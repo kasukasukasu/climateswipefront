@@ -7,22 +7,27 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // import PrivateRoute from "./PrivateRoute";
 import app from "./base";
-
 import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TasksList';
+<<<<<<< HEAD
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoicesList';
 import {createUser} from "./RestFunctions";
 
 
+=======
+import TheSwipe2 from './components/SwipeGame/ActionCards';
+import {createUser} from "./RestFunctions";
+import TheSwipe from './components/SwipeGame/TheSwipe';
+import ChoicesList from './components/ChoicesList';
+>>>>>>> 96594fbf1c9ad99a31926828ac8f40cc34949d64
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
-import MapSection from "./components/map";
 import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
@@ -85,7 +90,6 @@ class App extends Component {
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/theswipe" render={() => <TheSwipe user={this.state.currentUser} />}/>
                             <Route path="/botti" component={LajitteluBotti} />
-                            <Route path="/map" component={MapSection} />
                         </Switch>
                     </Grid>
                     <hr/>

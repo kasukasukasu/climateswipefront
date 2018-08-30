@@ -59,7 +59,6 @@ export function fetchAllRelations(callback) {
         });
 }
 
-
 export function fetchTask(id, callback) {
     fetch(url + "tasks/" + id, {accept: 'application/json'})
         .then(function(response) {
