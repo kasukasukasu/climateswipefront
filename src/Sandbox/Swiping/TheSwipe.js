@@ -3,7 +3,7 @@
 // import Swiper from './Swiper';
 //
 //
-// class TheSwipe extends Component {
+// class ActionCards extends Component {
 //     constructor(props) {
 //         super(props);
 //
@@ -125,7 +125,7 @@
 //     render() {
 //         return (
 //             <li
-//                 className="TheSwipe"
+//                 className="ActionCards"
 //                 style={{height: this.state.height + 'px', transition: 'height 250ms ease-in-out'}}
 //                 onTouchStart={touchStartEvent => this.handleTouchStart(touchStartEvent)}
 //                 onTouchMove={touchMoveEvent => this.handleTouchMove(touchMoveEvent)}
@@ -137,7 +137,7 @@
 //                 onMouseLeave={() => this.handleMouseLeave()}
 //             >
 //                 <div
-//                     className="TheSwipe-content"
+//                     className="ActionCards-content"
 //                     style={{left: this.state.left + 'px'}}
 //                 >
 //                     {this.props.children}
@@ -148,9 +148,9 @@
 // }
 //
 //
-// export default TheSwipe;
+// export default ActionCards;
 //
-// // class TheSwipe extends Component {
+// // class ActionCards extends Component {
 // //     onSwipeStart(event) {
 // //         console.log('Start swiping...', event);
 // //     }
@@ -186,4 +186,4 @@
 // //     }
 // // }
 // //
-// // export default TheSwipe;
+// // export default ActionCards;

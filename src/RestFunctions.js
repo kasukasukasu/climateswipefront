@@ -57,6 +57,29 @@ export function fetchAllRelations(callback) {
         });
 }
 
+export function fetchTask(id, callback) {
+    fetch(url + "tasks/" + id, {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
+
+export function fetchTasksIds(callback) {
+    fetch(url + "tasks/allids" , {accept: 'application/json'})
+        .then(function(response) {
+            response.json().then(function(json) {
+                if (response.status >= 500)
+                    callback(json, response.status);
+                else
+                    callback(json);
+            });
+        });
+}
 
 // export function fetchTask(id, callback) {
 //     fetch(apiurli+'tasks/'+id, {accept: 'application/json'})

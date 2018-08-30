@@ -6,7 +6,7 @@ const SignUpView = ({ onSubmit }) => {
 
     // saadaan onSubmit handleri propsina ja liitetään se formiin, tehdään myös paikat s-postille ja salasanalle
     return (
-        <div>
+        <div className="container text-center my-auto">
             <h1>Rekisteröidy</h1>
             <form onSubmit={onSubmit}>
                 <label>Sähköposti<input style={{ width: "100%" }} name="email" type="email" placeholder="Sähköposti"/></label>

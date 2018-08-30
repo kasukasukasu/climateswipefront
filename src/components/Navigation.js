@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 
@@ -10,18 +10,19 @@ export class Navigation extends Component {
     render() {
         return (
             <Navbar staticTop>
-                {/*<Navbar.Header>*/}
-                    {/*<Navbar.Brand>*/}
-                        {/*<Link to="/">ClimateSwipe</Link>*/}
-                    {/*</Navbar.Brand>*/}
-                    {/*<Navbar.Toggle/>*/}
-                {/*</Navbar.Header>*/}
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <Link to="/">ClimateSwipe</Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle/>
+                </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullLeft>
                         <NavItem href="/">Etusivu</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         <NavItem href="/botti">LajitteluBotti</NavItem>
                         <NavItem href="/theswipe">The Swipe</NavItem>
+                        <NavItem href="/theswipe2">The Swipe Two</NavItem>
                         <NavItem href="/map">Jokukartta</NavItem>
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}

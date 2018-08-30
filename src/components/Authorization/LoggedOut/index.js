@@ -17,7 +17,7 @@ handleLogOut= async event => {
 }
 
     render() {
-        return <SignedOutView onSubmit={this.handleLogOut()} />;
+        return <SignedOutView  onSubmit={this.handleLogOut()}  />;
     }
 }
 

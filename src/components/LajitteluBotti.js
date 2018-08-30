@@ -3,7 +3,7 @@ import React from "react";
 const LajitteluBotti = () => (
     <div>
         <h1>En tiedä pitäisikö tämä olla englanniksi? How to sort in Finland?</h1>
-        <iframe key="botti" className="container text-center my-auto"
+        <iframe title="botti" className="container text-center my-auto"
                 allow="microphone;"
                 width="350"
                 height="430"

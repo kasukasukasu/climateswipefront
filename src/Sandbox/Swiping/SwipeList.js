@@ -34,9 +34,9 @@
 //         return (
 //             <ul className="swipeList">
 //                 {Object.keys(this.state.items).map(itemKey =>
-//                     <TheSwipe key={`TheSwipe-${itemKey}`} onRemoval={() => this.removeItem(itemKey)}>
+//                     <ActionCards key={`ActionCards-${itemKey}`} onRemoval={() => this.removeItem(itemKey)}>
 //                         <img src={this.state.items[itemKey]}/>
-//                     </TheSwipe>
+//                     </ActionCards>
 //                 )}
 //                 <button
 //                     className="swipeList-addButton"
