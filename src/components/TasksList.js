@@ -1,3 +1,4 @@
+
 import React, {Component} from "react";
 import {fetchall} from "../RestFunctions"
 import Buttons from "./SwipeButtons";
@@ -63,4 +64,3 @@ class TasksList extends Component {
 }
 
 export default TasksList;
-
