@@ -81,20 +81,26 @@ class TheSwipe extends Component {
     render() {
         const item = this.state.tasks[this.state.index];
         console.log(this.props);
+        if (this.state.index +2 === this.state.tasks.length +1) {
+            return <p>Tyhjääää</p>
+        } else {
             return (
                 <div>
                     <SwipeMap item={this.state.tasks} index={this.state.index}/>
                     <div className="buttons">
                         <span className="left">
-                    <button className="card-button pass" onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
+                    <button className="card-button pass"
+                            onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
                         </span>
                         <span className="right">
-                    <button className="card-button like" onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
+                    <button className="card-button like"
+                            onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
                         </span>
                     </div>
                 </div>
             );
         }
+    }
 }
 
 export default TheSwipe;
