@@ -18,10 +18,11 @@ export class Navigation extends Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullLeft>
-                        <NavItem href="/">Etusivu</NavItem>
+                        {/*<NavItem href="/">Etusivu</NavItem>*/}
+                        <NavItem href="/theswipe">The Swipe</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         <NavItem href="/botti">LajitteluBotti</NavItem>
-                        <NavItem href="/theswipe">The Swipe</NavItem>
+                        {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}
                     {this.props.state.authenticated ? (
