@@ -83,8 +83,10 @@ class App extends Component {
                             <Route path="/botti" component={LajitteluBotti} />
                         </Switch>
                     </Grid>
-                    <hr/>
+                    {/*<hr/>*/}
+                    <div>
                     <FooterSection />
+                    </div>
                 </div>
             </Router>
         );

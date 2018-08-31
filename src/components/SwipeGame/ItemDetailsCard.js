@@ -10,6 +10,7 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './ActionCards.css'
+import {createRelation} from "../../RestFunctions";
 
 
 const styles = theme => ({
@@ -41,12 +42,21 @@ class ItemDetailsCard extends Component {
         this.setState(state => ({expanded: !state.expanded}));
     };
 
+    handleButtonClick(userid, taskid, choice, e) {
+        e.preventDefault();
+        this.props.goToNext();
+        console.log('The link was clicked.');
+        var data = ({choice: choice, user_id: userid, task_id: taskid});
+        console.log(data);
+        createRelation(data);
+    }
+
     render() {
         const {classes} = this.props;
         const task = this.props.item;
         return (
             <div className="stack-container">
-                <Card className={classes.card}>
+                <Card>
                     <CardContent>
                         <h1>{task.title}</h1>
                         <p>{task.content1}</p>
@@ -65,11 +75,20 @@ class ItemDetailsCard extends Component {
                     </CardActions>
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                         <CardContent>
+                            <p className="cardContentHeader">Lisätietoja: </p>
                             <p>{task.content2}</p>
-                            <p>{task.rating}</p>
+                            <p className="cardContentHeader">Haasteen vaikuttavuus: </p>
+                            <p>-{task.rating} kg hiilidioksidipäästöjä vuodessa</p>
                         </CardContent>
                     </Collapse>
                 </Card>
+                <br/>
+                <div className="buttons">
+                <button className="card-button pass"
+                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0")}>Ei</button>
+                <button className="card-button like"
+                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
+                </div>
             </div>
         );
     }
