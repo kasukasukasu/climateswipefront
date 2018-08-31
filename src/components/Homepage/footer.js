@@ -26,7 +26,7 @@ const FooterSection = () => (
       {/*))}*/}
       {/*</ul>*/}
       <p className="text-muted small mb-0">
-        Copyright &copy; Your Website 2018
+        Copyright &copy; Johanna, Annina, Kaarina
       </p>
     </div>
   </footer>

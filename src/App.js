@@ -23,6 +23,8 @@ import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
 import earth from "./earth-outline-vector-clipart_10_1_50.png";
+import NewChallenge from './components/NewChallenge/NewChallenge';
+import DataSentAndMoreInfo from './components/NewChallenge/DataSentAndMoreInfo';
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -81,6 +83,8 @@ class App extends Component {
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/theswipe" render={() => <TheSwipe user={this.state.currentUser} />}/>
                             <Route path="/botti" component={LajitteluBotti} />
+                            <Route path="/newchallenge" component={NewChallenge} />
+                            <Route path="/lisatietoa" component={DataSentAndMoreInfo} />
                         </Switch>
                     </Grid>
                     <hr/>

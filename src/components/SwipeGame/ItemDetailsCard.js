@@ -46,6 +46,7 @@ class ItemDetailsCard extends Component {
         const task = this.props.item;
         return (
             <div className="stack-container">
+                <div className="container text-center my-auto">
                 <Card className={classes.card}>
                     <CardContent>
                         <h1>{task.title}</h1>
@@ -70,6 +71,7 @@ class ItemDetailsCard extends Component {
                         </CardContent>
                     </Collapse>
                 </Card>
+                </div>
             </div>
         );
     }

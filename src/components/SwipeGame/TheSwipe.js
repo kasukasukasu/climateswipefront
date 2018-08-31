@@ -3,7 +3,6 @@ import {createRelation, fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 import './ActionCards.css';
 
-
 var shuffle = require('shuffle-array');
 
 
@@ -13,7 +12,8 @@ class TheSwipe extends Component {
         this.state = {
             userid: this.props.user,
             tasks: [],
-            index: 0
+            index: 0,
+            open:false
         }
     }
 
@@ -50,7 +50,7 @@ class TheSwipe extends Component {
                 console.log("task:", task);
                 console.log(this.state);
                 console.log(relation.task.id, task.id, relation.user.uid, this.props.user);
-                if (relation.task.id == task.id && relation.user.uid == this.props.user) {
+                if (relation.task.id ===task.id && relation.user.uid === this.props.user) {
                     console.log("itkettää");
                     tasks.splice(1, 1);
                 }
@@ -79,15 +79,19 @@ class TheSwipe extends Component {
 
 
     render() {
-        const item = this.state.tasks[this.state.index];
+        // const item = this.state.tasks[this.state.index];
         console.log(this.props);
         if (this.state.index +2 === this.state.tasks.length +1) {
             return (
                 <div className="stack-container">
-                        <h1>Ei tällä hetkellä enempää haasteita,
-                            ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
-                    </div>
+                    <h1>Ei tällä hetkellä enempää haasteita,
+                        ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
+                    <a className="btn btn-primary btn-xl js-scroll-trigger" href="/newchallenge">
+                        Lisää uusi haaste ehdotus!
+                    </a>
+                </div>
             );
+
         } else {
             return (
                 <div>
