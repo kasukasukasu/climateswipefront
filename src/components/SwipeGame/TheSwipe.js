@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {createRelation, fetchall, fetchallchoices,} from "../../RestFunctions";
+import {fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 import './ActionCards.css';
 
@@ -70,11 +70,11 @@ class TheSwipe extends Component {
 
     goToNext = (user_id, task, choice) => {
         this.setState({index: (this.state.index + 1) % this.state.tasks.length});
-        console.log('The link was clicked.');
-        var data = ({choice: choice, user_id: user_id, task_id: task.id});
-        console.log(data);
-        console.log(task);
-        createRelation(data);
+        // console.log('The link was clicked.');
+        // var data = ({choice: choice, user_id: user_id, task_id: task.id});
+        // console.log(data);
+        // console.log(task);
+        // createRelation(data);
     };
 
 
@@ -84,17 +84,13 @@ class TheSwipe extends Component {
         if (this.state.index + 1 !== this.state.tasks.length) {
             return (
                 <div>
-                    <SwipeMap item={this.state.tasks} index={this.state.index}/>
-                    <div className="buttons">
-                        <span className="left">
-                    <button className="card-button pass"
-                            onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>
-                        </span>
-                        <span className="right">
-                    <button className="card-button like"
-                            onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>
-                        </span>
-                    </div>
+                    <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user} goToNext={this.goToNext.bind(this)}/>
+                    {/*<div className="buttons">*/}
+                    {/*<button className="card-button pass"*/}
+                            {/*onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "0")}>Ei</button>*/}
+                    {/*<button className="card-button like"*/}
+                            {/*onClick={this.goToNext.bind(this, this.props.user, this.state.tasks[this.state.index], "1")}>Kyllä</button>*/}
+                    {/*</div>*/}
                 </div>
             );
         } else {

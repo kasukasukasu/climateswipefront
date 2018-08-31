@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 class ChoiceHeader extends Component {
     render() {
-        if (this.props.choice == 1) {
+        if (this.props.choice === "1") {
             return (
                 <div>
                     <h2>Valitsemasi haasteet:</h2>

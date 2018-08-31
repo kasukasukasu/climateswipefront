@@ -35,9 +35,9 @@ class ChoicesList extends Component {
         var count = 0;
         var relations = this.state.relations.filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user}).map(function (choice) {
             console.log('moroo5', choice);
-            count += parseInt(choice.task.rating);
+            count += parseInt(choice.task.rating, 10);
             return (
-                <ChoiceItem choice={choice}/>
+                <ChoiceItem choice={choice} key={choice.id}/>
             );
         });
         if (relations.length === 0) {

@@ -87,8 +87,10 @@ class App extends Component {
                             <Route path="/lisatietoa" component={DataSentAndMoreInfo} />
                         </Switch>
                     </Grid>
-                    <hr/>
+                    {/*<hr/>*/}
+                    <div>
                     <FooterSection />
+                    </div>
                 </div>
             </Router>
         );
