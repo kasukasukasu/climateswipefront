@@ -17,6 +17,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 // import MoreVertIcon from '@material-ui/icons/MoreVert';
 
+
 const styles = theme => ({
     card: {
         maxWidth: 400,
@@ -92,8 +93,7 @@ class SwipeCard extends React.Component {
                         })}
                         onClick={this.handleExpandClick}
                         aria-expanded={this.state.expanded}
-                        aria-label="Show more"
-                    >
+                        aria-label="Show more">
                         <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>

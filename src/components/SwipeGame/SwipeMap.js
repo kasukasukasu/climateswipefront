@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ItemDetails from "./ItemDetails";
+import ItemDetails from "./ItemDetailsCard";
 
 class SwipeMap extends Component {
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ActionCards.css'
+import '../components/SwipeGame/ActionCards.css'
 import {fetchall} from "../RestFunctions";
 
 class ActionCards extends Component {
