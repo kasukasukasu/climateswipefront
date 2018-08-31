@@ -71,14 +71,6 @@ class ItemDetailsCard extends Component {
                     </Collapse>
                 </Card>
             </div>
-        )
-
-        return (
-            <div className="stack-container">
-                    <h1>Ei tällä hetkellä enempää haasteita,
-                        ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
-            </div>
-
         );
     }
 }

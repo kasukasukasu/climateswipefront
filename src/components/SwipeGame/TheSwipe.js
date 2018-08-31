@@ -82,7 +82,12 @@ class TheSwipe extends Component {
         const item = this.state.tasks[this.state.index];
         console.log(this.props);
         if (this.state.index +2 === this.state.tasks.length +1) {
-            return <p>Tyhjääää</p>
+            return (
+                <div className="stack-container">
+                        <h1>Ei tällä hetkellä enempää haasteita,
+                            ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
+                    </div>
+            );
         } else {
             return (
                 <div>
