@@ -20,6 +20,8 @@ export function fetchallchoices(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
+                    console.log("json relations");
+                    console.log(json);
                     callback(json);
             });
             console.log('löytyy relations tiedot');

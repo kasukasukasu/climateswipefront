@@ -22,7 +22,7 @@ import WhoWeAre from "./components/Homepage/whoweare";
 import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
-
+import earth from "./earth-outline-vector-clipart_10_1_50.png";
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -53,13 +53,13 @@ class App extends Component {
 
     render() {
         // const { authenticated, loading } = this.state;
-        // const { loading } = this.state;
+        const { loading } = this.state;
 
-        // renderöinti, kun haetaan autentikaatiota näytetään viestiä sivua ladataan
+        //renderöinti, kun haetaan autentikaatiota näytetään viestiä sivua ladataan
 
-        // if (loading) {
-        //     return <p>Tietoja ladataan...</p>;
-        // }
+        if (loading) {
+            return <div className="loader"><img src={earth} className="App-logo" alt="logo" /></div>;
+        }
 
         // sitten renderöitään reitit
         // oteaan privateroute käyttöön, jos halutaan määritellä sivut, joille pääsee vain kirjautunut käyttäjä
