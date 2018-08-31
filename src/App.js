@@ -11,7 +11,7 @@ import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
 import SignUp from './components/Authorization/SignUp';
 import LoggedOut from './components/Authorization/LoggedOut';
-import TasksList from './components/TasksList';
+import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoicesList';

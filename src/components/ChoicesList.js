@@ -38,15 +38,17 @@ class ChoicesList extends Component {
         var relations = this.state.relations.filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user}).map(function (choice) {
             console.log('moroo5', choice);
             return (
-                <ExpansionPanel key = {choice.id}>
-                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <ExpansionPanel key={choice.id}>
+                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
                         <Typography variant="display1">{choice.task.title}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography variant="headline">
-                            {choice.task.content1}<br/><hr/>
+                            {choice.task.content1}<br/>
+                            <hr/>
 
-                            {choice.task.content2}<br/><hr/>
+                            {choice.task.content2}<br/>
+                            <hr/>
 
                             {choice.task.rating}<br/>
                         </Typography>
@@ -54,14 +56,23 @@ class ChoicesList extends Component {
                 </ExpansionPanel>
             );
         });
-        // var props = this.props;
+        if (relations.length === 0) {
+            return (
+                <div className="stack-container">
+                    <h2>Listasi on tällä hetkellä tyhjä.</h2>
+                    <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
+                        Siirry peliin tästä.
+                    </a>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    {relations}
+                </div>
 
-        return (
-            <div>
-                {relations}
-            </div>
-
-        )
+            )
+        }
 
     }
 }
