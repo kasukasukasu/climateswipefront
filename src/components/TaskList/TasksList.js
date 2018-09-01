@@ -13,7 +13,7 @@ class TasksList extends Component {
         console.log(this.props.user);
     }
 
-    searchHandler(event, e) {
+    searchHandler(event) {
         this.setState({search: true});
         let search = event.target.value.toLowerCase(),
             displayedTasks = this.state.tasks.filter((task) => {
@@ -44,8 +44,11 @@ class TasksList extends Component {
         if(this.state.search === false) {
             return (
                 <div>
-                    <span>Hae tekoja: </span>
-                    <input type="text" className="search" onChange={this.searchHandler.bind(this)}/>
+                    <h2 className="component">Esimerkkejä mahdollisista ilmastoteoista:</h2>
+                    <div className="component">
+                    {/*Hae tekoja:*/}
+                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
+                    </div>
                     <TaskItem tasks={this.state.tasks}>
                     </TaskItem>
                 </div>
@@ -53,9 +56,10 @@ class TasksList extends Component {
             )
         } else {
             return (
-                <div>
-                    <span>Hae tekoja: </span>
-                    <input type="text" className="search" onChange={this.searchHandler.bind(this)}/>
+                <div className="component">
+                    <h2>Esimerkkejä mahdollisista ilmastoteoista:</h2>
+                    {/*<span>Hae tekoja: </span>*/}
+                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
                     <TaskItem tasks={this.state.displayedTasks}>
                     </TaskItem>
                 </div> )

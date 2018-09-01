@@ -14,7 +14,7 @@ import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
-import ChoicesList from './components/ChoicesList';
+import ChoicesList from './components/ChoiceList/ChoicesList';
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import AboutSection from "./components/Homepage/about";

@@ -36,9 +36,9 @@ class TheSwipe extends Component {
 
     allChoices (tasksdata, relationsdata)
     {
-        var relations = relationsdata; //nimet väärin päin, en tiedä miksi!!!!
+        var relations = relationsdata;
         var tasks;
-        tasks = tasksdata;  //nimet väärin päin, en tiedä miksi!!!!
+        tasks = tasksdata;
         console.log("Saatiinko dataa?");
         console.log(relations);
         console.log(tasks);
@@ -52,7 +52,7 @@ class TheSwipe extends Component {
                 console.log(relation.task.id, task.id, relation.user.uid, this.props.user);
                 if (relation.task.id === task.id && relation.user.uid === this.props.user) {
                     console.log("itkettää");
-                    tasks.splice(1, 1);
+                    tasks.splice(j, 1);
                 }
             }
         }

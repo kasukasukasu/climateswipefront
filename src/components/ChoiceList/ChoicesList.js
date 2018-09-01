@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import {fetchallchoices} from "../RestFunctions"
-import "./ExpanPanel.css";
+import {fetchallchoices} from "../../RestFunctions"
+import "../ExpanPanel.css";
 import ChoiceItem from "./ChoiceItem";
 import ChoiceHeader from "./ChoiceHeader"
+import '../../App.css'
 
 // this.props.user
 
@@ -51,7 +52,7 @@ class ChoicesList extends Component {
             )
         } else {
             return (
-                <div>
+                <div >
                     <ChoiceHeader count={count} choice={this.props.choice}/>
                     {/*<h2>Valintasi:</h2>*/}
                     {/*<p> {counter} </p>*/}
