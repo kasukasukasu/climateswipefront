@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "../../App.css"
 
 class ChoiceHeader extends Component {
     render() {
@@ -6,7 +7,7 @@ class ChoiceHeader extends Component {
             return (
                 <div className="component">
                     <h2 >Valitsemasi haasteet:</h2>
-                    <p> Suorittamalla nämä haasteet vähennät hiilidioksidipäästöjäsi {this.props.count}kg vuodessa. </p>
+                    <p> Suorittamalla nämä haasteet vähennät hiilidioksidipäästöjäsi <span className="count">{this.props.count}kg</span> vuodessa. </p>
                 </div>
             )
         } else {
@@ -14,7 +15,7 @@ class ChoiceHeader extends Component {
                 <div className="component">
                     <h2>Hylkäämäsi haasteet:</h2>
                     <p> Jos kuitenkin päättäisit suorittaa nämä haasteet, vähentäisit
-                        hiilidioksidipäästöjäsi {this.props.count}kg vuodessa. </p>
+                        hiilidioksidipäästöjäsi <span className="count">{this.props.count}kg</span> vuodessa. </p>
                 </div>
             )
         }
