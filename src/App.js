@@ -85,7 +85,7 @@ class App extends Component {
                     </Grid>
                     {/*<hr/>*/}
                     <div>
-                    <FooterSection />
+                    {/*<FooterSection />*/}
                     </div>
                 </div>
             </Router>
