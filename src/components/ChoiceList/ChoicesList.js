@@ -1,8 +1,9 @@
 import React, {Component} from "react";
-import {fetchallchoices} from "../RestFunctions"
-import "./ExpanPanel.css";
+import {fetchallchoices} from "../../RestFunctions"
+import "../ExpanPanel.css";
 import ChoiceItem from "./ChoiceItem";
 import ChoiceHeader from "./ChoiceHeader"
+import '../../App.css'
 
 // this.props.user
 
@@ -43,7 +44,7 @@ class ChoicesList extends Component {
         if (relations.length === 0) {
             return (
                 <div className="stack-container">
-                    <h2>Listasi on tällä hetkellä tyhjä.</h2>
+                    <h2>Listasi on tällä hetkellä tyhjä.</h2><br/>
                     <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
                         Siirry peliin tästä.
                     </a>
@@ -51,7 +52,7 @@ class ChoicesList extends Component {
             )
         } else {
             return (
-                <div>
+                <div className="stack-container">
                     <ChoiceHeader count={count} choice={this.props.choice}/>
                     {/*<h2>Valintasi:</h2>*/}
                     {/*<p> {counter} </p>*/}

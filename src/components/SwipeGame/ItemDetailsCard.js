@@ -78,7 +78,7 @@ class ItemDetailsCard extends Component {
                             <p className="cardContentHeader">Lisätietoja: </p>
                             <p>{task.content2}</p>
                             <p className="cardContentHeader">Haasteen vaikuttavuus: </p>
-                            <p>-{task.rating} kg hiilidioksidipäästöjä vuodessa</p>
+                            <p>-{task.rating}kg hiilidioksidipäästöjä vuodessa</p>
                         </CardContent>
                     </Collapse>
                 </Card>

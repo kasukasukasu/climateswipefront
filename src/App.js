@@ -14,19 +14,19 @@ import LoggedOut from './components/Authorization/LoggedOut';
 import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
-import ChoicesList from './components/ChoicesList';
+import ChoicesList from './components/ChoiceList/ChoicesList';
 import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import AboutSection from "./components/Homepage/about";
 import WhoWeAre from "./components/Homepage/whoweare";
-import FooterSection from "./components/Homepage/footer";
+// import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
 import earth from "./earth-outline-vector-clipart_10_1_50.png";
-import NewChallenge from './components/NewChallenge/NewChallenge';
-import DataSentAndMoreInfo from './components/NewChallenge/DataSentAndMoreInfo';
-import RecyclingSearch from './components/RecyclingSearch/RecyclingSearch';
-import { ReactiveBase } from '@appbaseio/reactivesearch';
+// import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
+// import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
+// import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';
+// import { ReactiveBase } from '@appbaseio/reactivesearch';
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -85,14 +85,14 @@ class App extends Component {
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/theswipe" render={() => <TheSwipe user={this.state.currentUser} />}/>
                             <Route path="/botti" component={LajitteluBotti} />
-                            <Route path="/newchallenge" component={NewChallenge} />
-                            <Route path="/lisatietoa" component={DataSentAndMoreInfo} />
-                            <Route path="/recyclingsearch" component={RecyclingSearch} />
+                            {/*<Route path="/newchallenge" component={NewChallenge} />*/}
+                            {/*<Route path="/lisatietoa" component={DataSentAndMoreInfo} />*/}
+                            {/*<Route path="/recyclingsearch" component={RecyclingSearch} />*/}
                         </Switch>
                     </Grid>
                     {/*<hr/>*/}
                     <div>
-                    <FooterSection />
+                    {/*<FooterSection />*/}
                     </div>
                 </div>
             </Router>

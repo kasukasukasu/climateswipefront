@@ -7,7 +7,7 @@ const Header = () => (
       <h3 className="mb-5">
         <em>Täällä voit tehdä tietoisia ympäristövalintoja</em>
       </h3>
-      <a className="btn btn-primary btn-xl js-scroll-trigger" href="/taskslist">
+      <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
         Aloita ympäristöystävällisten valintojen tekeminen tästä!
       </a>
     </div>

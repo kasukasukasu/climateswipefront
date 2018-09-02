@@ -15,13 +15,14 @@ class ChoiceItem extends Component {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography variant="headline">
-                        {this.props.choice.task.content1}<br/>
+                        <p className="cardContentHeader">Tehtävä:</p>
+                        <p>{this.props.choice.task.content1}</p>
                         <hr/>
-
-                        {this.props.choice.task.content2}<br/>
+                        <p className="cardContentHeader">Lisätietoja:</p>
+                        <p>{this.props.choice.task.content2}</p>
                         <hr/>
-
-                        {this.props.choice.task.rating}<br/>
+                        <p className="cardContentHeader">Haasteen vaikuttavuus:</p>
+                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa.</p>
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
@@ -30,3 +31,4 @@ class ChoiceItem extends Component {
 }
 
 export default ChoiceItem;
+
