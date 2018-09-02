@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {changeChoice} from "../RestFunctions";
+import {changeChoice} from "../../RestFunctions";
+import './ChoiceList.css';
 
 class ChangeChoice extends Component {
     constructor(props) {
@@ -42,11 +43,11 @@ class ChangeChoice extends Component {
     render() {
         if (this.props.choice.choice === "1") {
             return (
-                <button type='button' onClick={this.setNewData.bind(this)}>poista valinta</button>
+                <button  className='change-button' onClick={this.setNewData.bind(this)}>Poista valinta</button>
             )
         } else {
             return (
-                <button type='button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
+                <button className='change-button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
         )}
     }
 }

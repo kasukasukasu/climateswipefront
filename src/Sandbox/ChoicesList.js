@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {fetchallchoices} from "../RestFunctions"
-import ChangeChoice from "../components/ChangeChoice";
+import ChangeChoice from "../components/ChoiceList/ChangeChoice";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';

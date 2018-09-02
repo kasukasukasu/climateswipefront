@@ -8,13 +8,13 @@
     /*max-width: 300px;*/
     border-radius: 50px;
     border: 1px solid #333;
-    background: indianred;
+    background: lightgrey;
     text-align: left;
     margin-bottom: 10px;
 }
 
 .filler {
-    background: yellowgreen;
+    background: forestgreen;
     height: 100%;
     border-radius: inherit;
     transition: widt .2s ease-in;
@@ -27,10 +27,33 @@
     margin: 0;
 }
 
+.footcount {
+    color: forestgreen;
+    font-weight: bold;
+    font-size: larger;
+}
+
 .fincofoot {
     font-size: small;
 }
 
 .coreduce {
     text-align: right;
+}
+
+
+.header-text {
+    font-size: medium;
+}
+
+.count {
+    color: forestgreen;
+}
+
+.change-button {
+    background-color: white;
+    color: forestgreen;
+    border: 1px solid forestgreen;
+    border-radius: 30px;
+    padding: 10px;
 }

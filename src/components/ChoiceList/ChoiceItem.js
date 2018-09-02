@@ -5,7 +5,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ChangeChoice from "../ChangeChoice";
+import ChangeChoice from "./ChangeChoice";
 
 class ChoiceItem extends Component {
     render() {
@@ -23,7 +23,7 @@ class ChoiceItem extends Component {
                         <p>{this.props.choice.task.content2}</p>
                         <hr/>
                         <p className="cardContentHeader">Haasteen vaikuttavuus:</p>
-                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa. </p>
+                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa. </p><br/>
                         <ChangeChoice choice={this.props.choice}></ChangeChoice>
                     </Typography>
                 </ExpansionPanelDetails>
