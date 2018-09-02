@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {fetchallchoices} from "../RestFunctions"
+import ChangeChoice from "./ChangeChoice";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -35,7 +36,9 @@ class ChoicesList extends Component {
 
     render() {
         console.log('moroo4', this.state.relations);
-        var relations = this.state.relations.filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user}).map(function (choice) {
+        var relations = this.state.relations
+            .filter(addToList => {return addToList.choice===this.props.choice && addToList.user.uid===this.props.user})
+            .map(function (choice) {
             console.log('moroo5', choice);
             return (
                 <ExpansionPanel key = {choice.id}>
@@ -48,7 +51,9 @@ class ChoicesList extends Component {
 
                             {choice.task.content2}<br/><hr/>
 
-                            {choice.task.rating}<br/>
+                            {choice.task.rating} <ChangeChoice choice = {choice}></ChangeChoice>
+                            <br/>
+
                         </Typography>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
@@ -60,9 +65,7 @@ class ChoicesList extends Component {
             <div>
                 {relations}
             </div>
-
         )
-
     }
 }
 
