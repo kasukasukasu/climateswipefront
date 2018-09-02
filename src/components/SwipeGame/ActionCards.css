@@ -120,11 +120,11 @@
     font-weight: bold;
 }
 
-h1 {
+.theswipe h1 {
     font-size: 250%;
 }
 
-h2 {
+.theswipe h2 {
     font-size: 230%;
     color: darkgreen;
 }
