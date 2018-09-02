@@ -7,7 +7,7 @@
     height: 20px;
     /*max-width: 300px;*/
     border-radius: 50px;
-    border: 1px solid #333;
+    /*border: 1px solid #333;*/
     background: lightgrey;
     text-align: left;
     margin-bottom: 10px;
@@ -70,3 +70,4 @@
     /*margin-bottom: 500px;*/
 
 }
+

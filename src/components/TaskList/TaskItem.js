@@ -11,7 +11,7 @@ class TaskItem extends Component {
             return (
                 <ExpansionPanel key={task.id}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                        <Typography variant="display1">{task.title}</Typography>
+                        <Typography variant="display1" className="title">{task.title}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography variant="headline">
