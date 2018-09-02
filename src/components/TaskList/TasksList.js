@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
-import "../ExpanPanel.css";
+import "./TaskList.css";
 import TaskItem from "./TaskItem"
 
 
@@ -43,10 +43,9 @@ class TasksList extends Component {
     render() {
         if(this.state.search === false) {
             return (
-                <div>
+                <div className="list-items">
                     <h2 className="component">Esimerkkejä mahdollisista ilmastoteoista:</h2>
-                    <div className="component">
-                    {/*Hae tekoja:*/}
+                    <div>
                     <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
                     </div>
                     <TaskItem tasks={this.state.tasks}>
@@ -56,7 +55,7 @@ class TasksList extends Component {
             )
         } else {
             return (
-                <div className="component">
+                <div className="list-items">
                     <h2>Esimerkkejä mahdollisista ilmastoteoista:</h2>
                     {/*<span>Hae tekoja: </span>*/}
                     <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>

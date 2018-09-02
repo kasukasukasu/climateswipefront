@@ -10,7 +10,7 @@ const ProgressBar = (props) => {
             <Filler percentage={props.percentage}/>
             </div>
             <p className="cofoot">Hiilijalanjälkesi: <span className="footcount">{footprint}</span> kg CO<sub>2</sub></p>
-            <p className="fincofoot">Suomalaisen keskimääräinen hiilijalanjälki 11 500kg/vuosi.</p>
+            <p className="fincofoot">Suomalaisen keskimääräinen hiilijalanjälki on 11 500 kg CO<sub>2</sub>.</p>
         </div>
     )
 };
