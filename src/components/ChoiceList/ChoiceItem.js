@@ -23,7 +23,8 @@ class ChoiceItem extends Component {
                         <p>{this.props.choice.task.content2}</p>
                         <hr/>
                         <p className="cardContentHeader">Haasteen vaikuttavuus:</p>
-                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa. </p><ChangeChoice choice={this.props.choice}></ChangeChoice>
+                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa. </p>
+                        <ChangeChoice choice={this.props.choice}></ChangeChoice>
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>

@@ -1,12 +1,12 @@
 import React, {Component} from "react";
 import {fetchallchoices} from "../RestFunctions"
-import ChangeChoice from "./ChangeChoice";
+import ChangeChoice from "../components/ChangeChoice";
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import "./ExpanPanel.css";
+import "../components/ExpanPanel.css";
 
 // this.props.user
 
@@ -52,7 +52,7 @@ class ChoicesList extends Component {
                             {choice.task.content2}<br/><hr/>
 
                             {choice.task.rating}
-                            <ChangeChoice choice = {choice}></ChangeChoice>
+                            <ChangeChoice choice = {choice} kukkuu={this}></ChangeChoice>
                             <br/>
                         </Typography>
                     </ExpansionPanelDetails>
