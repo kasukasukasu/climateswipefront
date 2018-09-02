@@ -51,9 +51,9 @@ class ChoicesList extends Component {
 
                             {choice.task.content2}<br/><hr/>
 
-                            {choice.task.rating} <ChangeChoice choice = {choice}></ChangeChoice>
+                            {choice.task.rating}
+                            <ChangeChoice choice = {choice}></ChangeChoice>
                             <br/>
-
                         </Typography>
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
