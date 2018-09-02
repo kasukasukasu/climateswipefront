@@ -47,7 +47,7 @@ class ChangeChoice extends Component {
         } else {
             return (
                 <button type='button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
-        )};
+        )}
     }
 }
 
