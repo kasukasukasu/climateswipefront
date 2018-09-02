@@ -25,6 +25,8 @@ import {Grid} from "react-bootstrap";
 import earth from "./earth-outline-vector-clipart_10_1_50.png";
 import NewChallenge from './components/NewChallenge/NewChallenge';
 import DataSentAndMoreInfo from './components/NewChallenge/DataSentAndMoreInfo';
+import RecyclingSearch from './components/RecyclingSearch/RecyclingSearch';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -85,6 +87,7 @@ class App extends Component {
                             <Route path="/botti" component={LajitteluBotti} />
                             <Route path="/newchallenge" component={NewChallenge} />
                             <Route path="/lisatietoa" component={DataSentAndMoreInfo} />
+                            <Route path="/recyclingsearch" component={RecyclingSearch} />
                         </Switch>
                     </Grid>
                     {/*<hr/>*/}

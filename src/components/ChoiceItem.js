@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import  {} from 'react-bootstrap';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -10,7 +11,7 @@ class ChoiceItem extends Component {
         return (
             <ExpansionPanel key={this.props.choice.id}>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                    <Typography variant="display1">{this.props.choice.task.title}</Typography>
+                    <Typography bsStyle="success" variant="display1">{this.props.choice.task.title}</Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography variant="headline">
