@@ -16,33 +16,40 @@ class ChangeChoice extends Component {
         console.log(this.state.choice + "Ennen muutosta");
         // var settingNewChoice = (this.state.choice);
 
-        if (oldChoice == "1") {
+        if (oldChoice === "1") {
             // settingNewChoice = 0;
-            this.setState({choice: "0"});
+            this.setState({choice: "0"}, () => {
+                changeChoice(this.state.id, this.state);
+            });
             console.log(this.state);
-            changeChoice(this.state.id, this.state);
         } else {
             // settingNewChoice = 1;
-            this.setState({choice: "1"});
+            this.setState({choice: "1"}, () => {
+                changeChoice(this.state.id, this.state);
+            });
             console.log(this.state);
-            changeChoice(this.state.id, this.state);
         }
         // console.log("päivitetty valinta on:" + this.state.choice);
     }
 
 
     setNewData(e) {
-        e.preventDefault();
+        // e.preventDefault();
         this.changeThis(this.state.choice);
+        window.location.reload();
     }
 
     render() {
-        return (
-            <button type='button' onClick={this.setNewData.bind(this)}>X</button>
-        )
+        if (this.props.choice.choice === "1") {
+            return (
+                <button type='button' onClick={this.setNewData.bind(this)}>poista valinta</button>
+            )
+        } else {
+            return (
+                <button type='button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
+        )};
     }
 }
-
 
 
 export default ChangeChoice;
