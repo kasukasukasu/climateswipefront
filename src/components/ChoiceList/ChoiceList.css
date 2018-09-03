@@ -1,6 +1,7 @@
-/*.title {*/
-    /*font-size: 2em;*/
-/*}*/
+
+.title {
+    font-size: 1em;
+}
 
 /*.details {*/
     /*font-size: 1em;*/
@@ -92,13 +93,13 @@
     position: initial;
     margin: auto;
     margin-top: 40px;
-    text-align: justify;
+    text-align: left;
     max-width: 400px;
     height: 300px;
     /*margin-bottom: 500px;*/
 
 }
 
-.title {
-    font-size: small;
+.button {
+    text-align: center;
 }

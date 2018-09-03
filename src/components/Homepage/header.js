@@ -11,7 +11,6 @@ const Header = () => (
         <div>
             <div>
                 <div className="container-fluid tausta-1 text-center">
-                    <h3 id="climatelogo">CLIMATE<br/>CHOICE</h3>
 
                 </div>
                 <div className="container-fluid tausta-2 text-center">
@@ -20,8 +19,8 @@ const Header = () => (
                         <h3>
                             <em>Täällä voit tehdä tietoisia ympäristövalintoja</em>
                         </h3>
-                        <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
-                            Aloita ympäristöystävällisten valintojen tekeminen tästä!
+                        <a className="button-header" href="/thechoice">
+                            Aloita tästä!
                         </a>
                     {/*</div>*/}
                 </div>
@@ -30,8 +29,8 @@ const Header = () => (
             <footer className="footer text-center">
                 <div className="container">
                     <p className="text-muted small mb-0">
-                        Copyright &copy; Team ClimateSwipe 2018
-                        <Image src={ClimateChoice} circle width="200" height="200" />
+                        Copyright &copy; Team ClimateChoice 2018
+                        {/*<Image src={ClimateChoice} circle width="50" height="50" />*/}
                     </p>
                 </div>
             </footer>

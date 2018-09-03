@@ -14,8 +14,13 @@ import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoiceList/ChoicesList';
+import Info from './components/InfoPage/info.js'
+import TheMap from './components/RecyclingMap/TheMap';
+
 // import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
+import {Image} from "react-bootstrap"
+import ClimateChoice from "./resources/static/image/ClimateChoice.png";
 // import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
 import Botti from "./components/Botti/Botti";
@@ -69,19 +74,24 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
+                    <div className="top"/>
                     <Navigation state={this.state} />
+                    {/*<img src={ClimateChoice} className="App-logo" alt="logo" />*/}
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                             <Route exact path="/" component={Header} />
                     <Grid>
                         <Switch>
+                            {/*<Route exact path="/" component={Header} />*/}
                             <Route exact path="/login" component={LogIn} />
+                            <Route exact path="/info" component={Info} />
                             <Route exact path="/signup" component={SignUp} />
                             <Route exact path="/loggedout" component={LoggedOut}/>
                             <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
-                            <Route path="/theswipe" render={() => <TheSwipe user={this.state.currentUser} />}/>
+                            <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} />}/>
                             <Route path="/botti" component={Botti} />
+                            <Route path="/themap" component={TheMap}/>
                             {/*<Route path="/newchallenge" component={NewChallenge} />*/}
                             {/*<Route path="/lisatietoa" component={DataSentAndMoreInfo} />*/}
                             {/*<Route path="/recyclingsearch" component={RecyclingSearch} />*/}

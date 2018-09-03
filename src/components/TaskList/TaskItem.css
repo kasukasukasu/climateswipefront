@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
 
-.component {
+.taskcomponent {
     font-family: Amiko;
     color: forestgreen;
     margin-bottom: 40px;
@@ -17,14 +17,13 @@
 .search {
     font-family: Mirza;
     color: forestgreen;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 5px;
     font-size: 20px;
     width: 50%;
     /*align: middle;*/
 
 }
-
 
 .task-container {
     width: 800px;
@@ -34,6 +33,7 @@
     background-color: #ffffff;
     align-items: flex-start;
     justify-content: center;
+    max-width: 300%;
 }
 
 .task-container > div {
