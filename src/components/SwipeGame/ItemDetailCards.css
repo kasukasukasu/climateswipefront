@@ -129,10 +129,11 @@
 
 .theswipe h1 {
     font-size: 250%;
+    font-weight: bold;
 }
 
 .theswipe h2 {
-    font-size: 230%;
+    font-size: 200%;
     color: darkgreen;
 }
 

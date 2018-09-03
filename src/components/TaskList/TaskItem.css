@@ -9,7 +9,9 @@
 .taskcomponent {
     /*font-family: Amiko;*/
     /*color: forestgreen;*/
-    margin-bottom: 40px;
+    font-family: Amiko;
+    color: forestgreen;
+    margin-bottom: 10px;
     font-size: 30px;
     font-weight: bold;
 }
