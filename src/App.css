@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: Amiko;
+  color: forestgreen;
 }
 
 .App-header {
@@ -42,4 +44,10 @@
 .top {
   padding: 20px;
 }
+
+.fonts {
+  font-family: Amiko;
+  color: forestgreen;
+}
+
 

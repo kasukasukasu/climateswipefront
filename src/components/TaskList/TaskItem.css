@@ -1,24 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+hallelujah');
-@import url('https://fonts.googleapis.com/css?family=Mirza');
-@import url('https://fonts.googleapis.com/css?family=Convergence');
-@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
-@import url('https://fonts.googleapis.com/css?family=Amiko');
-@import url('https://fonts.googleapis.com/css?family=Anton');
+/*@import url('https://fonts.googleapis.com/css?family=Gloria+hallelujah');*/
+/*@import url('https://fonts.googleapis.com/css?family=Mirza');*/
+/*@import url('https://fonts.googleapis.com/css?family=Convergence');*/
+/*@import url('https://fonts.googleapis.com/css?family=Sunflower:300');*/
+/*@import url('https://fonts.googleapis.com/css?family=Amiko');*/
+/*@import url('https://fonts.googleapis.com/css?family=Anton');*/
 
 
 .taskcomponent {
-    font-family: Amiko;
-    color: forestgreen;
+    /*font-family: Amiko;*/
+    /*color: forestgreen;*/
     margin-bottom: 40px;
     font-size: 30px;
     font-weight: bold;
 }
 
 .search {
-    font-family: Mirza;
+    font-family: Amiko;
     color: forestgreen;
     margin-bottom: 5px;
-
     margin-left: 5px;
     font-size: 20px;
     width: 50%;
@@ -125,8 +124,14 @@
 }
 
 .cardContentHeader2 {
-    /*font-family: Amiko;*/
-    color: darkgreen;
-    font-size: 140%;
+    font-family: Amiko;
+    color: forestgreen;
+    font-size: 180%;
     /*text-decoration: underline;*/
 }
+
+/*cardContentHeader3 {*/
+/*font-family: Amiko;*/
+/*color: forestgreen;*/
+/*font-size: 180%;*/
+/*}*/
