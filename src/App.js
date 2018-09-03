@@ -14,8 +14,11 @@ import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoiceList/ChoicesList';
+import Info from './components/InfoPage/info.js'
 // import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
+import {Image} from "react-bootstrap"
+import ClimateChoice from "./resources/static/image/ClimateChoice.png";
 // import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
 import Botti from "./components/Botti/Botti";
@@ -67,13 +70,17 @@ class App extends Component {
         // oteaan privateroute käyttöön, jos halutaan määritellä sivut, joille pääsee vain kirjautunut käyttäjä
         return (
             <Router>
-                <div>
+                <div className="App">
+                    <div className="top"/>
                     <Navigation state={this.state} />
+                    {/*<img src={ClimateChoice} className="App-logo" alt="logo" />*/}
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                             <Route exact path="/" component={Header} />
                     <Grid>
                         <Switch>
+                            {/*<Route exact path="/" component={Header} />*/}
                             <Route exact path="/login" component={LogIn} />
+                            <Route exact path="/info" component={Info} />
                             <Route exact path="/signup" component={SignUp} />
                             <Route exact path="/loggedout" component={LoggedOut}/>
                             <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>

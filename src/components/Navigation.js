@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../App.css';
-
+import ClimateChoice from "../resources/static/image/ClimateChoice.png";
 
 export class Navigation extends Component {
 
@@ -12,13 +12,13 @@ export class Navigation extends Component {
             <Navbar staticTop>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">ClimateSwipe</Link>
+                        <Link to="/"><img src={ClimateChoice} className="App-logo" alt="logo" /></Link>
                     </Navbar.Brand>
                     <Navbar.Toggle/>
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullLeft>
-                        {/*<NavItem href="/">Etusivu</NavItem>*/}
+                        <NavItem href="/info">Info</NavItem>
                         <NavItem href="/theswipe">The Swipe</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         <NavItem href="/botti">Kysy Botilta</NavItem>

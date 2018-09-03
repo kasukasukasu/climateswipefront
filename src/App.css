@@ -2,11 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #222;
   height: 150px;
@@ -22,10 +17,6 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
 
 .loader {
   position: fixed;
@@ -35,5 +26,24 @@
 
 .component {
   text-align: center;
+}
+
+img {
+  height: 100px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  height: 150px;
+  width: 150px;
+  padding: 14px 14px;
+  /*margin-top: 20px;*/
+}
+
+.top {
+  padding: 20px;
 }
 
