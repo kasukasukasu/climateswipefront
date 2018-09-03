@@ -21,6 +21,7 @@ import Header from "./components/Homepage/header";
 import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
+import "./App.css"
 // import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
 // import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
 // import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';
@@ -67,7 +68,7 @@ class App extends Component {
         // oteaan privateroute käyttöön, jos halutaan määritellä sivut, joille pääsee vain kirjautunut käyttäjä
         return (
             <Router>
-                <div>
+                <div className="App">
                     <Navigation state={this.state} />
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                             <Route exact path="/" component={Header} />

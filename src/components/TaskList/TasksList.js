@@ -46,7 +46,7 @@ class TasksList extends Component {
                 <div>
                     <h2 className="component">Esimerkkejä mahdollisista ilmastoteoista:</h2>
                     <div>
-                    <input type="text" className="search" style={{ width: "100%" }} placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
+                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
                     </div>
                     <TaskItem tasks={this.state.tasks}>
                     </TaskItem>
@@ -58,7 +58,7 @@ class TasksList extends Component {
                 <div className>
                     <h2 className="component">Esimerkkejä mahdollisista ilmastoteoista:</h2>
                     {/*<span>Hae tekoja: </span>*/}
-                    <input type="text" className="search" style={{ width: "100%" }} placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
+                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
                     <TaskItem tasks={this.state.displayedTasks}>
                     </TaskItem>
                 </div> )
