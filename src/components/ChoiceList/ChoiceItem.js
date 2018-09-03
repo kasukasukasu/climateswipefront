@@ -5,13 +5,15 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ChangeChoice from "./ChangeChoice";
 
 class ChoiceItem extends Component {
     render() {
         return (
             <ExpansionPanel key={this.props.choice.id}>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                    <Typography bsStyle="success" variant="display1">{this.props.choice.task.title}</Typography>
+                    <Typography variant="display1">
+                        <p className="title">{this.props.choice.task.title}</p></Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography variant="headline">
@@ -22,7 +24,8 @@ class ChoiceItem extends Component {
                         <p>{this.props.choice.task.content2}</p>
                         <hr/>
                         <p className="cardContentHeader">Haasteen vaikuttavuus:</p>
-                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa.</p>
+                        <p>-{this.props.choice.task.rating}kg hiilidioksidipäästöjä vuodessa. </p><br/>
+                        <ChangeChoice choice={this.props.choice}></ChangeChoice>
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>

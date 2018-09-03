@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {fetchallchoices} from "../../RestFunctions"
-import "./ChoiceList.css";
 import ChoiceItem from "./ChoiceItem";
 import ChoiceHeader from "./ChoiceHeader"
 import './ChoiceList.css';
@@ -38,12 +37,14 @@ class ChoicesList extends Component {
             console.log('moroo5', choice);
             count += parseInt(choice.task.rating, 10);
             return (
-                <ChoiceItem choice={choice} key={choice.id}/>
+                <div className="expan" key={choice.id}>
+                    <ChoiceItem choice={choice}/>
+                </div>
             );
         });
         if (relations.length === 0) {
             return (
-                <div className="stack-container">
+                <div className="list-items">
                     <h2>Listasi on tällä hetkellä tyhjä.</h2><br/>
                     <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
                         Siirry peliin tästä.
@@ -52,7 +53,7 @@ class ChoicesList extends Component {
             )
         } else {
             return (
-                <div>
+                <div className="list-items">
                     <ChoiceHeader count={count} choice={this.props.choice}/>
                     {/*<h2>Valintasi:</h2>*/}
                     {/*<p> {counter} </p>*/}

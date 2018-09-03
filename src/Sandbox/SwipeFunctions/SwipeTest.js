@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {fetchall, fetchTask, fetchTasksIds} from "../RestFunctions";
+import {fetchall, fetchTask, fetchTasksIds} from "../../RestFunctions";
 var shuffle = require('shuffle-array');
 
 class SwipeTest extends Component {

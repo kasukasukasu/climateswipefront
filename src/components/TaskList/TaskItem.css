@@ -1,10 +1,4 @@
-.title {
-    font-size: 2em;
-}
 
-.details {
-    font-size: 1em;
-}
 
 .task-container {
     display: flex;
@@ -17,10 +11,15 @@
 
 .task-container > div {
     background-color: #ffffff;
-    width: 200px;
-    margin: 20px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
+    width: 175px;
+    margin: 10px;
+    /*text-align: center;*/
+    line-height: 100px;
+    font-size: 20px;
+    justify-content: flex-start;
     /*align-items: center;*/
+}
+
+.title {
+    font-size: small;
 }

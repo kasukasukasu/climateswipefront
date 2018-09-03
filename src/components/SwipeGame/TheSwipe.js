@@ -83,7 +83,7 @@ class TheSwipe extends Component {
         // console.log(this.props);
         if (this.state.index + 1 !== this.state.tasks.length) {
             return (
-                <div>
+                <div className="theswipe">
                     <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user} goToNext={this.goToNext.bind(this)}/>
                     {/*<div className="buttons">*/}
                     {/*<button className="card-button pass"*/}

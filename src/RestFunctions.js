@@ -85,6 +85,19 @@ export function fetchTasksIds(callback) {
         });
 }
 
+export function changeChoice(id, data) {
+    return fetch(url + 'relations/' + id, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}
+    }).then(res => {
+        return res;
+    }).catch(err => err);
+}
+
+
+
+
 // //tää ei vissii toimi
 // export function deleteTasks(id/*, callback*/) {
 //     return fetch(apiurli+'tasks/'+id, {method: 'DELETE'})

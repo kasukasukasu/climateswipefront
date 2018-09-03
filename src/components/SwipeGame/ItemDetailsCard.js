@@ -58,7 +58,7 @@ class ItemDetailsCard extends Component {
             <div className="stack-container">
                 <Card>
                     <CardContent>
-                        <h1>{task.title}</h1>
+                        <h2>{task.title}</h2>
                         <p>{task.content1}</p>
                     </CardContent>
                     {/*<CardMedia*/}
