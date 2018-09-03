@@ -15,6 +15,8 @@ import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoiceList/ChoicesList';
 import Info from './components/InfoPage/info.js'
+import TheMap from './components/RecyclingMap/TheMap';
+
 // import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import {Image} from "react-bootstrap"
@@ -88,6 +90,7 @@ class App extends Component {
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} />}/>
                             <Route path="/botti" component={Botti} />
+                            <Route path="/themap" component={TheMap}/>
                             {/*<Route path="/newchallenge" component={NewChallenge} />*/}
                             {/*<Route path="/lisatietoa" component={DataSentAndMoreInfo} />*/}
                             {/*<Route path="/recyclingsearch" component={RecyclingSearch} />*/}

@@ -19,12 +19,16 @@ export class Navigation extends Component {
                 <Navbar.Collapse>
                     <Nav pullLeft>
                         <NavItem href="/info">Info</NavItem>
-                        <NavItem href="/theswipe">The Swipe</NavItem>
+                        <NavItem href="/thechoice">The Swipe</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
-                        <NavItem href="/botti">Kysy Botilta</NavItem>
                         {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
+                            <NavDropdown eventKey={3} title="Ympäristötyökaluja" id="basic-nav-dropdown">
+                                <MenuItem eventKey={3.1} href="/botti">Kysy Botilta</MenuItem>
+                                <MenuItem eventKey={3.2} href="/themap">Kierrätyspisteet</MenuItem>
+                            </NavDropdown>
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}
+
                     {this.props.state.authenticated ? (
                         <Nav pullRight>
                             <NavDropdown eventKey={3} title="Omat valinnat" id="basic-nav-dropdown">
