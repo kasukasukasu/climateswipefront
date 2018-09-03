@@ -30,6 +30,7 @@ class ChoiceItem extends Component {
                 </ExpansionPanelDetails>
             </ExpansionPanel>
         );
+
     }
 }
 

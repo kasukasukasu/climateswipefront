@@ -3,7 +3,7 @@ import {fetchallchoices} from "../../RestFunctions"
 import "./ChoiceList.css";
 import ChoiceItem from "./ChoiceItem";
 import ChoiceHeader from "./ChoiceHeader"
-import '../../App.css'
+import './ChoiceList.css';
 
 // this.props.user
 
@@ -54,7 +54,11 @@ class ChoicesList extends Component {
             )
         } else {
             return (
+<<<<<<< HEAD
                 <div className="list-items">
+=======
+                <div>
+>>>>>>> acf977973b543f5aedaf4426beef5898edbd1f1d
                     <ChoiceHeader count={count} choice={this.props.choice}/>
                     {/*<h2>Valintasi:</h2>*/}
                     {/*<p> {counter} </p>*/}

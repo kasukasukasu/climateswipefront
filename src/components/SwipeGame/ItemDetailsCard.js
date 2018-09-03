@@ -9,7 +9,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import './ActionCards.css'
+import './ItemDetailCards.css'
 import {createRelation} from "../../RestFunctions";
 
 

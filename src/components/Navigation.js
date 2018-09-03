@@ -21,7 +21,7 @@ export class Navigation extends Component {
                         {/*<NavItem href="/">Etusivu</NavItem>*/}
                         <NavItem href="/theswipe">The Swipe</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
-                        <NavItem href="/botti">LajitteluBotti</NavItem>
+                        <NavItem href="/botti">Kysy Botilta</NavItem>
                         {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}

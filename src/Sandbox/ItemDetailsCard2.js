@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import '../components/SwipeGame/ActionCards.css'
+import '../components/SwipeGame/ItemDetailCards.css'
 
 
 class ItemDetailsCard extends Component {
