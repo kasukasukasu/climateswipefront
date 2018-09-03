@@ -19,12 +19,12 @@ import TheMap from './components/RecyclingMap/TheMap';
 
 // import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
-import {Image} from "react-bootstrap"
 // import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
 import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
+import "./App.css"
 // import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
 // import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
 // import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';

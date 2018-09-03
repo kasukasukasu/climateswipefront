@@ -70,14 +70,14 @@
 
 .pass {
     /*position: center;*/
-    background: darkred;
+    background: red;
     font-size: 120%;
     /*left: 1000px;*/
     /*display: inline-block;*/
 }
 
 .like {
-    background: forestgreen;
+    background: yellowgreen;
     font-size: 120%;
     /*right: 50px;*/
     /*display: inline-block;*/

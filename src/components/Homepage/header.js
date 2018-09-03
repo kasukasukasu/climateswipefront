@@ -1,10 +1,5 @@
 import React from 'react';
 import './header.css';
-// npm install react-materialize
-// import {Row, Col} from 'react-materialize';
-import {Image} from "react-bootstrap"
-import ClimateChoice from "../../ClimateChoice.png";
-
 
 const Header = () => (
 
