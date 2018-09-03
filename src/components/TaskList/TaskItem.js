@@ -12,7 +12,7 @@ class TaskItem extends Component {
             return (
                 <ExpansionPanel key={task.id}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                        <Typography variant="title" className="title">{task.title}</Typography>
+                        <Typography variant="display1" className="title">{task.title}</Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography variant="headline">
@@ -30,7 +30,7 @@ class TaskItem extends Component {
             )
         });
         return (
-            <div className="task-container component">{tasks}</div>
+            <div className="list-items">{tasks}</div>
 
         )
     }

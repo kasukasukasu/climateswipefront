@@ -53,11 +53,11 @@ class ChoicesList extends Component {
             )
         } else {
             return (
-                <div className="list-items">
+                <div>
                     <ChoiceHeader count={count} choice={this.props.choice}/>
-                    {/*<h2>Valintasi:</h2>*/}
-                    {/*<p> {counter} </p>*/}
+                    <div className="list-items">
                     {relations}
+                    </div>
                 </div>
 
             )
