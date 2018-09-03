@@ -78,6 +78,21 @@ a:link, a:visited {
 a:link:active, a:visited:active {
   color: white;
   text-decoration: none;
+}
+
+.header-header {
+  color: forestgreen;
+  font-weight: bold;
+}
+
+.info {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.info-header {
+  font-size: 150%;
 
 }
 

@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+hallelujah');
-@import url('https://fonts.googleapis.com/css?family=Mirza');
-@import url('https://fonts.googleapis.com/css?family=Convergence');
-@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
-@import url('https://fonts.googleapis.com/css?family=Amiko');
-@import url('https://fonts.googleapis.com/css?family=Anton');
-
-
 .taskcomponent {
-    font-family: Amiko;
     color: forestgreen;
     margin-bottom: 40px;
     font-size: 30px;
@@ -15,7 +6,6 @@
 }
 
 .search {
-    font-family: Mirza;
     color: forestgreen;
     margin-bottom: 5px;
 
@@ -125,7 +115,6 @@
 }
 
 .cardContentHeader2 {
-    /*font-family: Amiko;*/
     color: darkgreen;
     font-size: 140%;
     /*text-decoration: underline;*/

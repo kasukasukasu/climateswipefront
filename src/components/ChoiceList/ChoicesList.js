@@ -46,7 +46,7 @@ class ChoicesList extends Component {
             return (
                 <div className="list-items">
                     <h2>Listasi on tällä hetkellä tyhjä.</h2><br/>
-                    <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
+                    <a className="button-header" href="/theswipe">
                         Siirry peliin tästä.
                     </a>
                 </div>
