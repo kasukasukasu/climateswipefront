@@ -1,3 +1,4 @@
+
 .taskcomponent {
     color: forestgreen;
     margin-bottom: 40px;
@@ -8,7 +9,6 @@
 .search {
     color: forestgreen;
     margin-bottom: 5px;
-
     margin-left: 5px;
     font-size: 20px;
     width: 50%;
@@ -115,7 +115,14 @@
 }
 
 .cardContentHeader2 {
-    color: darkgreen;
-    font-size: 140%;
+    font-family: Amiko;
+    color: forestgreen;
+    font-size: 180%;
     /*text-decoration: underline;*/
 }
+
+/*cardContentHeader3 {*/
+/*font-family: Amiko;*/
+/*color: forestgreen;*/
+/*font-size: 180%;*/
+/*}*/

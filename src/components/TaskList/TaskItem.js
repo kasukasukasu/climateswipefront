@@ -17,13 +17,13 @@ class TaskItem extends Component {
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography variant="headline">
-                            <p className="cardContentHeader">Tehtävä:</p>
+                            <p className="cardContentHeader2">Tehtävä:</p>
                             <p>{task.content1}</p>
                             <hr/>
-                            <p className="cardContentHeader">Lisätietoja:</p>
+                            <p className="cardContentHeader2">Lisätietoja:</p>
                             <p>{task.content2}</p>
                             <hr/>
-                            <p className="cardContentHeader">Haasteen vaikuttavuus:</p>
+                            <p className="cardContentHeader2">Haasteen vaikuttavuus:</p>
                             <p>-{task.rating}kg hiilidioksidipäästöjä vuodessa.</p>
                         </Typography>
                     </ExpansionPanelDetails>

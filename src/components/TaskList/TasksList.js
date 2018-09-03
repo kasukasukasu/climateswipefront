@@ -1,8 +1,9 @@
 
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
-// import "./TaskList.css";
 import TaskItem from "./TaskItem"
+import "./TaskItem.css";
+
 
 
 class TasksList extends Component {
@@ -45,7 +46,7 @@ class TasksList extends Component {
             return (
                 <div>
                     <h2 className="taskcomponent">Esimerkkejä mahdollisista ilmastoteoista:</h2>
-                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
+                    <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/>
                     <TaskItem tasks={this.state.tasks}>
                     </TaskItem>
                 </div>
