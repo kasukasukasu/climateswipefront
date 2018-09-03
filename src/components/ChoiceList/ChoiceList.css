@@ -1,0 +1,26 @@
+.title {
+    font-size: 2em;
+}
+
+.details {
+    font-size: 1em;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.task-container > div {
+    background-color: #ffffff;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    /*align-items: center;*/
+}

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
-import './ActionCards.css';
+import './ItemDetailCards.css';
 
 var shuffle = require('shuffle-array');
 

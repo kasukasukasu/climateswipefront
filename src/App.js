@@ -5,7 +5,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// import PrivateRoute from "./PrivateRoute";
 import app from "./base";
 import LogIn from "./components/Authorization/LogIn";
 import Navigation from './components/Navigation';
@@ -15,14 +14,13 @@ import TasksList from './components/TaskList/TasksList';
 import {createUser} from "./RestFunctions";
 import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoiceList/ChoicesList';
-import "./scss/stylish-portfolio.css";
+// import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
-import AboutSection from "./components/Homepage/about";
-import WhoWeAre from "./components/Homepage/whoweare";
+// import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
 import LajitteluBotti from "./components/LajitteluBotti";
 import {Grid} from "react-bootstrap";
-import earth from "./earth-outline-vector-clipart_10_1_50.png";
+import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
 // import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
 // import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
 // import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';
@@ -73,8 +71,6 @@ class App extends Component {
                     <Navigation state={this.state} />
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
                             <Route exact path="/" component={Header} />
-                            <Route exact path="/" component={AboutSection} />
-                            <Route exact path="/" component={WhoWeAre} />
                     <Grid>
                         <Switch>
                             <Route exact path="/login" component={LogIn} />
