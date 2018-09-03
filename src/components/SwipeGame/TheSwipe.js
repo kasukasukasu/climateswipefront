@@ -98,7 +98,7 @@ class TheSwipe extends Component {
                 <div className="stack-container">
                     <h1>Ei tällä hetkellä enempää haasteita,
                         ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
-                    <p>Lähetä meille uusi haastevaihtoehto arvioitavaksi: teamclimateswipe@gmail.com
+                    <p>Lähetä meille uusi haastevaihtoehto arvioitavaksi: teamclimatechoice@gmail.com
                     </p>
                 </div>
             );
