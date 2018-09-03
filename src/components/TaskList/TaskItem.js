@@ -13,7 +13,7 @@ class TaskItem extends Component {
                 <ExpansionPanel key={task.id}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
                         <Typography variant="title" className="title">
-                            <p className="cardContentHeader2">{task.title}</p></Typography>
+                            <p className="title">{task.title}</p></Typography>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Typography variant="headline">
