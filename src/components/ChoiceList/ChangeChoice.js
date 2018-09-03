@@ -43,12 +43,16 @@ class ChangeChoice extends Component {
     render() {
         if (this.props.choice.choice === "1") {
             return (
+                <div className="button">
                 <button  className='change-button' onClick={this.setNewData.bind(this)}>Poista valinta</button>
+                </div>
             )
         } else {
             return (
+                <div className="button">
                 <button className='change-button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
-        )}
+                </div>
+            )}
     }
 }
 

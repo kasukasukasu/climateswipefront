@@ -53,10 +53,10 @@ class ChoicesList extends Component {
             )
         } else {
             return (
-                <div className="list-items">
+                <div>
                     <ChoiceHeader count={count} choice={this.props.choice}/>
-                    <div className="task-container">
-                        {relations}
+                    <div className="list-items">
+                    {relations}
                     </div>
                 </div>
 

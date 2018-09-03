@@ -8,6 +8,7 @@
 /*}*/
 
 .task-container {
+    width: 800px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -92,9 +93,13 @@
     position: initial;
     margin: auto;
     margin-top: 40px;
-    text-align: center;
-    max-width: 600px;
+    text-align: left;
+    max-width: 400px;
     height: 300px;
     /*margin-bottom: 500px;*/
 
+}
+
+.button {
+    text-align: center;
 }

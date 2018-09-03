@@ -19,7 +19,7 @@ const Header = () => (
                         <h3>
                             <em>Täällä voit tehdä tietoisia ympäristövalintoja</em>
                         </h3>
-                        <a className="btn btn-primary btn-xl js-scroll-trigger" href="/theswipe">
+                        <a className="button-header" href="/thechoice">
                             Aloita tästä!
                         </a>
                     {/*</div>*/}
