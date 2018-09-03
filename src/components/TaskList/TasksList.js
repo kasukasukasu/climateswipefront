@@ -1,7 +1,6 @@
 
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
-import "../ExpanPanel.css";
 import TaskItem from "./TaskItem"
 
 

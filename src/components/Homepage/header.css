@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Yatra+One');
+@import url('https://fonts.googleapis.com/css?family=Zeyada');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+#climatelogo {
+  font-family: 'Yatra One', cursive;
+  color: white;
+  font-size: 135px;
+  /*margin-top: 80px;*/
+  padding-bottom: 4vw;
+  /*margin-right: 42vw;*/
+}
+
+#climate-content {
+  width: 100%;
+  float: left;
+}
+
+
+.tausta-1 {
+  background: url("../../resources/static/image/earth.jpg");
+
+  background-size: cover;
+  background-attachment: fixed;
+  /*background-position: center;*/
+  border-collapse: collapse;
+  margin-top: 0;
+}
+
+
+.tausta-2 {
+  background-size: cover;
+  background-attachment: fixed;
+  /*background-position: center;*/
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+
+.tausta-3 {
+  background: url("../../resources/static/image/kasvi.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  /*background-position: center;*/
+  border-collapse: collapse;
+  margin-top: 0;
+}
+
+
+

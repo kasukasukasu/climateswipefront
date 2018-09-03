@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import '../components/SwipeGame/ActionCards.css'
+import '../components/SwipeGame/ItemDetailCards.css'
 
 class ItemDetails extends Component {
 
