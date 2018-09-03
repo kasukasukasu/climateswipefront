@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import "./Botti";
+import "../components/Botti/Botti";
 import {Image} from "react-bootstrap"
 import ClimateChoice from "../../ClimateChoice.png";
 
