@@ -1,7 +1,6 @@
 
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
-import "../ChoiceList/ChoiceList.css";
 import TaskItem from "./TaskItem"
 
 

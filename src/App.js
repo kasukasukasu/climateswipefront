@@ -18,7 +18,7 @@ import ChoicesList from './components/ChoiceList/ChoicesList';
 import Header from "./components/Homepage/header";
 // import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
-import LajitteluBotti from "./components/LajitteluBotti";
+import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
 // import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
@@ -80,7 +80,7 @@ class App extends Component {
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/theswipe" render={() => <TheSwipe user={this.state.currentUser} />}/>
-                            <Route path="/botti" component={LajitteluBotti} />
+                            <Route path="/botti" component={Botti} />
                             {/*<Route path="/newchallenge" component={NewChallenge} />*/}
                             {/*<Route path="/lisatietoa" component={DataSentAndMoreInfo} />*/}
                             {/*<Route path="/recyclingsearch" component={RecyclingSearch} />*/}
