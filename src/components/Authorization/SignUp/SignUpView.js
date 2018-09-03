@@ -16,7 +16,7 @@ const SignUpView = ({ onSubmit }) => {
             <form onSubmit={onSubmit}>
                 <p><label>Sähköposti<input style={{ width: "90%" }} name="email" type="email" placeholder="Sähköposti"/></label></p>
                 <p><label>Salasana<input style={{ width: "100%" }} name="password" type="password" placeholder="Salasana"/></label></p>
-                <button type="submit">Rekisteröidy</button>
+                <button className="button-header" type="submit">Rekisteröidy</button>
             </form>
             {/*<Image src={ClimateChoice} circle width="200" height="200" />*/}
         </div>

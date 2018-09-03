@@ -3,7 +3,7 @@
     margin: auto;
     margin-top: 40px;
     text-align:center;
-    max-width: 300px;
+    max-width: 400px;
     height: 300px;
     /*margin-bottom: 500px;*/
 
@@ -42,7 +42,6 @@
     border-color: white;
     color: white;
     outline:none;
-    font-family: 'Calibri';
     font-weight: 700;
     font-size: 15px;
     border-radius: 50px;
@@ -69,7 +68,6 @@
     /*!*border-color: #E6E6E6;*!*/
     /*color: white;*/
     /*!*outline:none;*!*/
-    /*font-family: 'Calibri';*/
     /*!*font-weight: 700;*!*/
     /*!*font-size: 300%;*!*/
     /*!*margin: auto;*!*/
@@ -135,6 +133,7 @@
 .theswipe h2 {
     font-size: 200%;
     color: darkgreen;
+    font-weight: bold;
 }
 
 .cardContentHeader {

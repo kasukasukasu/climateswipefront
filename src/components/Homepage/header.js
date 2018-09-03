@@ -10,7 +10,7 @@ const Header = () => (
                 </div>
                 <div className="container-fluid tausta-2 text-center">
                     {/*<div className="container text-center my-auto">*/}
-                        <h1>Hienoin ympäristöplatform ikinä</h1>
+                        <h1 className="header-header">Hienoin ympäristöplatform ikinä</h1>
                         <h3>
                             <em>Täällä voit tehdä tietoisia ympäristövalintoja</em>
                         </h3><br/>

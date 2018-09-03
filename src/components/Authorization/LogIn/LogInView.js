@@ -15,7 +15,7 @@ const LogInView = ({ onSubmit }) => {
             <form className="containerLogIn" onSubmit={onSubmit}>
                 <p ><label>Sähköposti<input style={{ width: "90%" }} name="email" type="email" placeholder="Sähköposti"/></label></p>
                 <p><label>Salasana<input style={{ width: "95%" }} name="password" type="password" placeholder="Salasana"/></label></p>
-                <button type="submit">Kirjaudu sisään</button>
+                <button className="button-header" type="submit">Kirjaudu sisään</button>
             </form>
         </div>
     );
