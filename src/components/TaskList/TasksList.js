@@ -54,10 +54,10 @@ class TasksList extends Component {
             )
         } else {
             return (
-                <div className>
+                <div>
                     <h2 className="taskcomponent" >Esimerkkejä mahdollisista ilmastoteoista:</h2>
                     <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
-                    <TaskItem tasks={this.state.displayedTasks} className="list-items">
+                    <TaskItem tasks={this.state.displayedTasks}>
                     </TaskItem>
                 </div> )
         }
