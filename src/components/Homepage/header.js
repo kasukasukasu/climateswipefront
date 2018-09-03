@@ -18,7 +18,7 @@ const Header = () => (
                         <h1>Hienoin ympäristöplatform ikinä</h1>
                         <h3>
                             <em>Täällä voit tehdä tietoisia ympäristövalintoja</em>
-                        </h3>
+                        </h3><br/>
                         <a className="button-header" href="/thechoice">
                             Aloita tästä!
                         </a>
@@ -30,7 +30,7 @@ const Header = () => (
                 <div className="container">
                     <p className="text-muted small mb-0">
                         Copyright &copy; Team ClimateChoice 2018
-                        {/*<Image src={ClimateChoice} circle width="50" height="50" />*/}
+                        {/*<Image src={ClimateChoice} circle width="10" height="10" />*/}
                     </p>
                 </div>
             </footer>

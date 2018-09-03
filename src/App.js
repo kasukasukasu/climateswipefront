@@ -20,7 +20,6 @@ import TheMap from './components/RecyclingMap/TheMap';
 // import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
 import {Image} from "react-bootstrap"
-import ClimateChoice from "./resources/static/image/ClimateChoice.png";
 // import AboutSection from "./components/Homepage/about";
 // import FooterSection from "./components/Homepage/footer";
 import Botti from "./components/Botti/Botti";

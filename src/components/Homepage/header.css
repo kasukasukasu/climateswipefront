@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 
-#climatelogo {
-  font-family: 'Yatra One', cursive;
-  color: white;
-  font-size: 900%;
-  /*margin-top: 80px;*/
-  padding-bottom: 4vw;
-  /*margin-right: 42vw;*/
-}
+/*#climatelogo {*/
+  /*font-family: 'Yatra One', cursive;*/
+  /*color: white;*/
+  /*font-size: 900%;*/
+  /*!*margin-top: 80px;*!*/
+  /*padding-bottom: 4vw;*/
+  /*!*margin-right: 42vw;*!*/
+/*}*/
 
 #climate-content {
   max-width: 100%;
@@ -53,6 +53,31 @@
   border-collapse: collapse;
   margin-top: 0;
   max-width: 100%;
+
+}
+
+.button-header {
+  background-color: forestgreen;
+  color: white;
+  border: 1px solid forestgreen;
+  border-radius: 30px;
+  padding: 10px;
+
+}
+
+.button-header:hover {
+  background-color: darkgreen;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active {
+  color: white;
+  text-decoration: none;
 
 }
 

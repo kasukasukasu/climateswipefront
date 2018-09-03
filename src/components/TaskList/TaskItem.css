@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Gloria+hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Mirza');
-@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Amiko');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 
 
 .component {
-    font-family: Mirza;
+    font-family: Amiko;
     font-weight: bold;
     color: forestgreen;
     margin-bottom: 40px;
@@ -16,7 +16,7 @@
 .search {
     font-family: Mirza;
     color: forestgreen;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     margin-left: 5px;
     font-size: 20px;
 }
@@ -38,7 +38,7 @@
     width: 200px;
     margin: 20px;
     text-align: center;
-    line-height: 75px;
+    /*line-height: 75px;*/
     font-size: 30px;
     /*align-items: center;*/
 }
@@ -109,13 +109,12 @@
     position: initial;
     margin: auto;
     margin-top: 40px;
-    text-align: justify;
-    max-width: 400px;
+    text-align: left;
+    max-width: 600px;
     height: 300px;
-    /*margin-bottom: 500px;*/
 
 }
 
 .title {
-    font-size: small;
+    font-size: 150%;
 }
