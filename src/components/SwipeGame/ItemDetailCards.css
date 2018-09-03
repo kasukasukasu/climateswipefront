@@ -3,7 +3,7 @@
     margin: auto;
     margin-top: 40px;
     text-align:center;
-    max-width: 300px;
+    max-width: 400px;
     height: 300px;
     /*margin-bottom: 500px;*/
 
@@ -130,8 +130,9 @@
 }
 
 .theswipe h2 {
-    font-size: 230%;
+    font-size: 200%;
     color: darkgreen;
+    font-weight: bold;
 }
 
 .cardContentHeader {
