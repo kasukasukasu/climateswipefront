@@ -69,13 +69,13 @@
   background-color: darkgreen;
 }
 
-a:link, a:visited {
+.button-header:link, .button-header:visited {
   color: white;
   text-decoration: none;
   cursor: auto;
 }
 
-a:link:active, a:visited:active {
+.button-header:link:active, .button-header:visited:active {
   color: white;
   text-decoration: none;
 }
@@ -92,15 +92,47 @@ a:link:active, a:visited:active {
 
 .info-header {
   font-size: 150%;
-  max-width: 60%;
+  max-width: 600px;
 
 }
 
 .header-text {
   margin: auto;
   text-align: center;
-  max-width: 50%;
+  max-width: 500px;
 }
+
+.start-buttons {
+  font-size: 90%;
+  max-width: 500px;
+  margin: auto;
+  /*display:inline-block;*/
+
+}
+
+.game {
+  /*display:inline-block;*/
+  padding: 50px;
+  max-width: 100%;
+
+}
+
+.read-info-link {
+  font-size: 150%;
+}
+
+.read-info-link:link, .read-info-link:visited {
+  color: forestgreen;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+.read-info-link:link:active, .read-info-link:visited:active {
+  color: forestgreen;
+  text-decoration: underline;
+}
+
+
 
 
 

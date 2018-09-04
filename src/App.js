@@ -76,7 +76,7 @@ class App extends Component {
                     <Navigation state={this.state} />
                     {/*<img src={ClimateChoice} className="App-logo" alt="logo" />*/}
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
-                            <Route exact path="/" component={Header} />
+                            <Route exact path="/" render={() => <Header authentication={this.state.authenticated}/>}/>
                     <Grid>
                         <Switch>
                             {/*<Route exact path="/" component={Header} />*/}
@@ -84,7 +84,7 @@ class App extends Component {
                             <Route exact path="/info" component={Info} />
                             <Route exact path="/signup" component={SignUp} />
                             <Route exact path="/loggedout" component={LoggedOut}/>
-                            <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
+                            <Route path="/taskslist" render={() => <TasksList />}/>
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
                             <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} authentication={this.state.authenticated} />}/>
