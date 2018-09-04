@@ -56,7 +56,12 @@ class HeaderButtons extends Component {
         } else {
             return (
             <div className="start-buttons">
-                <a className="button-header" href="/login">Kirjaudu tästä sisään</a><br/><br/>
+                <div className="read-more">
+                    <a className="read-info-link" href="/info">Lue lisää hiilijalanjäljestä ja kestävistä valinnoista</a>
+                </div>
+                <div className="game">
+                <a className="button-header" href="/login">Kirjaudu tästä sisään</a>
+                </div>
             </div>
             )
         }
