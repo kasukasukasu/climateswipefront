@@ -72,42 +72,13 @@ class TheSwipe extends Component {
     render() {
         // const item = this.state.tasks[this.state.index];
         // console.log(this.props);
-        console.log(this.props.authentication);
-        if ((this.props.authentication === false) && (this.state.index + 1 !== this.state.tasks.length)) {
-            return (
-                <div className="theswipe">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <div>
-                        <a className="button-header" href="/login">
-                            Kirjaudu tallentaaksesi valintoja<br/></a>
-                    </div>
-                    <div className="theswipe">
-                        <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
-                                  goToNext={this.goToNext.bind(this)}/>
-                    </div>
-                </div>
-            );
-
-        } else {
-            if ((this.props.authentication === true) && (this.state.index + 1 !== this.state.tasks.length)) {
+        // console.log(this.props.authentication);
+            if ( this.state.index + 1 !== this.state.tasks.length) {
 
                 return (
                     <div className="theswipe">
                         <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
-                                  goToNext={this.goToNext.bind(this)}/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <div>
-                            <a className="button-header" href="/choices">
-                                Siirry tästä katsomaan omia valintojasi
-                            </a>
-                        </div>
+                                  goToNext={this.goToNext.bind(this)} authentication={this.props.authentication}/>
                     </div>
 
                 );
@@ -123,8 +94,6 @@ class TheSwipe extends Component {
             }
 
         }
-
-    }
 
 }
 

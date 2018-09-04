@@ -23,7 +23,7 @@ export class Navigation extends Component {
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
                             <NavDropdown eventKey={3} title="Ympäristötyökaluja" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1} href="/botti">Kysy Botilta</MenuItem>
+                                <MenuItem eventKey={3.1} href="/botti">Lahjabotti</MenuItem>
                                 <MenuItem eventKey={3.2} href="/themap">Kierrätyspisteet</MenuItem>
                             </NavDropdown>
                     </Nav>

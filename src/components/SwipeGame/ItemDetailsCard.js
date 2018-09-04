@@ -56,6 +56,12 @@ class ItemDetailsCard extends Component {
         const task = this.props.item;
         return (
             <div className="stack-container">
+                {this.props.authentication ? (<p></p>) : (
+                    <div>
+                <a className="button-header" href="/login">
+                    Kirjaudu tallentaaksesi valintoja</a><br/><br/><br/>
+                    </div>
+                )}
                 <Card className="card-top">
                     <CardContent>
                         <h2>{task.title}</h2>
@@ -83,6 +89,15 @@ class ItemDetailsCard extends Component {
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0")}>Ei</button>
                 <button className="card-button like"
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
+                </div>
+                <br/>
+                <br/>
+                <div>
+                    {this.props.authentication ? (
+                    <a className="button-header" href="/choices">
+                        Siirry tästä katsomaan omia valintojasi
+                    </a>
+                    ) :( <p></p>) }
                 </div>
             </div>
         );
