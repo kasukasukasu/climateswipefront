@@ -84,14 +84,6 @@ class ItemDetailsCard extends Component {
                 <button className="card-button like"
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <div>
-                    <a className="button-header" href="/choices">
-                        Siirry tästä katsomaan omia valintojasi
-                    </a>
-                </div>
             </div>
         );
     }
