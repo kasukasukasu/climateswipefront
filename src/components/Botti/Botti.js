@@ -46,6 +46,8 @@ class Botti extends Component {
                         </div>
                     <div className="botti"></div>
                     </div>
+                <br/>
+                <br/>
                 </div>
         );
     }

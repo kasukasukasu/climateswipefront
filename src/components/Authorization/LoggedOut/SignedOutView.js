@@ -1,8 +1,6 @@
 // tässä uloskirjautumissivun näkymä
 
 import React from "react";
-import {Image} from "react-bootstrap"
-import ClimateChoice from "../../../ClimateChoice.png";
 import "./SignedOutView.css";
 
 const SignedOutView = ({ onSubmit }) => {

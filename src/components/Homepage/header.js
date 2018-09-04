@@ -9,14 +9,13 @@ class Header extends Component {
                     <div className="container-fluid tausta-1">
 
                     </div>
+                    <br/>
+                    <br/>
                     <div className="container-fluid tausta-2">
                         {/*<div className="container text-center my-auto">*/}
                             <h1 className="header-header">Climate Choice</h1>
-                        <h3> Apunasi kestävämpään arkeen</h3><br/>
-                            <p className="header-text">
-                                <em>Suomalaisten kulutustottumuksilla tarvitsisimme 3,4 maapalloa kattamaan valintojemme luonnonvarojen tarpeen. Jos haluamme säästää luonnonvarojamme myös tuleville sukupolville, meidän tulisi pienentää kulutuksemme muodostamaa hiilijalanjälkeä huomattavasti. Jokainen kulutustamme pienentävä teko on lahja tuleville sukupolville ja maapallon hyvinvoinnille</em>
-                            </p><br/>
-                        <p className="header-text">Climate Choice auttaa sinua tekemään kestävämpiä ympäristövalintoja ja arvioi tekemisien valintojesi vaikutusta hiilijalanjälkeesi.</p>
+                        <h2> Apunasi kestävämpään arkeen</h2><br/>
+                        <h3 className="header-text">Climate Choice auttaa sinua tekemään kestävämpiä arjen ympäristövalintoja ja arvioi tekemisien valintojesi vaikutusta hiilijalanjälkeesi.</h3>
                         <br/><br/>
                        <HeaderButtons authentication={this.props.authentication}/>
                         {/*</div>*/}
