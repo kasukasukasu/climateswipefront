@@ -17,6 +17,8 @@ const LogInView = ({ onSubmit }) => {
                 <p><label>Salasana<input style={{ width: "95%" }} name="password" type="password" placeholder="Salasana"/></label></p>
                 <button className="button-header" type="submit">Kirjaudu sisään</button>
             </form>
+            <div className="gotosignup"><p>Etkö ole vielä rekisteröitynyt?</p></div>
+                <a className="button-header" href="/signup">Rekisteröidy tästä!</a>
         </div>
     );
 };
