@@ -100,3 +100,17 @@
 .button {
     text-align: center;
 }
+
+
+.choiceContentHeader2 {
+    font-family: Amiko;
+    color: forestgreen;
+    font-size: 180%;
+    /*text-decoration: underline;*/
+}
+
+.choicecomponent {
+    font-family: Amiko;
+    color: forestgreen;
+
+}

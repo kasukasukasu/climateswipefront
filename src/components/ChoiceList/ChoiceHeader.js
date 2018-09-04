@@ -14,7 +14,7 @@ class ChoiceHeader extends Component {
     render() {
         if (this.props.choice === "1") {
             return (
-                <div className="component">
+                <div className="choicecomponent">
                     <h1 >Valitsemasi haasteet:</h1>
                     <p className="header-text"> Suorittamalla nämä haasteet vähennät hiilidioksidipäästöjäsi <span className="count">{this.props.count}</span> kg vuodessa. </p><br/>
                     <ProgressBar percentage={this.state.percentage} count={this.props.count}/><br/>
@@ -22,7 +22,7 @@ class ChoiceHeader extends Component {
             )
         } else {
             return (
-                <div className="component">
+                <div className="choicecomponent">
                     <h1>Hylkäämäsi haasteet:</h1>
                     <p className="header-text"> Jos kuitenkin päättäisit suorittaa nämä haasteet, vähentäisit
                         hiilidioksidipäästöjäsi <span className="count">{this.props.count}</span> kg vuodessa. </p>

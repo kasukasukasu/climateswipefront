@@ -7,8 +7,11 @@ class TheMap extends Component {
         return (
             <div>
                 <div className="container-fluid tausta-4 text-center">
-                        <h3>Täsä o karttajee</h3><br/>
-                        <div><iframe className="map-component" src="https://www.google.com/maps/d/embed?mid=1Ad3ThL2WNF6NgCMawXBaFSNvLjx992er"></iframe></div>
+                        <h3>Kirpputorit, kierrätyskeskukset, kontit ja Sorttiasemat</h3><br/>
+                        <div><iframe className="map-component" max-width="100%" max-height="300%" src="https://www.google.com/maps/d/embed?mid=1Ad3ThL2WNF6NgCMawXBaFSNvLjx992er"></iframe></div>
+
+
+                    <br/>
                 </div>
             </div>
         );

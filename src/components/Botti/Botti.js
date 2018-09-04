@@ -36,11 +36,11 @@ class Botti extends Component {
                     <div class="container-fluid tausta-4 text-center">
                         <h3>Juttele kanssani asiasta</h3><br/>
                         <div>
-                            <iframe title="botti" className="botti"
-                                    allow="microphone;"
-                                    width="350"
-                                    height="430"
-                                    src="https://console.dialogflow.com/api-client/demo/embedded/36f27c67-ae72-4f1f-b3ea-6cb5bb2533e9">
+                            <iframe
+                                allow="microphone;"
+                                width="350"
+                                height="430"
+                                src="https://console.dialogflow.com/api-client/demo/embedded/d3a63bf6-ccf8-4ac3-8584-2403a551aa89">
                             </iframe>
                         </div>
                         </div>
