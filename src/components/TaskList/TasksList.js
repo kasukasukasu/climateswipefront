@@ -57,9 +57,9 @@ class TasksList extends Component {
                 <div>
                     <h2 className="taskcomponent" >Esimerkkejä mahdollisista ilmastoteoista:</h2>
                     <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/><br/>
-                    <TaskItem tasks={this.state.displayedTasks}>
-                    </TaskItem>
-                </div> )
+                    <TaskItem tasks={this.state.displayedTasks}></TaskItem>
+                </div>
+            )
         }
 
     }

@@ -31,7 +31,9 @@ class TaskItem extends Component {
             )
         });
         return (
-            <div className="list-items">{tasks}</div>
+            <div className="list-items">{tasks}
+            <br></br><br></br><br></br><br></br>
+            </div>
 
         )
     }

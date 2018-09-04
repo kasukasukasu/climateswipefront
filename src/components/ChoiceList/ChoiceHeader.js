@@ -7,7 +7,7 @@ class ChoiceHeader extends Component {
         super(props)
 
         this.state = {
-            percentage: ((11500-this.props.count)/11500*100)
+            percentage: ((10300-this.props.count)/10300*100)
         }
     }
 
