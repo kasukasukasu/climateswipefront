@@ -34,7 +34,7 @@ class Botti extends Component {
                 <p>Aloita botille juttelu klikkaamalla logoa</p>
                 <div style={hidden}>
                     <div class="container-fluid tausta-4 text-center">
-                        <h3>Juttele kanssani asiasta</h3><br/>
+                        <h3>Kysy minulta lahjoista!</h3><br/>
                         <div>
                             <iframe
                                 allow="microphone;"
