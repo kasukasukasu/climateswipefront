@@ -2,8 +2,8 @@ import React from 'react';
 import "./ChoiceList.css"
 
 const ProgressBar = (props) => {
-    console.log("hei");
-    var footprint = 11500 - props.count;
+    console.log(props.percentage);
+    var footprint = 10300 - props.count;
     return (
         <div className="bar">
             <div className="progressBar">

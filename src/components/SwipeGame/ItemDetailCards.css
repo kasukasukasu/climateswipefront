@@ -1,7 +1,7 @@
 .stack-container {
     position: initial;
     margin: auto;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
     text-align:center;
     max-width: 400px;
     height: 300px;
@@ -140,4 +140,41 @@
     color: darkgreen;
     font-size: 110%;
     /*text-decoration: underline;*/
+}
+
+.gameProgress{
+    font-size: 100%;
+    max-width: 400px;
+    margin: auto
+}
+
+.gameProgress > .bar > .progressBar > .filler {
+    background-color: darkgray;
+    height: 100%;
+    border-radius: inherit;
+    transition: widt .2s ease-in;
+    text-align: center;
+}
+
+.gameProgress > .bar > .progressBar {
+    background-color: lightgrey;
+    margin-top: 20px;
+    position: relative;
+    height: 10px;
+    /*max-width: 300px;*/
+    border-radius: 50px;
+    /*border: 1px solid #333;*/
+    text-align: left;
+    /*margin-bottom: 10px;*/
+
+}
+
+.gameProgress > .bar  > p {
+    color: darkgray;
+    font-size: 100%;
+    display: inline-block;
+}
+
+.gameProgress > .bar  > .fincofoot {
+    display: none;
 }

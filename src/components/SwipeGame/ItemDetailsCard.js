@@ -11,6 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './ItemDetailCards.css'
 import {createRelation} from "../../RestFunctions";
+import ProgressBar from "../ChoiceList/ProgressBar";
 
 
 const styles = theme => ({
@@ -42,12 +43,13 @@ class ItemDetailsCard extends Component {
         this.setState(state => ({expanded: !state.expanded}));
     };
 
-    handleButtonClick(userid, taskid, choice, e) {
+    handleButtonClick(userid, taskid, choice, rating, e) {
         e.preventDefault();
         this.props.goToNext();
         console.log('The link was clicked.');
         var data = ({choice: choice, user_id: userid, task_id: taskid});
         console.log(data);
+        this.props.counting(rating, choice );
         createRelation(data);
     }
 
@@ -86,9 +88,9 @@ class ItemDetailsCard extends Component {
                 <br/>
                 <div className="buttons">
                 <button className="card-button pass"
-                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0")}>Ei</button>
+                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.rating)}>Ei</button>
                 <button className="card-button like"
-                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
+                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.rating)}>Kyllä</button>
                 </div>
                 <br/>
                 <br/>
