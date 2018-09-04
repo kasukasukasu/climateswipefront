@@ -26,10 +26,11 @@
   /*background-position: center;*/
   border-collapse: collapse;
 
-  max-width: 100%;
+  /*max-width: 100%;*/
   font-size: 100%;
   text-align: center;
-  max-height: 100%;
+  /*max-height: 100%;*/
+  margin: auto;
 
 
 }
@@ -40,8 +41,8 @@
   background-attachment: fixed;
   /*background-position: center;*/
   border-collapse: collapse;
-  margin-bottom: 50px;
-  max-width: 100%;
+  margin: auto;
+  max-width: 70%;
 
 }
 
@@ -51,8 +52,9 @@
   background-attachment: fixed;
   /*background-position: center;*/
   border-collapse: collapse;
-  margin-top: 0;
+  /*margin-top: 0;*/
   max-width: 100%;
+  margin: auto;
 
 }
 
@@ -92,14 +94,14 @@
 
 .info-header {
   font-size: 150%;
-  max-width: 600px;
+  /*max-width: 600px;*/
 
 }
 
 .header-text {
   margin: auto;
   text-align: center;
-  max-width: 500px;
+  /*max-width: 500px;*/
 }
 
 .start-buttons {
@@ -113,7 +115,7 @@
 .game {
   /*display:inline-block;*/
   padding: 50px;
-  max-width: 100%;
+  /*max-width: 100%;*/
 
 }
 
@@ -132,8 +134,10 @@
   text-decoration: underline;
 }
 
-
-
+.footer {
+  margin: auto;
+  text-align: center;
+}
 
 
 
