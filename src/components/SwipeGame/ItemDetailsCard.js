@@ -61,11 +61,6 @@ class ItemDetailsCard extends Component {
                         <h2>{task.title}</h2>
                         <p>{task.content1}</p>
                     </CardContent>
-                    {/*<CardMedia*/}
-                    {/*className={classes.media}*/}
-                    {/*image=""*/}
-                    {/*title="Ilmastokuva"*/}
-                    {/*/>*/}
                     <CardActions className={classes.actions} disableActionSpacing>
                         <IconButton className={classnames(classes.expand, {
                             [classes.expandOpen]: this.state.expanded,
