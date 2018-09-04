@@ -97,6 +97,14 @@ class TheSwipe extends Component {
                     <div className="theswipe">
                         <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
                                   goToNext={this.goToNext.bind(this)}/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <a className="button-header" href="/choices">
+                                Siirry tästä katsomaan omia valintojasi
+                            </a>
+                        </div>
                     </div>
 
                 );
