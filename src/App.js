@@ -87,7 +87,7 @@ class App extends Component {
                             <Route path="/taskslist" render={() => <TasksList user={this.state.currentUser}/>}/>
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
-                            <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} />}/>
+                            <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} authentication={this.state.authenticated} />}/>
                             <Route path="/botti" component={Botti} />
                             <Route path="/themap" component={TheMap}/>
                             {/*<Route path="/newchallenge" component={NewChallenge} />*/}

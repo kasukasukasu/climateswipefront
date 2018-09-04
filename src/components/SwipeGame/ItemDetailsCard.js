@@ -61,11 +61,6 @@ class ItemDetailsCard extends Component {
                         <h2>{task.title}</h2>
                         <p>{task.content1}</p>
                     </CardContent>
-                    {/*<CardMedia*/}
-                    {/*className={classes.media}*/}
-                    {/*image=""*/}
-                    {/*title="Ilmastokuva"*/}
-                    {/*/>*/}
                     <CardActions className={classes.actions} disableActionSpacing>
                         <IconButton className={classnames(classes.expand, {
                             [classes.expandOpen]: this.state.expanded,
@@ -88,6 +83,14 @@ class ItemDetailsCard extends Component {
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0")}>Ei</button>
                 <button className="card-button like"
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <div>
+                    <a className="button-header" href="/choices">
+                        Siirry tästä katsomaan omia valintojasi
+                    </a>
                 </div>
             </div>
         );
