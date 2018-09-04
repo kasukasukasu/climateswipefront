@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import "./Botti";
-import ClimateChoice from "../../ClimateChoice.png";
+import BottiPic from "./NewBot.png";
 
 
 class Botti extends Component {
@@ -30,7 +30,7 @@ class Botti extends Component {
         return (
             <div>
                 <a className="toggle-a" onClick={this.toggle.bind(this)}>
-                    <img className="botti"  alt="botti"  src={ClimateChoice} circle width="200" height="200"/></a>
+                    <img className="botti"  alt="botti"  src={BottiPic} circle width="500" height="500"/></a>
                 <p>Aloita botille juttelu klikkaamalla logoa</p>
                 <div style={hidden}>
                     <div class="container-fluid tausta-4 text-center">
