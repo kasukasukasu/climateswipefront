@@ -97,6 +97,9 @@ class App extends Component {
                     </Grid>
                     {/*<hr/>*/}
                     <div>
+                        <div>
+                            <br/>
+                        </div>
                     {/*<FooterSection />*/}
                     </div>
                 </div>

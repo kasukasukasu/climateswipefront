@@ -14,7 +14,7 @@ class Header extends Component {
                             <h1 className="header-header">Climate Choice</h1>
                         <h3> Apunasi kestävämpään arkeen</h3><br/>
                             <p className="header-text">
-                                <em>Suomalaisten kulutustottumuksilla tarvitsisimme 3,4 maapalloa kattamaan valintojemme luonnonvarojen tarpeen. Jos haluamme säästää luonnonvarojamme myös tuleville sukupolville, meidän tulisi pienentää kulutuksemme muodostamaa hiilijalanjälkeä huomattavasti. Jokainen kulutustamme pienentävä teko on lahja tuleville sukupolville ja maapallon hyvinvoinnille</em>
+                                <em>Suomalaisten kulutustottumuksilla tarvitsisimme 3,6 maapalloa kattamaan valintojemme luonnonvarojen tarpeen. Jos haluamme säästää luonnonvarojamme myös tuleville sukupolville, meidän tulisi pienentää kulutuksemme muodostamaa hiilijalanjälkeä huomattavasti. Jokainen kulutustamme pienentävä teko on lahja tuleville sukupolville ja maapallon hyvinvoinnille</em>
                             </p><br/>
                         <p className="header-text">Climate Choice auttaa sinua tekemään kestävämpiä ympäristövalintoja ja arvioi tekemisien valintojesi vaikutusta hiilijalanjälkeesi.</p>
                         <br/><br/>
