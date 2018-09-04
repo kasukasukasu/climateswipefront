@@ -69,6 +69,7 @@ class ItemDetailsCard extends Component {
                         <h2>{task.title}</h2>
                         <p>{task.content1}</p>
                     </CardContent>
+                    <div>
                     <CardActions className={classes.actions} disableActionSpacing>
                         <IconButton className={classnames(classes.expand, {
                             [classes.expandOpen]: this.state.expanded,
@@ -76,6 +77,13 @@ class ItemDetailsCard extends Component {
                                     aria-expanded={this.state.expanded}
                                     aria-label="Show more"><ExpandMoreIcon/></IconButton>
                     </CardActions>
+                        <div className="buttons">
+                            <button className="card-button pass"
+                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.rating)}>Ei</button>
+                            <button className="card-button like"
+                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.rating)}>Kyllä</button>
+                        </div>
+                    </div>
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                         <CardContent>
                             <p className="cardContentHeader">Lisätietoja: </p>
@@ -86,12 +94,12 @@ class ItemDetailsCard extends Component {
                     </Collapse>
                 </Card>
                 <br/>
-                <div className="buttons">
-                <button className="card-button pass"
-                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.rating)}>Ei</button>
-                <button className="card-button like"
-                        onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.rating)}>Kyllä</button>
-                </div>
+                {/*<div className="buttons">*/}
+                {/*<button className="card-button pass"*/}
+                        {/*onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.rating)}>Ei</button>*/}
+                {/*<button className="card-button like"*/}
+                        {/*onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.rating)}>Kyllä</button>*/}
+                {/*</div>*/}
                 <br/>
                 <br/>
                 <div>
