@@ -99,6 +99,7 @@ class ItemDetailsCard extends Component {
                     </a>
                     ) :( <p></p>) }
                 </div>
+                <br></br><br></br><br></br><br></br>
             </div>
         );
     }

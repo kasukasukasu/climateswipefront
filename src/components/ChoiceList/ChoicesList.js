@@ -57,6 +57,7 @@ class ChoicesList extends Component {
                     <ChoiceHeader count={count} choice={this.props.choice}/>
                     <div className="list-items">
                     {relations}
+                        <br></br><br></br><br></br><br></br>
                     </div>
                 </div>
 
