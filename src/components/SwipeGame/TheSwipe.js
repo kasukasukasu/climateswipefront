@@ -81,7 +81,7 @@ class TheSwipe extends Component {
                     <br/>
                     <div>
                         <a className="button-header" href="/login">
-                            Siirry tästä kirjautumiseen, niin voit tallentaa valintoja<br/></a>
+                            Kirjaudu tallentaaksesi valintoja<br/></a>
                     </div>
                     <div className="theswipe">
                         <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
@@ -97,6 +97,9 @@ class TheSwipe extends Component {
                     <div className="theswipe">
                         <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
                                   goToNext={this.goToNext.bind(this)}/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <br/>
                         <br/>
                         <br/>
