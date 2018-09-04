@@ -12,6 +12,7 @@
     background-color: #ffffff;
     align-items: flex-start;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .task-container > div {
