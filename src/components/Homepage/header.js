@@ -22,14 +22,14 @@ class Header extends Component {
                         {/*</div>*/}
                     </div>
                 </div>
-                <div className="container-fluid tausta-2 text-center">
-                <footer className="footer text-center">
-                    <div className="container">
+                <div className="container-fluid tausta-2">
+                <footer className="footer">
+                    {/*<div className="container">*/}
                         <p className="text-muted small mb-0">
                             Copyright &copy; Team ClimateChoice 2018
                             {/*<Image src={ClimateChoice} circle width="10" height="10" />*/}
                         </p>
-                    </div>
+                    {/*</div>*/}
                 </footer>
                 </div>
             </div>
