@@ -77,9 +77,9 @@ class App extends Component {
                     <Navigation state={this.state} />
                     {/*<img src={ClimateChoice} className="App-logo" alt="logo" />*/}
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
-                            <Route exact path="/" render={() => <Header authentication={this.state.authenticated}/>}/>
                     <Grid>
                         <Switch>
+                            <Route exact path="/" render={() => <Header authentication={this.state.authenticated}/>}/>
                             {/*<Route exact path="/" component={Header} />*/}
                             <Route exact path="/login" component={LogIn} />
                             <Route exact path="/info" component={Info} />
