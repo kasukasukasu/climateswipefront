@@ -85,7 +85,7 @@ class ItemDetailsCard extends Component {
                         </CardContent>
                     </Collapse>
                 </Card>
-                <br/>
+                <br/><br/>
                     {this.props.authentication ? (
                     <a className="button-header" href="/choices">
                         Siirry tästä katsomaan omia valintojasi

@@ -28,7 +28,6 @@ export class Navigation extends Component {
                             </NavDropdown>
                     </Nav>
                     {/*<NavItem href="/choices">Valitut haasteet</NavItem>*/}
-
                     {this.props.state.authenticated ? (
                         <Nav pullRight>
                             <NavDropdown eventKey={3} title="Omat valinnat" id="basic-nav-dropdown">
