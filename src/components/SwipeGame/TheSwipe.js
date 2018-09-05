@@ -87,7 +87,7 @@ class TheSwipe extends Component {
         var sum = this.state.count;
         console.log(this.state);
         if (choice === "1") {
-            sum += parseInt(rating,10);
+            sum += parseInt(rating, 10);
         } else {
             sum += 0;
         }
