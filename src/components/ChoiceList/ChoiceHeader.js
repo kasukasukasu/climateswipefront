@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-// import "../../App.css"
 import ProgressBar from "./ProgressBar";
 
 class ChoiceHeader extends Component {
     constructor (props) {
         super(props)
+        this.state = {
+            percentage: ((10300-this.props.count)/10300*100)
+        }
     }
 
     render() {
@@ -33,4 +35,5 @@ class ChoiceHeader extends Component {
         }
     }
 }
+
 export default ChoiceHeader;

@@ -3,10 +3,7 @@ import LogInView from "./LogInView";
 import { withRouter } from "react-router";
 import app from "../../../base";
 
-
 // luodaan kirjautumisscontainer komponentti index failiin
-
-
 class LogInContainer extends Component {
 
     // handleSignup funktio määritelty nuolifunktioksi, tehtiin tässä, jotta ei tarvitse käyttää bind(this)

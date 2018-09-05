@@ -12,6 +12,7 @@ class SignUpContainer extends Component {
     // Tässä funktiossa preventDefault jotta vältetään sivun reloadaamista
     // haetaan salasana ja sähköposti formielementiltä
     // luodaan uusi käyttäjä firebaseen käyttäen  createUserWithEmailAndPassword funktiota
+
     handleSignUp = async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;

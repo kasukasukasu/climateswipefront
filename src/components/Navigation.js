@@ -19,7 +19,7 @@ export class Navigation extends Component {
                 <Navbar.Collapse>
                     <Nav pullLeft>
                         <NavItem href="/info">Info</NavItem>
-                        <NavItem href="/thechoice">The Choice</NavItem>
+                        <NavItem href="/thechoiceinfo">Valintakortit</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
                             <NavDropdown eventKey={3} title="Ympäristötyökaluja" id="basic-nav-dropdown">
@@ -32,8 +32,8 @@ export class Navigation extends Component {
                     {this.props.state.authenticated ? (
                         <Nav pullRight>
                             <NavDropdown eventKey={3} title="Omat valinnat" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1} href="/choices">Valitut haasteet</MenuItem>
-                                <MenuItem eventKey={3.2} href="/notchosentasks">Hylätyt haasteet</MenuItem>
+                                <MenuItem eventKey={3.1} href="/choices">Valitut ilmastoteot</MenuItem>
+                                <MenuItem eventKey={3.2} href="/notchosentasks">Hylätyt ilmastoteot</MenuItem>
                             </NavDropdown>
                             <NavItem href="/loggedout">Kirjaudu ulos</NavItem>
                         </Nav>

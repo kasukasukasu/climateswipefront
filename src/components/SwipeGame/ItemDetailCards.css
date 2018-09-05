@@ -191,3 +191,145 @@
 .gameProgress > .bar  > .fincofoot {
     display: none;
 }
+
+
+
+.button-info {
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid forestgreen;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+
+.button-info:hover {
+    background-color: darkgreen;
+}
+
+.button-info:link, .button-info:visited {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.button-info:link:active, .button-info:visited:active {
+    color: white;
+    text-decoration: none;
+}
+
+.header-info {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.info-info {
+    text-align: center;
+    margin: auto;
+}
+
+.info-header {
+    font-size: 150%;
+    /*max-width: 600px;*/
+
+}
+
+.gameinfo-text {
+    margin: auto;
+    text-align: center;
+    /*max-width: 500px;*/
+}
+
+.start-buttons {
+    font-size: 90%;
+    max-width: 500px;
+    margin: auto;
+    /*display:inline-block;*/
+
+}
+
+.game {
+    /*display:inline-block;*/
+    padding: 50px;
+    /*max-width: 100%;*/
+
+}
+
+.read-info-link {
+    font-size: 150%;
+}
+
+.read-info-link:link, .read-info-link:visited {
+    color: forestgreen;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+.read-info-link:link:active, .read-info-link:visited:active {
+    color: forestgreen;
+    text-decoration: underline;
+}
+
+.footer {
+    margin: auto;
+    text-align: center;
+}
+
+.tausta-1 {
+    /*background: url("../../resources/static/image/earth.jpg");*/
+
+    /*background-size: cover;*/
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+
+    /*max-width: 100%;*/
+    font-size: 100%;
+    text-align: center;
+    /*max-height: 100%;*/
+    margin: auto;
+
+
+}
+
+
+.tausta-2 {
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 900px;
+
+}
+
+.tausta-3 {
+    background: url("../../resources/static/image/kasvi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    /*margin-top: 0;*/
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.listStyle {
+    list-style-type:none;
+    margin: auto;
+
+}
+
+.infocard {
+    border-style: solid;
+    border-width: 1px;
+    border-color: forestgreen;
+    position: initial;
+    margin: auto;
+    text-align:center;
+    max-width: 600px;
+    height: 250px;
+}
+
+
