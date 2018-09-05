@@ -25,9 +25,9 @@ class Botti extends Component {
         return (
             <div>
                 <a className="toggle-a" onClick={this.toggle.bind(this)}>
-                    <img  title="botti" className="botti"  alt="botti"  src={BottiPic} width="500" height="500"/></a>
+                    <img  title="botti" className="botti"  alt="botti"  src={BottiPic} width="340" height="340"/></a>
                 <p>Aloita botille juttelu klikkaamalla logoa</p>
-                <div style={hidden}>class=
+                <div style={hidden}>
                     <div title="presentbot" className="container-fluid tausta-4 text-center">
                         <h3>Kysy minulta lahjoista!</h3><br/>
                         <div>
