@@ -25,24 +25,22 @@ class Botti extends Component {
         return (
             <div>
                 <a className="toggle-a" onClick={this.toggle.bind(this)}>
-                    <img  title="botti" className="botti"  alt="botti"  src={BottiPic} width="340" height="340"/></a>
+                    <img  className="botti"  alt="botti" src={BottiPic} width="340" height="340"/></a>
                 <p>Aloita botille juttelu klikkaamalla logoa</p>
                 <div style={hidden}>
-                    <div title="presentbot" className="container-fluid tausta-4 text-center">
+                    <div title="presentBot" className="container-fluid tausta-4 text-center">
                         <h3>Kysy minulta lahjoista!</h3><br/>
-                        <div>
                             <iframe title="presentbot"
                                 allow="microphone;"
                                 width="350"
                                 height="430"
-                                src="https://console.dialogflow.com/api-client/demo/embedded/d3a63bf6-ccf8-4ac3-8584-2403a551aa89">
-                            </iframe>
+                                src="https://console.dialogflow.com/api-client/demo/embedded/d3a63bf6-ccf8-4ac3-8584-2403a551aa89"/>
                         </div>
-                        </div>
+                </div>
                     <div className="botti"></div>
                     <br></br><br></br><br></br><br></br>
                     </div>
-                </div>
+
         );
     }
 }
