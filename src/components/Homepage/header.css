@@ -42,7 +42,7 @@
   /*background-position: center;*/
   border-collapse: collapse;
   margin: auto;
-  max-width: 900px;
+  /*max-width: 900px;*/
 
 }
 
@@ -102,7 +102,35 @@
   margin: auto;
   text-align: center;
   /*max-width: 500px;*/
+  margin-bottom: 20px;
 }
+
+.header-text-1 {
+  margin: auto;
+  text-align: center;
+  /*max-width: 500px;*/
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+
+.header-text-2 {
+  margin: auto;
+  text-align: center;
+  /*max-width: 500px;*/
+  margin-bottom: 20px;
+  color: forestgreen;
+  font-size: 150%;
+  padding: 20px;
+}
+
+.header-text-3 {
+  margin: auto;
+  text-align: center;
+  /*max-width: 500px;*/
+  margin-bottom: 20px;
+}
+
 
 .start-buttons {
   font-size: 90%;
