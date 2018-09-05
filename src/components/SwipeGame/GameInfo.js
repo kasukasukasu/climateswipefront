@@ -8,8 +8,6 @@ class GameInfo extends Component {
         return (
             <div>
                 <div>
-                    <br/>
-                    <br/>
                     <div className="container-fluid tausta-2">
                         {/*<div className="container text-center my-auto">*/}
                         <h1 className="header-header">Tervetuloa tekemään arjen ilmastovalintoja.</h1><br/>

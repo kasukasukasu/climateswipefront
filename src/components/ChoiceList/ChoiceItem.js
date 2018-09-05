@@ -12,7 +12,7 @@ class ChoiceItem extends Component {
         return (
             <ExpansionPanel key={this.props.choice.id}>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
-                    <Typography variant="display1">
+                    <Typography variant="title" className="title">
                         <p className="title">{this.props.choice.task.title}</p></Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>

@@ -118,3 +118,13 @@
     color: forestgreen;
 
 }
+
+.choice-title {
+    font-family: Amiko;
+    font-size: 1.5em;
+    text-align: left;
+    margin: auto;
+    color: forestgreen;
+    line-height: 1.5em;
+
+}
