@@ -26,7 +26,7 @@ class GameInfo extends Component {
                             <p>Tehtävien merkityksestä ja vaikuttavuudesta saat lisätietoa painalla kortin alareunassa olevaa nuolta.</p>
                             </CardContent>
                         </Card>
-                        <div className="start-buttons">
+                        <div>
                             <div className="game">
                                 <a className="button-header" href="/thechoice">Siirry tästä tekemään valintoja!</a>
                             </div>
