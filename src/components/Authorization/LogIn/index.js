@@ -11,19 +11,19 @@ class LogInContainer extends Component {
     // haetaan salasana ja sähköposti formielementiltä
     // luodaan uusi käyttäjä firebaseen käyttäen  signInWithEmailAndPassword funktiota
 
-    handleSignUp = async event => {
+    handleLogIn = async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
-        try {
-              app.auth().signInWithEmailAndPassword(email.value, password.value);
-            this.props.history.push("/");
-        } catch (error) {
-            alert(error);
-        }
+        app.auth().signInWithEmailAndPassword(email.value, password.value)
+            .then(auth => {
+                this.props.history.push("/")
+            })
+            .catch(err => { alert(err); })
+
     };
 
     render() {
-        return <LogInView onSubmit={this.handleSignUp} />;
+        return <LogInView onSubmit={this.handleLogIn} />;
     }
 }
 
