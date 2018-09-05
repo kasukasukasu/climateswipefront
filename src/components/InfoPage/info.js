@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Hiilijalanjalki from './hiilijalanjalki.png';
+import './info.css';
 
 
 class Info extends Component {
