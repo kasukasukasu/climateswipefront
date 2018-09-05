@@ -32,7 +32,6 @@ class TasksList extends Component {
     //sets fetched tasks to this.state
     allFetched = (data) => {
         this.setState({tasks: data});
-        console.log(this.state.tasks);
     };
 
     render() {

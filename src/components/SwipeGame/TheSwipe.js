@@ -61,7 +61,7 @@ class TheSwipe extends Component {
             this.setState({count: 0});
         } else {
             var count = 0;
-            var relations = data.filter(addToList => {
+            data.filter(addToList => {
                 return addToList.choice === "1" && addToList.user.uid === this.props.user
             }).map(function (choice) {
                 count += parseInt(choice.task.rating, 10);
@@ -85,7 +85,7 @@ class TheSwipe extends Component {
         var sum = this.state.count;
         console.log(this.state);
         if (choice === "1") {
-            sum += parseInt(rating);
+            sum += parseInt(rating, 10);
         } else {
             sum += 0;
         }
