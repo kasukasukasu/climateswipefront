@@ -42,6 +42,9 @@ class Botti extends Component {
                                 height="430"
                                 src="https://console.dialogflow.com/api-client/demo/embedded/d3a63bf6-ccf8-4ac3-8584-2403a551aa89">
                             </iframe>
+                            <p>
+                                <ul> Apua arkeen, hemmottelu, urheilu, kulttuuri, kurssit ja yhteistä hyvää.</ul>
+                            </p>
                         </div>
                         </div>
                     <div className="botti"></div>
