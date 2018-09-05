@@ -48,7 +48,7 @@ class HeaderButtons extends Component {
                     <a className="read-info-link" href="/info">Lue lisää hiilijalanjäljestä ja kestävistä valinnoista</a>
                     </div>
                     <div className="game">
-                    <a className="button-header" href="/thechoice">Aloita valintojen tekeminen tästä!</a>
+                    <a className="button-header" href="/thechoiceinfo">Aloita valintojen tekeminen tästä!</a>
                     </div>
                 </div>
             )

@@ -19,7 +19,7 @@ export class Navigation extends Component {
                 <Navbar.Collapse>
                     <Nav pullLeft>
                         <NavItem href="/info">Info</NavItem>
-                        <NavItem href="/thechoice">The Choice</NavItem>
+                        <NavItem href="/thechoiceinfo">Valintakortit</NavItem>
                         <NavItem href="/taskslist">Ilmastoteot</NavItem>
                         {/*<NavItem href="/theswipe">The Swipe</NavItem>*/}
                             <NavDropdown eventKey={3} title="Ympäristötyökaluja" id="basic-nav-dropdown">

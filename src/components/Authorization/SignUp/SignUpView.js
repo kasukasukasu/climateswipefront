@@ -18,6 +18,7 @@ const SignUpView = ({ onSubmit }) => {
                 <p><input className="input" name="password" type="password" placeholder="Salasana"/></p><br/>
                 <button className="button-header" type="submit">Rekisteröidy</button>
             </form>
+            <p className="siqnup-info">Tallennamme antamasi sähköpostiosoitteen tietokantaamme vain kirjautumista varten.</p>
             {/*<Image src={ClimateChoice} circle width="200" height="200" />*/}
         </div>
 

@@ -4,3 +4,11 @@
     font-family: Amiko;
     color: forestgreen;
 }
+
+.siqnup-info {
+    color: black;
+    font-size: 80%;
+    margin: auto;
+    margin-top: 15px;
+    max-width: 300px;
+}

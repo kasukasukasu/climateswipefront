@@ -1,7 +1,7 @@
 .stack-container {
     position: initial;
     margin: auto;
-    margin-top: 40px;
+    margin-top:10px;
     text-align:center;
     max-width: 400px;
     height: 300px;
@@ -33,23 +33,25 @@
 
 .card-button {
     position: center;
-    margin-top: 120px;
+    /*margin-top: 120px;*/
     bottom: 20px;
     cursor: pointer;
-    z-index: 50;
-    border-style: solid;
-    border-width: 5px;
+    z-index: 40;
+    /*border-style: solid;*/
+    border-width: 0px;
     border-color: white;
     color: white;
     outline:none;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 30px;
     border-radius: 50px;
     margin: auto;
     text-align:center;
-    width: 95px;
-    height: 95px;
-
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 /*.swipeDiv{*/
@@ -73,19 +75,29 @@
     /*!*margin: auto;*!*/
 /*}*/
 
+.buttons {
+    margin-left: 20%;
+    margin-bottom: 20px;
+}
+
+.MuiCardActions-root-33 {
+    float: right;
+}
+
 .pass {
-    /*position: center;*/
+    /*color: red;*/
+    /*border-color: red;*/
+
     background: red;
     font-size: 120%;
-    /*left: 1000px;*/
-    /*display: inline-block;*/
 }
 
 .like {
-    background: yellowgreen;
+    /*color: forestgreen;*/
+    /*border-color: forestgreen;*/
+    background: forestgreen;
     font-size: 120%;
-    /*right: 50px;*/
-    /*display: inline-block;*/
+
 }
 
 /*.name-header-card {*/
@@ -141,3 +153,183 @@
     font-size: 110%;
     /*text-decoration: underline;*/
 }
+
+.gameProgress{
+    font-size: 100%;
+    max-width: 400px;
+    margin: auto
+}
+
+.gameProgress > .bar > .progressBar > .filler {
+    background-color: forestgreen;
+    height: 100%;
+    border-radius: inherit;
+    transition: widt .2s ease-in;
+    text-align: center;
+
+}
+
+.gameProgress > .bar > .progressBar {
+    background-color: lightgrey;
+    margin-top: 20px;
+    position: relative;
+    height: 10px;
+    /*max-width: 300px;*/
+    border-radius: 50px;
+    /*border: 1px solid #333;*/
+    text-align: left;
+    /*margin-bottom: 10px;*/
+
+}
+
+.gameProgress > .bar  > p {
+    color: darkgray;
+    font-size: 100%;
+    display: inline-block;
+}
+
+.gameProgress > .bar  > .fincofoot {
+    display: none;
+}
+
+
+
+.button-info {
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid forestgreen;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+
+.button-info:hover {
+    background-color: darkgreen;
+}
+
+.button-info:link, .button-info:visited {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+
+.button-info:link:active, .button-info:visited:active {
+    color: white;
+    text-decoration: none;
+}
+
+.header-info {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+.info-info {
+    text-align: center;
+    margin: auto;
+}
+
+.info-header {
+    font-size: 150%;
+    /*max-width: 600px;*/
+
+}
+
+.gameinfo-text {
+    margin: auto;
+    text-align: center;
+    /*max-width: 500px;*/
+}
+
+.start-buttons {
+    font-size: 90%;
+    max-width: 500px;
+    margin: auto;
+    /*display:inline-block;*/
+
+}
+
+.game {
+    /*display:inline-block;*/
+    padding: 50px;
+    /*max-width: 100%;*/
+
+}
+
+.read-info-link {
+    font-size: 150%;
+}
+
+.read-info-link:link, .read-info-link:visited {
+    color: forestgreen;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+.read-info-link:link:active, .read-info-link:visited:active {
+    color: forestgreen;
+    text-decoration: underline;
+}
+
+.footer {
+    margin: auto;
+    text-align: center;
+}
+
+.tausta-1 {
+    /*background: url("../../resources/static/image/earth.jpg");*/
+
+    /*background-size: cover;*/
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+
+    /*max-width: 100%;*/
+    font-size: 100%;
+    text-align: center;
+    /*max-height: 100%;*/
+    margin: auto;
+
+
+}
+
+
+.tausta-2 {
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 900px;
+
+}
+
+.tausta-3 {
+    background: url("../../resources/static/image/kasvi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    /*margin-top: 0;*/
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.listStyle {
+    list-style-type:none;
+    margin: auto;
+
+}
+
+.infocard {
+    border-style: solid;
+    border-width: 1px;
+    border-color: forestgreen;
+    position: initial;
+    margin: auto;
+    text-align:center;
+    max-width: 600px;
+    height: 250px;
+}
+
+
