@@ -39,6 +39,7 @@ class TasksList extends Component {
             return (
                 <div>
                     <h2 className="taskcomponent">Esimerkkejä mahdollisista ilmastoteoista:</h2>
+                    <p className="header-text">Täältä löydät kätevästi kaikki ilmastoteot.<br/></p><br/>
                     <input type="text" className="search" placeholder="Hae tekoja" onChange={this.searchHandler.bind(this)}/><br/>
                     <TaskItem tasks={this.state.tasks}>
                     </TaskItem>

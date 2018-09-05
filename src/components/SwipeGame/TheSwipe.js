@@ -64,7 +64,9 @@ class TheSwipe extends Component {
             data.filter(addToList => {
                 return addToList.choice === "1" && addToList.user.uid === this.props.user
             }).map(function (choice) {
+                console.log('moroo5', choice);
                 count += parseInt(choice.task.rating, 10);
+
             });
             var percentage = ((10300-count)/10300*100);
             this.setState({count: count, percentage: percentage});

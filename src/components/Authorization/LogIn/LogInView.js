@@ -9,8 +9,10 @@ const LogInView = ({ onSubmit }) => {
             <h1 className="containerLogIn">Kirjaudu  sisään</h1>
             {/*<p><Image src={ClimateChoice} circle width="200" height="200" /></p>*/}
             <form className="containerLogIn" onSubmit={onSubmit}>
-                <p ><label>Sähköposti<input style={{ width: "90%" }} name="email" type="email" placeholder="Sähköposti"/></label></p>
-                <p><label>Salasana<input style={{ width: "95%" }} name="password" type="password" placeholder="Salasana"/></label></p>
+                <p><label>Sähköposti</label></p>
+                <p><input className="input" name="email" type="email" placeholder="Sähköposti"/></p>
+                    <p><label>Salasana</label></p>
+                <p><input className="input" name="password" type="password" placeholder="Salasana"/></p><br/>
                 <button className="button-header" type="submit">Kirjaudu sisään</button>
             </form>
             <div className="gotosignup"><p>Etkö ole vielä rekisteröitynyt?</p>

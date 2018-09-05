@@ -16,20 +16,14 @@ import TheSwipe from './components/SwipeGame/TheSwipe';
 import ChoicesList from './components/ChoiceList/ChoicesList';
 import Info from './components/InfoPage/info.js'
 import TheMap from './components/RecyclingMap/TheMap';
-
-// import "./scss/stylish-portfolio.css";
 import Header from "./components/Homepage/header";
-// import AboutSection from "./components/Homepage/about";
-// import FooterSection from "./components/Homepage/footer";
 import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
 import "./App.css"
 import NotFound from "./components/NotFound";
-// import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
-// import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
-// import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';
-// import { ReactiveBase } from '@appbaseio/reactivesearch';
+import GameInfo from "./components/SwipeGame/GameInfo";
+
 
 class App extends Component {
     // tässä asetetaan alkuperäinen state
@@ -89,6 +83,7 @@ class App extends Component {
                             <Route path="/taskslist" render={() => <TasksList />}/>
                             <Route path="/choices" render={() => <ChoicesList user={this.state.currentUser} choice={"1"} />}/>
                             <Route path="/notchosentasks" render={() => <ChoicesList user={this.state.currentUser} choice={"0"} />}/>
+                            <Route exact path="/thechoiceinfo" component={GameInfo}/>
                             <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} authentication={this.state.authenticated} />}/>
                             <Route path="/botti" component={Botti} />
                             <Route path="/themap" component={TheMap}/>

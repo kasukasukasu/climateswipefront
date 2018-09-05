@@ -12,13 +12,16 @@ const SignUpView = ({ onSubmit }) => {
         <div className="containerSignUp text-center my-auto">
             <h1>Rekisteröidy</h1>
             <form onSubmit={onSubmit}>
-                <p><label>Sähköposti<input style={{ width: "100%" }} name="email" type="email" placeholder="Sähköposti"/></label></p>
-                <p><label>Salasana<input style={{ width: "100%" }} name="password" type="password" placeholder="Salasana"/></label></p>
+                <p><label>Sähköposti</label></p>
+                <p><input className="input" name="email" type="email" placeholder="Sähköposti"/></p>
+                <p><label>Salasana</label></p>
+                <p><input className="input" name="password" type="password" placeholder="Salasana"/></p><br/>
                 <button className="button-header" type="submit">Rekisteröidy</button>
             </form>
             <p className="siqnup-info">Tallennamme antamasi sähköpostiosoitteen tietokantaamme vain kirjautumista varten.</p>
             {/*<Image src={ClimateChoice} circle width="200" height="200" />*/}
         </div>
+
     );
 };
 

@@ -191,3 +191,88 @@
 .gameProgress > .bar  > .fincofoot {
     display: none;
 }
+
+
+.tausta-1 {
+    /*background: url("../../resources/static/image/earth.jpg");*/
+
+    /*background-size: cover;*/
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+
+    /*max-width: 100%;*/
+    font-size: 100%;
+    text-align: center;
+    /*max-height: 100%;*/
+    margin: auto;
+
+
+}
+
+
+.tausta-2 {
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    margin: auto;
+    max-width: 900px;
+
+}
+
+.tausta-3 {
+    background: url("../../resources/static/image/kasvi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    /*background-position: center;*/
+    border-collapse: collapse;
+    /*margin-top: 0;*/
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.listStyle {
+    list-style-type:none;
+    margin: auto;
+
+}
+
+.infocard {
+    border-style: solid;
+    border-width: 1px;
+    border-color: forestgreen;
+    position: initial;
+    margin: auto;
+    text-align:center;
+    max-width: 400px;
+    max-height: 700px;
+
+}
+
+/*.toGamebutton {*/
+    /*background-color: forestgreen;*/
+    /*color: white;*/
+    /*border: 1px solid forestgreen;*/
+    /*border-radius: 30px;*/
+    /*padding: 10px;*/
+    /*display:inline-block;*/
+
+/*}*/
+
+/*.toGamebutton:hover {*/
+    /*background-color: darkgreen;*/
+/*}*/
+
+/*.toGamebutton:link, .toGamebutton:visited {*/
+    /*color: white;*/
+    /*text-decoration: none;*/
+    /*cursor: auto;*/
+/*}*/
+
+/*.toGamebutton:link:active, .toGamebutton:visited:active {*/
+    /*color: white;*/
+    /*text-decoration: none;*/
+/*}*/
+
