@@ -1,17 +1,12 @@
-
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
 import TaskItem from "./TaskItem"
 import "./TaskItem.css";
 
-
-
 class TasksList extends Component {
     constructor(props) {
         super(props);
         this.state = {tasks: [], displayedTasks: [], search: false};
-        console.log("Propsit tulee!!!!");
-        console.log(this.props.user);
     }
 
     searchHandler(event) {
@@ -37,9 +32,7 @@ class TasksList extends Component {
     //sets fetched tasks to this.state
     allFetched = (data) => {
         this.setState({tasks: data});
-        console.log(this.state.tasks);
     };
-
 
     render() {
         if(this.state.search === false) {
@@ -62,7 +55,6 @@ class TasksList extends Component {
                 </div>
             )
         }
-
     }
 }
 

@@ -7,7 +7,6 @@ export function fetchall(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
-                    console.log(json);
                     callback(json);
             });
         });
@@ -20,11 +19,8 @@ export function fetchallchoices(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
-                    console.log("json relations");
-                    console.log(json);
                     callback(json);
             });
-            console.log('löytyy relations tiedot');
         });
 }
 
@@ -95,16 +91,11 @@ export function changeChoice(id, data) {
     }).catch(err => err);
 }
 
-
-
-
-// //tää ei vissii toimi
-// export function deleteTasks(id/*, callback*/) {
-//     return fetch(apiurli+'tasks/'+id, {method: 'DELETE'})
-//         .then(function(response){
-//             //callback();
-//         })
-// }
+export function deleteFromRelations(id) {
+    return fetch(url + 'relations/' + id, {
+        method: 'DELETE'
+    }).catch(err => err);
+}
 //
 // export function createTask(task, callback) {
 //     fetch(apiurli+'tasks/',  {

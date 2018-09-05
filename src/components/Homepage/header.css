@@ -46,17 +46,17 @@
 
 }
 
-.tausta-3 {
-  background: url("../../resources/static/image/kasvi.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  /*background-position: center;*/
-  border-collapse: collapse;
-  /*margin-top: 0;*/
-  max-width: 100%;
-  margin: auto;
+/*.tausta-3 {*/
+  /*background: url("../../resources/static/image/kasvi.jpg");*/
+  /*background-size: cover;*/
+  /*background-attachment: fixed;*/
+  /*!*background-position: center;*!*/
+  /*border-collapse: collapse;*/
+  /*!*margin-top: 0;*!*/
+  /*max-width: 100%;*/
+  /*margin: auto;*/
 
-}
+/*}*/
 
 .button-header {
   background-color: forestgreen;
@@ -114,8 +114,10 @@
 
 .game {
   /*display:inline-block;*/
-  padding: 50px;
-  /*max-width: 100%;*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  margin: auto;
 
 }
 
@@ -137,6 +139,7 @@
 .footer {
   margin: auto;
   text-align: center;
+  margin-top: 100px;
 }
 
 

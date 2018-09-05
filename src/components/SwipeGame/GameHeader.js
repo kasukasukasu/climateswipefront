@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import ProgressBar from "../ChoiceList/ProgressBar";
-// import ChoiceHeader from "../ChoiceList/ChoiceHeader";
-// import {fetchallchoices} from "../../RestFunctions";
 
 class GameHeader extends Component {
     render() {

@@ -19,6 +19,7 @@
 }
 
 .loader {
+  animation: loader-spin infinite 5s linear;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -47,6 +48,11 @@
 .fonts {
   font-family: Amiko;
   color: forestgreen;
+}
+
+@keyframes loader-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 

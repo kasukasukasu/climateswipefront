@@ -3,9 +3,7 @@ import {fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 import './ItemDetailCards.css';
 import GameHeader from "./GameHeader";
-
 var shuffle = require('shuffle-array');
-
 
 class TheSwipe extends Component {
     constructor(props) {
@@ -25,18 +23,13 @@ class TheSwipe extends Component {
     componentDidMount() {
         this.getAll();
         this.getAllForCount();
-        // console.log("hei");
-
     }
 
     getAll() {
-        // console.log(this.props.user);
-        // console.log("moi");
         fetchall(this.getAllRelations.bind(this))
     }
 
     getAllRelations(datatasks) {
-        // console.log(this.state);
         fetchallchoices(this.allChoices.bind(this, datatasks))
     }
 
@@ -44,19 +37,11 @@ class TheSwipe extends Component {
         var relations = relationsdata;
         var tasks;
         tasks = tasksdata;
-        // console.log("Saatiinko dataa?");
-        // console.log(relations);
-        // console.log(tasks);
         for (let i = 0; i < relations.length; i++) {
             let relation = relations[i];
             for (let j = 0; j < tasks.length; j++) {
                 let task = tasks[j];
-
-                // console.log("task:", task);
-                // console.log(this.state);
-                // console.log(relation.task.id, task.id, relation.user.uid, this.props.user);
                 if (relation.task.id === task.id && relation.user.uid === this.props.user) {
-                    console.log("itkettää");
                     tasks.splice(j, 1);
                 }
             }
@@ -64,14 +49,10 @@ class TheSwipe extends Component {
         this.allFetched(tasks);
     };
 
-
     getAllForCount() {
         if(this.props.authentication) {
             fetchallchoices(this.allchoicesFetched);
-            console.log("jau")
-        } else {
-            console.log('ei kirjautunut');
-        }
+        } else {}
     }
 
     //sets fetched tasks to this.state
@@ -79,14 +60,11 @@ class TheSwipe extends Component {
         if(data.length === 0) {
             this.setState({count: 0});
         } else {
-            console.log('moroo3');
             var count = 0;
-            var relations = data.filter(addToList => {
+            data.filter(addToList => {
                 return addToList.choice === "1" && addToList.user.uid === this.props.user
             }).map(function (choice) {
-                console.log('moroo5', choice);
                 count += parseInt(choice.task.rating, 10);
-
             });
             var percentage = ((10300-count)/10300*100);
             this.setState({count: count, percentage: percentage});
@@ -107,7 +85,7 @@ class TheSwipe extends Component {
         var sum = this.state.count;
         console.log(this.state);
         if (choice === "1") {
-            sum += parseInt(rating);
+            sum += parseInt(rating, 10);
         } else {
             sum += 0;
         }
@@ -118,9 +96,6 @@ class TheSwipe extends Component {
     }
 
     render() {
-        // const item = this.state.tasks[this.state.index];
-        // console.log(this.props);
-        // console.log(this.props.authentication);
             if ( this.state.index + 1 !== this.state.tasks.length) {
                 return (
                     <div className="theswipe">
@@ -140,9 +115,7 @@ class TheSwipe extends Component {
                     </div>
                 );
             }
-
         }
-
 }
 
 export default TheSwipe;
