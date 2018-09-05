@@ -52,6 +52,8 @@ class App extends Component {
 
 
     render() {
+        //This hides warnings from console log!
+        console.log = console.warn = console.error = () => {};
         // const { authenticated, loading } = this.state;
         const { loading } = this.state;
 
