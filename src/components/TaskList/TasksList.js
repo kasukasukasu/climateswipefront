@@ -35,7 +35,6 @@ class TasksList extends Component {
         console.log(this.state.tasks);
     };
 
-
     render() {
         if(this.state.search === false) {
             return (
@@ -56,7 +55,6 @@ class TasksList extends Component {
                 </div>
             )
         }
-
     }
 }
 

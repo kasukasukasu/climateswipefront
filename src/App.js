@@ -25,6 +25,7 @@ import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
 import "./App.css"
+import NotFound from "./components/NotFound";
 // import NewChallenge from './Sandbox/NewChallenge/NewChallenge';
 // import DataSentAndMoreInfo from './Sandbox/NewChallenge/DataSentAndMoreInfo';
 // import RecyclingSearch from './Sandbox/RecyclingSearch/RecyclingSearch';
@@ -75,9 +76,9 @@ class App extends Component {
                     <Navigation state={this.state} />
                     {/*<img src={ClimateChoice} className="App-logo" alt="logo" />*/}
                             {/*<PrivateRoute exact path="/" component={Home} authenticated={authenticated}/>*/}
-                            <Route exact path="/" render={() => <Header authentication={this.state.authenticated}/>}/>
                     <Grid>
                         <Switch>
+                            <Route exact path="/" render={() => <Header authentication={this.state.authenticated}/>}/>
                             {/*<Route exact path="/" component={Header} />*/}
                             <Route exact path="/login" component={LogIn} />
                             <Route exact path="/info" component={Info} />
@@ -89,9 +90,7 @@ class App extends Component {
                             <Route path="/thechoice" render={() => <TheSwipe user={this.state.currentUser} authentication={this.state.authenticated} />}/>
                             <Route path="/botti" component={Botti} />
                             <Route path="/themap" component={TheMap}/>
-                            {/*<Route path="/newchallenge" component={NewChallenge} />*/}
-                            {/*<Route path="/lisatietoa" component={DataSentAndMoreInfo} />*/}
-                            {/*<Route path="/recyclingsearch" component={RecyclingSearch} />*/}
+                            <Route path="*" component={NotFound}/>
                         </Switch>
                     </Grid>
                     {/*<hr/>*/}

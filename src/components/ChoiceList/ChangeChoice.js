@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {changeChoice, deleteFromRelations} from "../../RestFunctions";
 import './ChoiceList.css';
-import {deleteThisOne} from "../../Sandbox/SwipeFunctions/DeleteChoice";
 
 
 class ChangeChoice extends Component {
