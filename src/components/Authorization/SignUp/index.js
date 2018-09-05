@@ -16,13 +16,13 @@ class SignUpContainer extends Component {
     handleSignUp = async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
-        try {
-            app.auth().createUserWithEmailAndPassword(email.value, password.value);
-            this.props.history.push("/");
-        } catch (error) {
-            alert(error);
-        }
-    };
+        app.auth().createUserWithEmailAndPassword(email.value, password.value)
+            .then(auth => {
+                    this.props.history.push("/")
+                })
+            .catch(err => { alert(err); })
+
+            };
 
     render() {
         return <SignUpView onSubmit={this.handleSignUp} />;
