@@ -2,7 +2,6 @@ import React,{Component} from "react";
 import "./Botti";
 import BottiPic from "./NewBot.png";
 
-
 class Botti extends Component {
     constructor() {
         super();
@@ -19,10 +18,6 @@ class Botti extends Component {
     }
 
     render() {
-        // let shown = {
-        //     display: this.state.shown ? "block" : "none"
-        // };
-
         let hidden = {
             display: this.state.hidden ? "block" : "none"
         };
@@ -36,7 +31,7 @@ class Botti extends Component {
                     <div class="container-fluid tausta-4 text-center">
                         <h3>Kysy minulta lahjoista!</h3><br/>
                         <div>
-                            <iframe
+                            <iframe title="presentbot"
                                 allow="microphone;"
                                 width="350"
                                 height="430"
@@ -52,6 +47,4 @@ class Botti extends Component {
     }
 }
 
-
 export default Botti;
-

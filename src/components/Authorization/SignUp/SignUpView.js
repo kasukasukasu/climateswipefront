@@ -2,8 +2,6 @@
 
 
 import React from "react";
-import {Image} from "react-bootstrap"
-import ClimateChoice from "../../../ClimateChoice.png";
 import './SignUpView.css';
 
 

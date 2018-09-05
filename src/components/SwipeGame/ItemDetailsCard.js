@@ -45,11 +45,9 @@ class ItemDetailsCard extends Component {
     handleButtonClick(userid, taskid, choice, e) {
         e.preventDefault();
         this.props.goToNext();
-        console.log('The link was clicked.');
         var data = ({choice: choice, user_id: userid, task_id: taskid});
-        console.log(data);
         createRelation(data);
-    }
+    };
 
     render() {
         const {classes} = this.props;
@@ -89,9 +87,7 @@ class ItemDetailsCard extends Component {
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0")}>Ei</button>
                 <button className="card-button like"
                         onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1")}>Kyllä</button>
-                </div>
-                <br/>
-                <br/>
+                </div><br/><br/>
                 <div>
                     {this.props.authentication ? (
                     <a className="button-header" href="/choices">
@@ -105,10 +101,8 @@ class ItemDetailsCard extends Component {
     }
 }
 
-
 ItemDetailsCard.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(ItemDetailsCard);
-

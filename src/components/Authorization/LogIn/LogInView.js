@@ -1,13 +1,9 @@
 // tässä tehdään kirjautumislogiikka
-
 import React from "react";
-import {Image} from "react-bootstrap"
-import ClimateChoice from "../../../ClimateChoice.png";
 import './LogInView.css';
 
 const LogInView = ({ onSubmit }) => {
-
-    //   // saadaan onSubmit handleri propsina ja liitetään se formiin, tehdään myös paikat s-postille ja salasanalle
+    // saadaan onSubmit handleri propsina ja liitetään se formiin, tehdään myös paikat s-postille ja salasanalle
     return (
         <div className="containerLogIn text-center my-auto">
             <h1 className="containerLogIn">Kirjaudu  sisään</h1>

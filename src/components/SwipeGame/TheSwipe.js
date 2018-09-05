@@ -2,9 +2,7 @@ import React, {Component} from "react";
 import {fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 import './ItemDetailCards.css';
-
 var shuffle = require('shuffle-array');
-
 
 class TheSwipe extends Component {
     constructor(props) {
@@ -20,18 +18,13 @@ class TheSwipe extends Component {
 
     componentDidMount() {
         this.getAll();
-        // console.log("hei");
-
     }
 
     getAll() {
-        // console.log(this.props.user);
-        // console.log("moi");
         fetchall(this.getAllRelations.bind(this))
     }
 
     getAllRelations(datatasks) {
-        // console.log(this.state);
         fetchallchoices(this.allChoices.bind(this, datatasks))
     }
 
@@ -39,18 +32,11 @@ class TheSwipe extends Component {
         var relations = relationsdata;
         var tasks;
         tasks = tasksdata;
-        // console.log("Saatiinko dataa?");
-        // console.log(relations);
-        // console.log(tasks);
         for (let i = 0; i < relations.length; i++) {
             let relation = relations[i];
             for (let j = 0; j < tasks.length; j++) {
                 let task = tasks[j];
-                // console.log("task:", task);
-                // console.log(this.state);
-                // console.log(relation.task.id, task.id, relation.user.uid, this.props.user);
                 if (relation.task.id === task.id && relation.user.uid === this.props.user) {
-                    console.log("itkettää");
                     tasks.splice(j, 1);
                 }
             }
@@ -68,33 +54,23 @@ class TheSwipe extends Component {
         this.setState({index: (this.state.index + 1) % this.state.tasks.length});
     };
 
-
     render() {
-        // const item = this.state.tasks[this.state.index];
-        // console.log(this.props);
-        // console.log(this.props.authentication);
-            if ( this.state.index + 1 !== this.state.tasks.length) {
-
-                return (
-                    <div className="theswipe">
-                        <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
-                                  goToNext={this.goToNext.bind(this)} authentication={this.props.authentication}/>
-                    </div>
-
-                );
-            } else {
-                return (
-                    <div className="stack-container">
-                        <h1>Ei tällä hetkellä enempää haasteita,
-                            ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
-                        <p>Lähetä meille uusi haastevaihtoehto arvioitavaksi: teamclimatechoice@gmail.com
-                        </p>
-                    </div>
-                );
-            }
-
+        if ( this.state.index + 1 !== this.state.tasks.length) {
+            return (
+                <div className="theswipe">
+                    <SwipeMap item={this.state.tasks} index={this.state.index} user={this.props.user}
+                              goToNext={this.goToNext.bind(this)} authentication={this.props.authentication}/>
+                </div>
+            );
+        } else {
+            return (
+                <div className="stack-container">
+                    <h1>Ei tällä hetkellä enempää haasteita, ehdota meille helppoja arkipäivän ympäristöhaasteita</h1>
+                    <p>Lähetä meille uusi haastevaihtoehto arvioitavaksi: teamclimatechoice@gmail.com</p>
+                </div>
+            );
         }
-
+    }
 }
 
 export default TheSwipe;

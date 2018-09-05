@@ -1,6 +1,8 @@
 import React, {Component} from "react";
-import {changeChoice} from "../../RestFunctions";
+import {changeChoice, deleteFromRelations} from "../../RestFunctions";
 import './ChoiceList.css';
+import {deleteThisOne} from "../../Sandbox/SwipeFunctions/DeleteChoice";
+
 
 class ChangeChoice extends Component {
     constructor(props) {
@@ -11,32 +13,35 @@ class ChangeChoice extends Component {
             user: this.props.choice.user,
             task: this.props.choice.task
         };
+        this.handleClick = this.handleClick.bind(this);
     }
 
     changeThis(oldChoice) {
-        console.log(this.state.choice + "Ennen muutosta");
-        // var settingNewChoice = (this.state.choice);
-
         if (oldChoice === "1") {
             // settingNewChoice = 0;
             this.setState({choice: "0"}, () => {
                 changeChoice(this.state.id, this.state);
             });
-            console.log(this.state);
         } else {
             // settingNewChoice = 1;
             this.setState({choice: "1"}, () => {
                 changeChoice(this.state.id, this.state);
             });
-            console.log(this.state);
         }
-        // console.log("päivitetty valinta on:" + this.state.choice);
     }
 
-
     setNewData(e) {
-        // e.preventDefault();
         this.changeThis(this.state.choice);
+        window.location.reload();
+    }
+
+    deleteThisOne(deleteThisTask) {
+        deleteFromRelations(deleteThisTask);
+    }
+
+    handleClick(id, e) {
+        e.preventDefault();
+        this.deleteThisOne(id);
         window.location.reload();
     }
 
@@ -44,17 +49,18 @@ class ChangeChoice extends Component {
         if (this.props.choice.choice === "1") {
             return (
                 <div className="button">
-                <button  className='change-button' onClick={this.setNewData.bind(this)}>Poista valinta</button>
+                    <button  className='change-button' onClick={this.setNewData.bind(this)}>Siirrä hylättyihin</button>
+                    <button className='change-button' onClick={this.handleClick.bind(this, this.props.choice.id)}>Poista</button>
                 </div>
             )
         } else {
             return (
                 <div className="button">
-                <button className='change-button' onClick={this.setNewData.bind(this)}>Tahdon sittenkin suorittaa tämän haasteen</button>
+                    <button className='change-button' onClick={this.setNewData.bind(this)}>Teen sittenkin</button>
+                    <button className='change-button' onClick={this.handleClick.bind(this, this.props.choice.id)}>Poista</button>
                 </div>
             )}
     }
 }
-
 
 export default ChangeChoice;

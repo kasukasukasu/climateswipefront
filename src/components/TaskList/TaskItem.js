@@ -31,10 +31,7 @@ class TaskItem extends Component {
             )
         });
         return (
-            <div className="list-items">{tasks}
-            <br></br><br></br><br></br><br></br>
-            </div>
-
+            <div className="list-items">{tasks}<br></br><br></br><br></br><br></br></div>
         )
     }
 }

@@ -38,7 +38,6 @@ class App extends Component {
         app.auth().onAuthStateChanged(user => {
             if (user) {
                 var userid = user.uid;
-                console.log(user.uid);
                 this.setState({
                     authenticated: true,
                     currentUser: user.uid,

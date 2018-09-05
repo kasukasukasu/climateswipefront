@@ -7,17 +7,14 @@ import app from "../../../base";
 
 
 class LogOutContainer extends Component {
+    handleLogOut= async event => {
+        app.auth()
+            .signOut()
+            .catch(function (err) {});
+        }
 
-handleLogOut= async event => {
-    console.log('moroo')
-    app.auth().signOut().catch(function (err) {
-            // Handle errors
-            console.log('ei kirjautunut ulos');
-        });
-}
-
-    render() {
-        return <SignedOutView  onSubmit={this.handleLogOut()}  />;
+        render() {
+            return <SignedOutView  onSubmit={this.handleLogOut()}/>;
     }
 }
 

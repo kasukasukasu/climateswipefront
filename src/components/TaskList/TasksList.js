@@ -1,17 +1,12 @@
-
 import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
 import TaskItem from "./TaskItem"
 import "./TaskItem.css";
 
-
-
 class TasksList extends Component {
     constructor(props) {
         super(props);
         this.state = {tasks: [], displayedTasks: [], search: false};
-        console.log("Propsit tulee!!!!");
-        console.log(this.props.user);
     }
 
     searchHandler(event) {
