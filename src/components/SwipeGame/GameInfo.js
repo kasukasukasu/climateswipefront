@@ -8,16 +8,11 @@ class GameInfo extends Component {
         return (
             <div>
                 <div>
-                    <div className="container-fluid tausta-1">
-
-                    </div>
-                    <br/>
-                    <br/>
                     <div className="container-fluid tausta-2">
                         {/*<div className="container text-center my-auto">*/}
-                        <h1 className="header-info">Tervetuloa tekemään arjen ilmastovalintoja.</h1><br/>
+                        <h1 className="header-header">Tervetuloa tekemään arjen ilmastovalintoja.</h1><br/>
                         <h3 className="header-text">Peli antaa sinulle yksitellen arkipäivän haasteita.</h3><br/>
-                        <h3 className="header-text">Valitse niistä kyllä ta ei.</h3><br/>
+                        <h3 className="header-text">Valitse niistä kyllä tai ei.</h3><br/>
                         <Card className="infocard">
                             <CardContent>
                                 <p>Valitsemalla kyllä, tehtävä siirtyy omaan listaasi, mikäli olet kirjautunut.</p><br/>
