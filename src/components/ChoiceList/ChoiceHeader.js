@@ -11,10 +11,11 @@ class ChoiceHeader extends Component {
 
     render() {
         var count = this.props.count;
+        console.log(count, "ChoiceHeaderin count");
         if (count > 9000) {
-            count=10300-9000;
+            count=9000;
         } else {
-            count = this.props.count
+            count = this.props.count;
         }
         if (this.props.choice === "1") {
             return (

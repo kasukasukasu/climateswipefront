@@ -3,9 +3,12 @@ import "./ChoiceList.css"
 
 
 const ProgressBar = (props) => {
-    var footprint = 11500 - props.count;
+    console.log(props.count);
+ //   var footprint = 11500 - props.count;
     var percentage= ((10300-props.count)/10300*100);
-    footprint = 10300 - props.count;
+    console.log(percentage);
+    var footprint = 10300 - props.count;
+    console.log(footprint);
     return (
         <div className="bar">
             <div className="progressBar">
