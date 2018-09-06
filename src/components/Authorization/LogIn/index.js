@@ -19,7 +19,6 @@ class LogInContainer extends Component {
                 this.props.history.push("/")
             })
             .catch(err => { alert(err); })
-
     };
 
     render() {
