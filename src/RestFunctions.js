@@ -96,25 +96,3 @@ export function deleteFromRelations(id) {
         method: 'DELETE'
     }).catch(err => err);
 }
-//
-// export function createTask(task, callback) {
-//     fetch(apiurli+'tasks/',  {
-//         method: 'POST',
-//         headers: {'Content-Type': 'application/json' },
-//         body: JSON.stringify(task)
-//     })
-//         .then((function(response) {
-//             callback();
-//         }));
-// }
-//
-// export function updateTask(task, callback) {
-//     fetch(apiurli+'tasks/'+task.id,  {
-//         method: 'PUT',
-//         headers: {'Content-Type': 'application/json' },
-//         body: JSON.stringify(quote)
-//     })
-//         .then((function(response) {
-//             callback();
-//         }));
-// }

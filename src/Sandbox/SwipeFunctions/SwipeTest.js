@@ -17,7 +17,7 @@ class SwipeTest extends Component {
 
     componentDidMount() {
         this.getIds();
-        console.log("hei");
+
 
     }
 

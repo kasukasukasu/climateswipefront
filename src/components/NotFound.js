@@ -2,7 +2,6 @@ import React, {Component} from "react";
 
 class NotFound extends Component {
     render() {
-        console.log("äääää")
         return (
             <div>
                 <h2>

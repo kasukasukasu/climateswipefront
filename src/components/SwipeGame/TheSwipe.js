@@ -64,7 +64,7 @@ class TheSwipe extends Component {
             data.filter(addToList => {
                 return addToList.choice === "1" && addToList.user.uid === this.props.user
             }).map(function (choice) {
-                console.log('moroo5', choice);
+
                 count += parseInt(choice.task.rating, 10);
 
             });
@@ -85,16 +85,14 @@ class TheSwipe extends Component {
 
     countingIfNotAuth(rating, choice) {
         var sum = this.state.count;
-        console.log(this.state);
         if (choice === "1") {
             sum += parseInt(rating, 10);
         } else {
             sum += 0;
         }
         var percentage = ((10300-sum)/10300*100);
-        console.log("mööööö");
         this.setState({count: sum, percentage: percentage});
-        console.log(this.state);
+
     }
 
     render() {
