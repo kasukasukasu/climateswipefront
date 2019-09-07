@@ -3,7 +3,10 @@ import {fetchall, fetchallchoices,} from "../../RestFunctions";
 import SwipeMap from "./SwipeMap";
 import './ItemDetailCards.css';
 import GameHeader from "./GameHeader";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 var shuffle = require('shuffle-array');
+
 
 class TheSwipe extends Component {
     constructor(props) {
@@ -96,6 +99,7 @@ class TheSwipe extends Component {
     }
 
     render() {
+    if (this.state.tasks.length > 0) {
             if ( this.state.index + 1 !== this.state.tasks.length) {
                 return (
                     <div className="theswipe">
@@ -115,7 +119,39 @@ class TheSwipe extends Component {
                     </div>
                 );
             }
+        } else {
+                     return (
+                                 <div>
+                                                            <div>
+                                                                <div className="container-fluid tausta-2">
+                                                                                        <h1 className="header-header">Tervetuloa tekemään arjen ilmastovalintoja.</h1><br/>
+                                                                                        <h3 className="header-text">Peli antaa sinulle yksitellen arkipäivän haasteita.</h3><br/>
+                                                                                        <h3 className="header-text">Valitse niistä kyllä tai ei.</h3><br/>
+                                                                    <Card className="infocard">
+                                                                        <CardContent>
+                                                                        <br/>
+                                                                        <br/>
+                                                                        <br/>
+                                                                        <h1>Tietokantaan ei juuri nyt saada yhteyttä</h1>
+                                                                            <br/>
+                                                                            <br/>
+                                                                            <br/>
+                                                                            <br/>
+                                                                        </CardContent>
+                                                                    </Card>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                        );
         }
+
+
+        }
+
 }
+
 
 export default TheSwipe;

@@ -2,11 +2,15 @@ import React, {Component} from "react";
 import {fetchall} from "../../RestFunctions"
 import TaskItem from "./TaskItem"
 import "./TaskItem.css";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 class TasksList extends Component {
     constructor(props) {
         super(props);
-        this.state = {tasks: [], displayedTasks: [], search: false};
+        this.state = {tasks: [],
+        displayedTasks: [],
+        search: false};
     }
 
     searchHandler(event) {
@@ -35,7 +39,8 @@ class TasksList extends Component {
     };
 
     render() {
-        if(this.state.search === false) {
+      if(this.state.tasks.length > 0) {
+         if(this.state.search === false) {
             return (
                 <div>
                     <h2 className="taskcomponent">Esimerkkejä mahdollisista ilmastoteoista:</h2>
@@ -55,7 +60,34 @@ class TasksList extends Component {
                 </div>
             )
         }
+    } else {
+                                  return (
+                                          <div>
+                                                                 <br/>
+                                                                  <br/>
+                                                                     <br/>
+                                                                        <div>
+                                                                            <div className="container-fluid tausta-2">
+                                                                                <Card className="infocard">
+                                                                                    <CardContent>
+                                                                                    <br/>
+                                                                                    <br/>
+                                                                                    <br/>
+                                                                                    <h1>Tietokantaan ei juuri nyt saada yhteyttä</h1>
+                                                                                        <br/>
+                                                                                        <br/>
+                                                                                        <br/>
+                                                                                        <br/>
+                                                                                    </CardContent>
+                                                                                </Card>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                  )}
     }
+
 }
 
 export default TasksList;

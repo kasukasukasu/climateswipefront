@@ -1,4 +1,9 @@
+//const url = 'http://localhost:8080/';
+//for local development
+// also add to package.json   "proxy": "http://localhost:8080",
+
 const url = '/';
+
 
 export function fetchall(callback) {
     fetch(url + "tasks", {accept: 'application/json'})
@@ -7,7 +12,9 @@ export function fetchall(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
+                    console.log(json);
                     callback(json);
+
             });
         });
 }
@@ -19,8 +26,12 @@ export function fetchallchoices(callback) {
                 if (response.status >= 500)
                     callback(json, response.status);
                 else
+                    console.log("json relations");
+                    console.log(json);
                     callback(json);
+
             });
+            console.log('löytyy relations tiedot');
         });
 }
 
